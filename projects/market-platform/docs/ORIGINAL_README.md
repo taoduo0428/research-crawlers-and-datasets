@@ -1,3 +1,5 @@
+> 历史文件：保留原始工程叙述以供回溯。所述旧输出目录和某些 BOSS 采集结论已过时；请以 [当前引擎说明](../README.md) 和 [2026-10-17 审计报告](../../../docs/REPOSITORY_AUDIT_2026-10-17.md) 为准。
+
 # DRV 外包与岗位价格样本爬虫
 
 该项目面向 DRV（Daily Result Value）任务价格表和招聘薪资样本。外包部分覆盖一品威客、猪八戒、实现网和程序员客栈；招聘部分覆盖 BOSS 直聘、前程无忧和猎聘。原始标题与价格原文始终保留，列表价、详情价、平台估价、雇主正文价格及日/月/年薪不会相互覆盖。
@@ -171,11 +173,11 @@ BOSS 使用 `drv_crawler/boss_cdp` 的 MIT Chrome/CDP 后端。第一次运行�
 .\.venv\Scripts\python.exe run.py jobs --site liepin --per-category 2 --max-categories 10
 ```
 
-Cookie、token、SQLite 断点和浏览器 profile 都位于被忽略的本地状态目录，不写入最终结果。单站参数、分类规模和故障恢复说明分别见 [`boss_cdp/README.md`](drv_crawler/boss_cdp/README.md)、[`job51/README.md`](drv_crawler/job51/README.md) 和 [`liepin/README.md`](drv_crawler/liepin/README.md)。
+Cookie、token、SQLite 断点和浏览器 profile 都位于被忽略的本地状态目录，不写入最终结果。单站参数、分类规模和故障恢复说明分别见 [`boss_cdp/README.md`](../drv_crawler/boss_cdp/README.md)、[`job51/README.md`](../drv_crawler/job51/README.md) 和 [`liepin/README.md`](../drv_crawler/liepin/README.md)。
 
 同一站点的所有持久 scope 共享站点级互斥锁；即使 per1 与 per50 参数不同，第二个 `jobs` 进程也会立即报告 `RecruitmentScopeBusy`，避免共享 CDP、浏览器会话或风控额度。每个 scope 仍保留独立锁，防止断点并发写入。BOSS 分类默认每类间隔 12-20 秒，遇到限制首次冷却 3600 秒，单次子进程默认最多运行 21600 秒；前程无忧默认每类间隔 3-5 秒，每 20 类冷却 60 秒，WAF 软拦截冷却 1800 秒。Full probe 默认最多自动恢复 8 轮、总计 86400 秒；达到边界会以 `full_probe_cycle_limit` 或 `full_probe_runtime_limit` 停止并保留断点。可通过 `crawler.recruitment.auto_resume_full_probe`、`full_probe_max_cycles`、`full_probe_max_runtime_seconds` 调整；BOSS 单次子进程超时另由 `crawler.recruitment.sites.boss.run_timeout_seconds` 控制。
 
-GitHub 候选、许可证和本机实测结论见 [`docs/THIRD_PARTY_REVIEW.md`](docs/THIRD_PARTY_REVIEW.md)。
+GitHub 候选、许可证和本机实测结论见 第三方爬虫方案（原 THIRD_PARTY_REVIEW.md 未收录）。
 
 ## 招聘详情补采与交付结果
 
@@ -250,7 +252,7 @@ py tools\build_recruitment_detail_results.py
 .\.venv-standalone\Scripts\python.exe tools\build_recruitment_clean_dataset.py
 ```
 
-三站完整元数据位于 `outputs/招聘--完整数据`；用于后续分析的“职位、JD、薪资、一级分类、二级分类、三级分类”位于 `outputs/招聘--最终结果`，其中不包含 BOSS。数据口径和代码入口分别见 [`docs/招聘数据说明.md`](docs/招聘数据说明.md) 与 [`docs/招聘爬虫代码说明.md`](docs/招聘爬虫代码说明.md)，风控与浏览器登录态问题见 [`docs/招聘爬取失败原因复盘.md`](docs/招聘爬取失败原因复盘.md)。
+三站完整元数据位于 `outputs/招聘--完整数据`；用于后续分析的“职位、JD、薪资、一级分类、二级分类、三级分类”位于 `outputs/招聘--最终结果`，其中不包含 BOSS。数据口径和代码入口分别见 [招聘数据说明](招聘数据说明.md) 与 [当前采集器说明](../README.md)（原代码说明未收录），风控与浏览器登录态问题见 [招聘失败复盘](招聘爬取失败原因复盘.md)。
 
 ## 输出格式
 
@@ -355,9 +357,9 @@ outputs/外包--最终结果/
 - 一品威客：2691 条详情发布日期核验通过的任务；86 个无法核验发布时间的页面未纳入。
 - 实现网：53 条岗位，其中 34 条严格三个月内，19 条为页面显示“3个月前”的边界记录。
 
-交付口径、价格处理和边界说明见 [`outputs/外包--最终结果/说明.md`](outputs/外包--最终结果/说明.md)。
+交付口径、价格处理和边界说明见 [当前外包项目组说明](../../outsourcing/README.md)（原输出说明未收录）。
 
-GitHub 候选仓库、许可证、时效性和未采用原因见 [`docs/THIRD_PARTY_REVIEW.md`](docs/THIRD_PARTY_REVIEW.md)。
+GitHub 候选仓库、许可证、时效性和未采用原因见 第三方爬虫方案（原 THIRD_PARTY_REVIEW.md 未收录）。
 
 ## 可选的底层侦察命令
 

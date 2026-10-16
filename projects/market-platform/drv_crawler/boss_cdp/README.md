@@ -11,7 +11,7 @@
 
 > 📌 **一句话介绍**：不用 Selenium/Playwright，直接通过 Chrome DevTools Protocol 连接本地已登录的 Chrome，复用真实登录态调搜索 API，输出含明文薪资的 JSON/CSV，并生成薪资分布、技能词频和求职材料优化提示词。
 
-![cover](cover.png)
+*原上游封面图未包含在研究发布副本中。*
 
 ---
 

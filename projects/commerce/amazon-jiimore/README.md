@@ -2,7 +2,7 @@
 # 亚马逊 + Jiimore：一个多数据源商品研究项目
 
 **一个项目，不将 Amazon、Jiimore 和 SellerSprite 作为彼此独立的三个课题。** 全部通过 `ASIN` 关联。
-代码位于 `source/current`、`source/legacy`、`source/supplement`，包括 Amazon 商品详情、Jiimore 品类 ASIN 与周点击量、SellerSprite 月销量/留评率/Keepa 风格趋势。主运行入口推荐先看 `source/current/jiimore1.py` 和 `source/current/sellersprite.py`；有些早期脚本仍是历史实验，不保证每个入口都能独立工作。运行前安装 `requests pandas beautifulsoup4 DrissionPage openpyxl` 等所需依赖，配置 `JIIMORE_PHONE` / `JIIMORE_PASSWORD` / `SELLERSPRITE_COOKIE` 在本机环境变量，不要写到源码或提交 Git。
+代码位于 `source/current`、`source/legacy`、`source/supplement`，包括 Amazon 商品详情、Jiimore 品类 ASIN 与周点击量、SellerSprite 月销量/留评率/Keepa 风格趋势。主运行入口推荐先看 `source/current/jiimore1.py` 和 `source/current/sellersprite.py`；有些早期脚本仍是历史实验，不保证每个入口都能独立工作。各脚本依赖并不完全相同：主脚本主要涉及 `requests pandas beautifulsoup4 DrissionPage openpyxl`，部分旧脚本还依赖 `selenium`、`chromedriver_autoinstaller` 和 `ddddocr`。仓库目前没有经过全量验证的统一电商 `requirements.txt`，应在独立虚拟环境按实际脚本导入项安装依赖，不要假定所有旧版本可以直接运行。使用前配置 `JIIMORE_PHONE` / `JIIMORE_PASSWORD` / `SELLERSPRITE_COOKIE` 在本机环境变量，不要写到源码或提交 Git。
 
 ## 数据关联
 - `data/amazon/products.csv`：2,006 行，其中 1,999 个有效唯一 ASIN；商品标题、价格、评分等。

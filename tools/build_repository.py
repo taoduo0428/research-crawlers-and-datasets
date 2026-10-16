@@ -59,6 +59,11 @@ def write(rel: str, text: str):
     dst.write_text(text.rstrip() + "\n", encoding="utf-8")
     return dst
 
+def write_if_missing(rel: str, text: str):
+    """Never overwrite audited project handbooks on a data rebuild."""
+    path = OUT / rel
+    return path if path.exists() else write(rel, text)
+
 def scrub_text(value: str) -> str:
     text = EMAIL.sub("[EMAIL_REDACTED]", str(value))
     text = DATA_PHONE.sub("[PHONE_REDACTED]", text)
@@ -242,74 +247,10 @@ def anonymize_keep(value, key="", depth=0):
     return value
 
 def export_keep():
-    root=OUT/"projects/social/keep"
-    phase1=root/"data/phase1_anonymized"
-    counts=collections.Counter()
-    for group,folder in [("profiles",KEEP/"用户数据"),("activities",KEEP/"动态爬取/chenggong1")]:
-        for i,src in enumerate(sorted(folder.glob("*.json")),1):
-            try:obj=json.loads(src.read_text(encoding="utf-8-sig",errors="replace"))
-            except Exception:
-                EXCLUDED["keep_unreadable"]+=1
-                continue
-            parsed=anonymize_keep(obj)
-            dest=phase1/group/("%04d.json"%i)
-            dest.parent.mkdir(parents=True,exist_ok=True)
-            dest.write_text(json.dumps(parsed,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
-            TRACKED.append({"path":dest.relative_to(OUT).as_posix(),
-              "origin":src.relative_to(DESKTOP).as_posix(),"source_sha256":digest(src),
-              "sha256":digest(dest),"bytes":dest.stat().st_size,"records":None,
-              "privacy_processing":"IDs pseudonymized; usernames, text, media URLs and private data removed",
-              "dataset":"keep-stage1-sanitized"})
-            counts[group]+=1
-    # The derived tables keep source relations, but not sensitive identifiers or free-form comments.
-    posts={};profiles={};comments=[]
-    for fp in (phase1/"profiles").glob("*.json"):
-        try:o=json.loads(fp.read_text(encoding="utf-8"))
-        except:continue
-        x=(((o.get("data") or {}).get("headInfo") or {}).get("userBasicInfo") or {})
-        if not isinstance(x,dict):continue
-        pid=x.get("id")
-        if pid:profiles[pid]={"profile_id":pid,"gender":x.get("gender"),
-           "keep_value":x.get("keepValue"),"kg_level":x.get("kgLevel"),
-           "member_status":x.get("memberStatus")}
-    for fp in (phase1/"activities").glob("*.json"):
-        try:o=json.loads(fp.read_text(encoding="utf-8"))
-        except:continue
-        for sec in o.get("data",[]) or []:
-            info=sec.get("info") if isinstance(sec,dict) else {}
-            entries=info.get("entries") if isinstance(info,dict) else []
-            if not isinstance(entries,list):continue
-            for e in entries:
-                if not isinstance(e,dict):continue
-                pid=e.get("id");au=e.get("author") or {}
-                author=au.get("_id") if isinstance(au,dict) else None
-                if pid:
-                    posts[pid]={"post_id":pid,"author_id":author,
-                      "type":str(e.get("type") or "")[:35],
-                      "state":str(e.get("state") or "")[:35],
-                      "internal_share_count":e.get("internalShareCount")}
-                cs=e.get("sampleComments")
-                if isinstance(cs,list):
-                    for j,comment in enumerate(cs):
-                        if isinstance(comment,dict):
-                            cid=comment.get("id") or stable_private_id(str(pid)+":"+str(j))
-                            comments.append({"comment_id":cid,"post_id":pid,"sample_comment_index":j})
-    def table(rel,fields,rows,dataset):
-        dest=OUT/rel;dest.parent.mkdir(parents=True,exist_ok=True)
-        with dest.open("w",encoding="utf-8",newline="") as f:
-            wr=csv.DictWriter(f,fieldnames=fields,lineterminator="\n")
-            wr.writeheader()
-            for row in rows:wr.writerow({k:row.get(k) for k in fields})
-        TRACKED.append({"path":rel,"origin":"Derived from local Keep phase-1 JSON","source_sha256":None,
-          "sha256":digest(dest),"bytes":dest.stat().st_size,"records":len(rows),
-          "privacy_processing":"pseudonymized research features only","dataset":dataset})
-    table("projects/social/keep/data/phase2/profiles.csv",["profile_id","gender","keep_value","kg_level","member_status"],
-          list(profiles.values()),"keep-profiles")
-    table("projects/social/keep/data/phase2/posts.csv",["post_id","author_id","type","state","internal_share_count"],
-          list(posts.values()),"keep-posts")
-    table("projects/social/keep/data/phase2/comments.csv",["comment_id","post_id","sample_comment_index"],
-          comments,"keep-comment-index")
-    return {"phase1_files":dict(counts),"profiles":len(profiles),"posts":len(posts),"sample_comments":len(comments)}
+    """The maintained tools/keep_release.py is the only Keep publication logic."""
+    from keep_release import publish
+    return publish(KEEP, OUT, TRACKED, digest, stable_private_id)
+
 
 def export_facebook():
     folder=FACEBOOK/"runs"
@@ -544,11 +485,11 @@ Windows 先读 `source/WINDOWS_DEPLOYMENT.md`；Mac 先读 `source/macos/QUICKST
 
 ## 第一阶段：抓包 / 收集 JSON 响应
 原目录 `用户数据/` 101 个 JSON 与 `动态爬取/chenggong1/` 105 个 JSON，来自抓包/历史人工采集产物。这里**没有证据确认存在一个可直接一键运行的第一阶段抓包程序**，也不会虚构；项目还保留指向历史“八爪鱼采集器”的快捷方式，但非可移植的安装包。
-`data/phase1_anonymized/profiles/` 与 `activities/` 上传的是**同结构、已脱敏的响应副本**。真实用户名、个人简介、内容、评论正文、媒体地址、原始 ID、Cookie 和位置信息没有上传；本机原始 JSON 完整保留。
+`data/phase1_anonymized/profiles/` 与 `activities/` 上传的是**仅保留研究必要字段的最小化匿名 JSON 摘要**。真实用户名、个人简介、内容、评论正文、媒体地址、原始 ID、Cookie 和位置信息没有上传；本机原始 JSON 完整保留。
 
 ## 第二阶段：结构化整理 / 输出
 `source/phase2/` 是历史 JSON 转 CSV 脚本（原来硬编码旧 Windows 路径、混合评论行且存在缺失值问题）。
-`data/phase2/profiles.csv`：按用户 ID 清洗资料；`posts.csv`：按动态 ID 清洗动态；`comments.csv`：按动态关联的示例评论索引。三张表共享第一阶段假名 ID。可以用 `python ../../../../tools/normalize_keep.py --help` 查看新转换脚本；不允许直接将原始敏感 JSON 提交至仓库。
+`data/phase2/profiles.csv`：按用户 ID 清洗资料；`posts.csv`：按动态 ID 清洗动态；`comments.csv`：按动态关联的示例评论索引。三张表共享第一阶段假名 ID。可以用 `python ../../../tools/normalize_keep.py --help` 查看新转换脚本；不允许直接将原始敏感 JSON 提交至仓库。
 
 ## 数据解释
 原始动态共 1,146 条、1,050 个非重复动态 ID，评论示例合计 1,692 条；历史 CSV 2,838 行不等于 2,838 条动态。
@@ -581,8 +522,12 @@ Windows 先读 `source/WINDOWS_DEPLOYMENT.md`；Mac 先读 `source/macos/QUICKST
 所有发现的硬编码旧手机号/密码/Cookie 在发布副本中需替换为环境读取，原始文件留在本机；建议立即轮换此前使用过的有效凭据。原 ZIP/HTML 可能含认证会话，未上传。
 """
     }
-    for path,body in READMES.items():write(path,body)
-    write("README.md",f"""
+    for path,body in READMES.items():
+        # Project handbooks are curated independently after first publication.
+        # Do not overwrite their audited corrections on a data rebuild.
+        if not (OUT/path).exists():
+            write(path,body)
+    write_if_missing("README.md",f"""
 # 课题组爬虫源码与数据总仓库
 
 本仓库按原有课题分组整理指定的 **12 个研究目标**：外包 4 站、招聘 3 站、B站、Facebook、Keep、豆瓣、亚马逊+Jiimore 整合项目。项目源文件来源于本机，原目录只读；**仓库应一直保持 Private**。
@@ -618,7 +563,7 @@ python tools/verify_release.py
 - 请先执行离线验证或单元测试，不要直接用默认配置对网站发起大规模请求。
 - 新增采集的本地私密原件必须先完成敏感信息审查再进入仓库。不要提交 .env、真实 Cookie、浏览器 Profile、APK、HAR/PCAP/MITM、认证密钥或尚未获授权的身份数据。
 """)
-    write("docs/SECURITY_AND_LIMITATIONS.md",f"""
+    write_if_missing("docs/SECURITY_AND_LIMITATIONS.md",f"""
 # 发布边界与局限（UTC {DATE}）
 
 ## 仓库访问
@@ -627,7 +572,7 @@ python tools/verify_release.py
 ## 已故意排除
 - 每个项目的 .git、.env、Cookie、密钥、证书、browser Profile、各种本机日志、临时构建、虚拟环境与历史系统缓存；
 - Facebook `runs` 原始 JSONL/完整 MITM HTTP Flow、Android 登录会话、证书、APK、Frida 二进制、完整用户个人信息；
-- Keep 原始用户/动态 JSON、昵称、头像、位置、动态/评论正文，发布同结构的脱敏 JSON 和匿名三表；
+- Keep 原始用户/动态 JSON、昵称、头像、位置、动态/评论正文，发布字段最小化的匿名 JSON 和匿名三表；
 - Amazon 原始 ZIP/HTML 页面存档、网页抓取时产生的登录 Cookie；
 - 任何在源码静态扫描中被识别为仍可能含长字符串凭据的文件；详见 `metadata/build-summary.json` 的排除计数。
 
@@ -647,7 +592,7 @@ python tools/verify_release.py
 ## 未声称
 不声称在 {DATE[:10]} 重新访问或采集任何外部网站；不声称旧脚本全部适配当前网页/API；不声称历史数据许可允许公开分发。
 """)
-    write("docs/DATA_GUIDE.md","""
+    write_if_missing("docs/DATA_GUIDE.md","""
 # 数据目录与字典使用方法
 
 请先访问各项目 README，再根据 `metadata/data-manifest.json` 的文件级 SHA-256、原始路径与脱敏说明核对数据。
@@ -665,7 +610,7 @@ python tools/verify_release.py
 
 大数据存储：`.gitattributes` 对数据表使用 Git LFS；按 `git lfs pull` 下载实际文件。验证 `python tools/verify_release.py` 将检测 hash（LFS 尚未拉取时需先 pull）。
 """)
-    write("docs/RESEARCH_WORKFLOW.md","""
+    write_if_missing("docs/RESEARCH_WORKFLOW.md","""
 # 课题组使用流程
 
 1. 项目负责人将成员按最小权限加入 Private 仓库；不得复制他人的浏览器登录状态。
@@ -676,86 +621,8 @@ python tools/verify_release.py
 6. 分享研究成果时只提交脱敏数据、新生成的统计脚本、README 更新以及 `metadata` 校验；用户身份/原始抓包继续由获批研究者在本机保管。
 7. 加入/更新大型数据：`git lfs track "projects/**/*.csv"`（仓库已配置）、`git add`、`git commit`、`git push`。源文件哈希清单应同时更新。
 """)
-    write("tools/normalize_keep.py","""
-#!/usr/bin/env python3
-# These commands only use already anonymized first-phase JSON and do not contact Keep.
-import argparse
-import json
-import csv
-from pathlib import Path
-
-def collect(src: Path, output: Path):
-    for stage in ("profiles", "activities"):
-        source=src / stage
-        if not source.exists():
-            raise SystemExit(f"Missing first-phase {stage}: {source}")
-    profiles={};posts={};comments=[]
-    for file in (src/"profiles").glob("*.json"):
-        o=json.loads(file.read_text(encoding="utf-8"))
-        info=(((o.get("data") or {}).get("headInfo") or {}).get("userBasicInfo") or {})
-        if not isinstance(info,dict):continue
-        uid=info.get("id")
-        if uid:profiles[uid]={"profile_id":uid,"gender":info.get("gender"),"keep_value":info.get("keepValue"),"kg_level":info.get("kgLevel"),"member_status":info.get("memberStatus")}
-    for file in (src/"activities").glob("*.json"):
-        o=json.loads(file.read_text(encoding="utf-8"))
-        for group in o.get("data",[]):
-            info=group.get("info") if isinstance(group,dict) else {}
-            for entry in ((info.get("entries") if isinstance(info,dict) else []) or []):
-                if not isinstance(entry,dict):continue
-                pid=entry.get("id")
-                if not pid:continue
-                author=(entry.get("author") or {})
-                posts[pid]={"post_id":pid,"author_id":author.get("_id") if isinstance(author,dict) else None,
-                            "type":entry.get("type"),"state":entry.get("state"),
-                            "internal_share_count":entry.get("internalShareCount")}
-                for i,comment in enumerate(entry.get("sampleComments") or []):
-                    if isinstance(comment,dict):
-                        comments.append({"comment_id":comment.get("id") or pid+":"+str(i),
-                        "post_id":pid,"sample_comment_index":i})
-    def save(name,fields,records):
-        target=output/name
-        target.parent.mkdir(parents=True,exist_ok=True)
-        with target.open("w",encoding="utf-8",newline="") as f:
-            w=csv.DictWriter(f,fieldnames=fields)
-            w.writeheader();w.writerows(records)
-    save("profiles.csv",["profile_id","gender","keep_value","kg_level","member_status"],list(profiles.values()))
-    save("posts.csv",["post_id","author_id","type","state","internal_share_count"],list(posts.values()))
-    save("comments.csv",["comment_id","post_id","sample_comment_index"],comments)
-    print(f"profiles={len(profiles)} posts={len(posts)} comments={len(comments)}")
-
-if __name__=="__main__":
-    ap=argparse.ArgumentParser(description="Normalize already-anonymized Keep capture responses")
-    ap.add_argument("--input",type=Path,default=Path(__file__).resolve().parents[1]/"projects/social/keep/data/phase1_anonymized")
-    ap.add_argument("--output",type=Path,default=Path(__file__).resolve().parents[1]/"projects/social/keep/data/phase2")
-    args=ap.parse_args()
-    collect(args.input,args.output)
-""")
-    write("tools/verify_release.py","""
-#!/usr/bin/env python3
-import argparse
-import hashlib
-import json
-from pathlib import Path
-
-base=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser()
-p.add_argument("--manifest-only",action="store_true",help="Check paths without opening Git LFS large objects")
-args=p.parse_args()
-data=json.loads((base/"metadata/data-manifest.json").read_text(encoding="utf-8"))
-missing=[];bad=[];ok=0
-for entry in data["files"]:
-    f=base/entry["path"]
-    if not f.is_file():missing.append(entry["path"]);continue
-    if not args.manifest_only:
-        h=hashlib.sha256()
-        with f.open("rb") as inp:
-            for part in iter(lambda:inp.read(1024*1024),b""):h.update(part)
-        if h.hexdigest()!=entry["sha256"]:bad.append(entry["path"]);continue
-    ok+=1
-print(f"verified={ok} missing={len(missing)} mismatched={len(bad)}")
-for x in (missing+bad)[:15]:print("MISMATCH:",x)
-raise SystemExit(0 if not missing and not bad else 1)
-""")
+    # normalize_keep.py is version-controlled; never regenerate over it.
+    # verify_release.py is maintained separately; do not overwrite it.
     write(".gitattributes","""
 # Git LFS: all research tables and binary research sheets.
 projects/**/*.csv filter=lfs diff=lfs merge=lfs -text

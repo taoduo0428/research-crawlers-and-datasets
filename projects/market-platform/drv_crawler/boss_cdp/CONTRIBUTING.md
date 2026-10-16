@@ -8,7 +8,7 @@
 
 ## 在贡献之前
 
-- **先开 Issue 再写代码**：修 Bug 或加新功能前，请先在 [Issues](../../issues) 里搜索是否已有人提过；没有的话新开一个，简要说明你打算做什么，避免和别人重复劳动或方向跑偏。
+- **先开 Issue 再写代码**：修 Bug 或加新功能前，请先在 [总仓库 Issues](https://github.com/taoduo0428/research-crawlers-and-datasets/issues) 里搜索是否已有人提过；没有的话新开一个，简要说明你打算做什么，避免和别人重复劳动或方向跑偏。
 - **一个 PR 只做一件事**：混合多个改动的 PR 很难 review，请拆开。
 
 ## 开发环境
@@ -70,7 +70,7 @@ chore: 杂项         例: chore: 升级依赖
 
 ## 有问题？
 
-- Bug / 功能建议 → [Issues](../../issues)
+- Bug / 功能建议 → [总仓库 Issues](https://github.com/taoduo0428/research-crawlers-and-datasets/issues)
 - 不确定怎么改 → 先开 Issue 讨论
 
 再次感谢你的贡献！
