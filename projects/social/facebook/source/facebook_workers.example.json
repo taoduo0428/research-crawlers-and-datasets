@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "workers": [
+    {
+      "worker_id": "worker-01",
+      "serial": "emulator-5554",
+      "avd_name": "fb-x86_64-api35",
+      "capture_port": 18081,
+      "native_port": 18766,
+      "enabled": true,
+      "cooldown_seconds": 900,
+      "frida_ssl_unpin": true
+    }
+  ]
+}

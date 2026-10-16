@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.openai.facebookuidump" android:versionCode="5" android:versionName="5.0">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:label="Facebook UI Dump Helper" android:debuggable="true" android:allowBackup="false" />
+    <instrumentation
+        android:name=".DumpInstrumentation"
+        android:targetPackage="com.openai.facebookuidump"
+        android:functionalTest="true"
+        android:handleProfiling="false" />
+</manifest>

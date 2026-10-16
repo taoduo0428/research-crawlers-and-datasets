@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "workers": [
+    {
+      "worker_id": "worker-01",
+      "serial": "emulator-5554",
+      "avd_name": "fb-macos-api35-worker-01",
+      "capture_port": 18081,
+      "native_port": 18766,
+      "enabled": true
+    },
+    {
+      "worker_id": "worker-02",
+      "serial": "emulator-5556",
+      "avd_name": "fb-macos-api35-worker-02",
+      "capture_port": 18082,
+      "native_port": 18767,
+      "enabled": true
+    },
+    {
+      "worker_id": "worker-03",
+      "serial": "emulator-5558",
+      "avd_name": "fb-macos-api35-worker-03",
+      "capture_port": 18083,
+      "native_port": 18768,
+      "enabled": false
+    }
+  ]
+}

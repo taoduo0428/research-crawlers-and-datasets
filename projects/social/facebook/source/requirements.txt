@@ -1,0 +1,5 @@
+# Python 3.12 recommended. Device frida-server must match the host frida version.
+mitmproxy==12.2.3
+frida==17.17.0
+frida-tools==14.10.4
+requests==2.32.5

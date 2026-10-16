@@ -1,0 +1,245 @@
+crawler:
+  mode: standard
+  obey_robots_txt: true
+  logging:
+    level: INFO
+    file: logs/crawler.log
+  proxy:
+    mode: "auto"
+    url_env: CRAWLER_PROXY_URL
+    default_url: "http://127.0.0.1:7897"
+    probe_timeout_seconds: 1.5
+    fail_open_in_auto_mode: true
+    sticky_session: true
+  headers:
+    mode: browser_consistent
+    accept_language: zh-CN,zh;q=0.9,en;q=0.8
+    user_agent_env: CRAWLER_USER_AGENT
+    copy_user_agent_from_playwright: true
+    let_playwright_generate_client_hints: true
+  cookies:
+    storage_state: .crawler-state/storage-state.json
+    bootstrap: playwright
+    refresh_on_status: [401, 403]
+    max_refreshes_per_run: 2
+    save_atomically: true
+  anti_bot:
+    block_status_codes: [401, 403, 407, 418, 429]
+    honor_retry_after: true
+    exponential_backoff: true
+    jitter: true
+    lower_concurrency_on_block: true
+  export:
+    uri: outputs/items.jsonl
+    directory: outputs
+    format: jsonlines
+    encoding: utf-8
+  checkpoint:
+    enabled: true
+    jobdir: .jobs/default
+  concurrency:
+    concurrent_requests: 1
+    concurrent_requests_per_domain: 1
+  throttling:
+    autothrottle_enabled: true
+    autothrottle_start_delay: 1.0
+    autothrottle_max_delay: 30.0
+    autothrottle_target_concurrency: 2.0
+    download_delay: 2.5
+    randomize_download_delay: true
+  retry:
+    enabled: true
+    retry_times: 2
+    retry_http_codes: [408, 429, 500, 502, 503, 504, 522, 524]
+    max_retry_after_seconds: 30
+  timeout:
+    connect_timeout_seconds: 8
+    read_timeout_seconds: 45
+    download_timeout_seconds: 30
+  playwright:
+    enabled: true
+    browser_type: chromium
+    browser_channel: msedge
+    max_contexts: 1
+    max_pages_per_context: 2
+    navigation_timeout_ms: 30000
+    capture_finish_wait_seconds: 1.0
+  limits:
+    max_items_per_site: 50
+    max_pages_per_site: 10
+    max_detail_requests_per_site: 10
+    max_publication_records_per_site: 10000
+    max_publication_detail_requests_per_site: 5000
+    max_response_bytes: 6000000
+    max_captured_responses: 40
+  sites:
+    epwk:
+      enabled: true
+      http_transport: curl_cffi
+      curl_impersonate: chrome
+      download_delay: 0.5
+      storage_state: .crawler-state/epwk-storage-state.json
+      start_url: "https://task.epwk.com/?o=7"
+      page_url_template: "https://task.epwk.com/page{page}.html?o=7"
+      publication_sorted_desc: false
+      publication_max_pages: 400
+      publication_max_detail_requests: 5000
+      publication_unknown_cutoff_pages: 50
+      publication_sitemap:
+        primary_source: true
+        validation_sample_size: 10
+        checkpoint_interval: 50
+        candidate_lookback_days: 30
+        boundary_only: false
+        max_response_bytes: 5000000
+        max_entries_per_file: 30000
+        urls:
+          - https://task.epwk.com/sitemap/3.xml
+          - https://task.epwk.com/sitemap/4.xml
+          - https://task.epwk.com/sitemap/5.xml
+          - https://task.epwk.com/sitemap/6.xml
+          - https://task.epwk.com/sitemap/7.xml
+          - https://task.epwk.com/sitemap/8.xml
+          - https://task.epwk.com/sitemap/9.xml
+          - https://task.epwk.com/sitemap/10.xml
+          - https://task.epwk.com/sitemap/11.xml
+          - https://task.epwk.com/sitemap/12.xml
+          - https://task.epwk.com/sitemap/2.xml
+          - https://task.epwk.com/sitemap/1.xml
+        max_files: 12
+      max_response_bytes: 5000000
+      max_entries_per_file: 30000
+      quality:
+        main_trade_modes: ["招标", "雇佣"]
+        secondary_trade_modes: ["单人悬赏"]
+        excluded_trade_modes: ["直接雇佣", "多人悬赏", "计件"]
+        completed_status: "圆满完成"
+        description_min_length: 80
+        description_gray_min_length: 40
+        high_information_length: 150
+      detail_sample_limit: 5
+    zbj:
+      enabled: true
+      auth_url: https://www.zbj.com/fw/
+      storage_state: .crawler-state/zbj-storage-state.json
+      detail_sample_limit: 5
+      sources:
+        - kind: services
+          start_url: https://www.zbj.com/fw/
+          max_pages: 1
+        - kind: demands
+          start_url: https://www.zbj.com/xq/rjkf/r4/
+          page_url_template: https://www.zbj.com/xq/rjkf/r4p{page}/
+          publication_sorted_desc: true
+          publication_max_pages: 400
+        - kind: demands
+          start_url: https://www.zbj.com/xq/haibaosj/r4/
+          page_url_template: https://www.zbj.com/xq/haibaosj/r4p{page}/
+          publication_sorted_desc: true
+          publication_max_pages: 400
+        - kind: demands
+          start_url: https://www.zbj.com/xq/dzlogo/r4/
+          page_url_template: https://www.zbj.com/xq/dzlogo/r4p{page}/
+          publication_sorted_desc: true
+          publication_max_pages: 400
+        - kind: demands
+          start_url: https://www.zbj.com/xq/appkaifaaa/r4/
+          page_url_template: https://www.zbj.com/xq/appkaifaaa/r4p{page}/
+          publication_sorted_desc: true
+          publication_max_pages: 400
+        - kind: demands
+          start_url: https://www.zbj.com/xq/xcxkfzbjzbj/r4/
+          page_url_template: https://www.zbj.com/xq/xcxkfzbjzbj/r4p{page}/
+          publication_sorted_desc: true
+          publication_max_pages: 400
+        - kind: demands
+          start_url: https://www.zbj.com/xq/website/r4/
+          page_url_template: https://www.zbj.com/xq/website/r4p{page}/
+          publication_sorted_desc: true
+          publication_max_pages: 400
+    shixian:
+      enabled: true
+      detail_sample_limit: 10
+      streams:
+        - kind: full_time
+          page_url_template: https://shixian.com/job/all?page={page}&pay_type=daily_wage_mode&sort_arrow=down
+          publication_sorted_desc: true
+          publication_max_pages: 400
+        - kind: part_time
+          page_url_template: https://shixian.com/job/all?page={page}&pay_type=project_mode&sort_arrow=down
+          publication_sorted_desc: true
+          publication_max_pages: 400
+    proginn:
+      enabled: true
+      category_urls:
+        - https://www.proginn.com/cat/python
+        - https://www.proginn.com/cat/java
+      detail_sample_limit: 10
+    boss:
+      enabled: true
+      start_url: https://www.zhipin.com/web/geek/jobs
+      anonymous_only: false
+      anonymous_live_enabled: true
+      auth_url: https://www.zhipin.com/web/user/?ka=header-login&from=www
+      auth_mode: external_edge_cdp
+      auth_debug_port: 9333
+      auth_profile_dir: .crawler-state/boss-manual-edge-profile
+      storage_state: .crawler-state/boss-storage-state.json
+      max_scrolls: 4
+      archive_fallback:
+        enabled: false
+  recruitment:
+    output_directory: outputs
+    state_directory: .crawler-state/recruitment
+    per_category: 2
+    auto_resume_full_probe: true
+    full_probe_max_cycles: 8
+    full_probe_max_runtime_seconds: 86400
+    sites:
+      boss:
+        enabled: true
+        city: 全国
+        pages_per_category: 1
+        cdp_port: 9224
+        cdp_profile_dir: .crawler-state/boss-third-account-profile
+        auto_start_cdp: true
+        category_interval_seconds: 6.0
+        category_jitter_seconds: 4.0
+        page_delay_min_seconds: 3.0
+        page_delay_max_seconds: 5.0
+        batch_size: 25
+        batch_cooldown_seconds: 120.0
+        max_consecutive_errors: 2
+        block_cooldown_seconds: 3600.0
+        run_timeout_seconds: 21600
+        numeric_price_only: true
+      job51:
+        enabled: true
+        city_code: "000000"
+        pages_per_category: 2
+        numeric_salary_only: false
+        browser_channel: msedge
+        headless: false
+        proxy_policy: auto
+        request_retries: 2
+        max_category_attempts: 4
+        timeout_ms: 45000
+        delay_min_seconds: 0.8
+        delay_max_seconds: 1.8
+        batch_size: 50
+        batch_cooldown_seconds: 20.0
+        soft_block_cooldown_seconds: 1800.0
+      liepin:
+        enabled: true
+        home_url: https://www.liepin.com/
+        pages_per_category: 20
+        numeric_salary_only: false
+        min_taxonomy_categories: 500
+        proxy_policy: auto
+        request_retries: 2
+        max_category_attempts: 3
+        max_consecutive_failures: 5
+        connect_timeout_seconds: 5
+        read_timeout_seconds: 20
+        delay_min_seconds: 0.8
+        delay_max_seconds: 1.8

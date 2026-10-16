@@ -1,0 +1,34 @@
+{
+  "created_at_utc": "2026-10-16T16:26:40+00:00",
+  "source_files_copied": 407,
+  "data_files_prepared": 250,
+  "data_bytes_total": 370655507,
+  "exclusions_count_by_reason": {
+    "source_missing": 1,
+    "source_sensitive_blocked": 2,
+    "corrupt_original_all_zero_files": 5
+  },
+  "keep": {
+    "phase1_files": {
+      "profiles": 101,
+      "activities": 105
+    },
+    "profiles": 100,
+    "posts": 1050,
+    "sample_comments": 1692
+  },
+  "facebook": {
+    "reactions": 2245,
+    "shares": 16
+  },
+  "boss_recovered_ids": 40747,
+  "publication_policy": "private, redacted research use only",
+  "original_files_unchanged": true,
+  "publication_fixes": {
+    "converted_utf16_course_scripts": 5,
+    "sanitized_keep_numeric_fields": 0,
+    "changed_keep_json_files": 6,
+    "removed_all_zero_course_sources": 5,
+    "pseudonyms_use_base32_without_phone_like_digits": true
+  }
+}

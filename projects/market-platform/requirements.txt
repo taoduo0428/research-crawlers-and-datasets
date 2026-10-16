@@ -1,0 +1,9 @@
+requests[socks]>=2.32,<3
+curl-cffi>=0.13,<1
+certifi>=2024.2.2
+beautifulsoup4>=4.12,<5
+playwright>=1.40,<2
+PyYAML>=6,<7
+openpyxl>=3.1,<4
+websocket-client>=1.8,<2
+psutil>=7,<8

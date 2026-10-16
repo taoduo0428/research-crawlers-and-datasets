@@ -1,0 +1,60 @@
+name: Source and local contracts
+on: [push, pull_request]
+jobs:
+  contracts:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m venv .venv
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m pip install -r requirements.txt
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m pip install -r requirements.txt
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m pip check
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m pip check
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m unittest tests.test_layout tests.test_facebook_release_gate tests.test_facebook_local tests.test_facebook_network tests.test_facebook_android_capture tests.test_facebook_mac_device tests.test_facebook_macos tests.test_facebook_capture_orchestrator tests.test_facebook_capture_api tests.test_facebook_worker_bootstrap tests.test_facebook_setup tests.test_facebook_warm_start
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m unittest tests.test_layout tests.test_facebook_release_gate tests.test_facebook_local tests.test_facebook_network tests.test_facebook_android_capture tests.test_facebook_mac_device tests.test_facebook_macos tests.test_facebook_capture_orchestrator tests.test_facebook_capture_api tests.test_facebook_worker_bootstrap tests.test_facebook_setup tests.test_facebook_warm_start
+      - run: node --check web/app.js
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m unittest tests.test_facebook_http_security tests.test_frontend_security tests.test_maintenance_gate
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m unittest tests.test_facebook_http_security tests.test_frontend_security tests.test_maintenance_gate
+      - run: node --check examples/capture_fetch.mjs
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m unittest tests.test_facebook_target_readiness tests.test_api_examples
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m unittest tests.test_facebook_target_readiness tests.test_api_examples
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m unittest tests.test_facebook_api_client tests.test_facebook_visible_emulator tests.test_facebook_transport_health tests.test_facebook_navigation_latency tests.test_facebook_navigation_guards tests.test_facebook_capture_file_sharing tests.test_facebook_shutdown_safety tests.test_facebook_unpin_reuse tests.test_facebook_cancel_transport
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m unittest tests.test_facebook_api_client tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_posix_termination_signals_session_process_group tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_macos_cleanup_requires_runner_finally_status tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_macos_cleanup_does_not_accept_older_attempt_status tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_no_windows_runner_keeps_cleanup_safe_without_adb_probe
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m unittest tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_terminate_tree_poll_oserror_keeps_stop_unverified tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_terminate_known_pid_permission_error_keeps_stop_unverified tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_terminate_known_pid_process_lookup_error_is_confirmed_stopped tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_macos_cleanup_rejects_incomplete_runner_status_schema tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_macos_cleanup_rejects_null_or_non_list_cleanup_errors tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_cleanup_none_result_is_persisted_as_blocked_failure tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_cleanup_success_state_with_error_is_not_accepted tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_linux_not_required_cleanup_releases_pending_lease tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_failed_job_unverified_process_does_not_retry_cleanup tests.test_facebook_cancel_transport.CancelTransportCleanupTests.test_failed_job_without_pending_cleanup_remains_noop
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m unittest tests.test_analyze_facebook_capture tests.test_facebook_batch_pressure tests.test_facebook_batch_summary tests.test_facebook_live_progress tests.test_facebook_post_queue tests.test_facebook_raw_capture tests.test_reaction_rate_limit_progress tests.test_resolve_facebook_share_url tests.test_facebook_release_report
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m unittest tests.test_analyze_facebook_capture tests.test_facebook_batch_pressure tests.test_facebook_batch_summary tests.test_facebook_live_progress tests.test_facebook_post_queue tests.test_facebook_raw_capture tests.test_reaction_rate_limit_progress tests.test_resolve_facebook_share_url tests.test_facebook_release_report
+      # Run current UI/startup contracts via the packaged tests entrypoints.
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe -m unittest tests.test_ui_v2_and_safety.WebV2IntegrationTests tests.test_ui_v2_and_safety.WebV2BatchSelectionTests tests.test_ui_v2_and_safety.WindowsOneClickRuntimeContractTests
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python -m unittest tests.test_ui_v2_and_safety.WebV2IntegrationTests tests.test_ui_v2_and_safety.WebV2BatchSelectionTests tests.test_ui_v2_and_safety.WindowsOneClickRuntimeContractTests
+      - run: node --check web_v2/app.js
+      - if: runner.os == 'Windows'
+        run: .venv/Scripts/python.exe tools/export_source.py
+      - if: runner.os == 'macOS'
+        run: .venv/bin/python tools/export_source.py

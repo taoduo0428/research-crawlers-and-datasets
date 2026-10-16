@@ -1,0 +1,7 @@
+{
+  "facebook_apks": [],
+  "frida_server": "",
+  "download_frida": true,
+  "install_sdk_packages": true,
+  "configure_app_links": true
+}

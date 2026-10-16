@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniCapture Console v2 · 多链接串行采集矩阵</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="theme-dark">
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="brand-badge">
+        <span class="brand-icon"></span>
+        <div class="brand-text">
+          <div class="brand-title">OmniCapture <span class="version-tag">v2 Swarm</span></div>
+          <div class="brand-subtitle">Multi-Link Isolation · Android 15 · MITM · GraphQL</div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-center">
+      <div class="swarm-indicator">
+        <span class="swarm-pulse"></span>
+        <span class="swarm-text" id="swarmStatusText">多任务隔离调度引擎· 就绪</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="system-pills">
+        <div class="sys-pill" id="backendPill">
+          <span class="dot" id="backendDot"></span>
+          <span id="backendText">API :8765</span>
+        </div>
+        <div class="sys-pill" id="devicePill">
+          <span class="dot" id="deviceDot"></span>
+          <span id="deviceText">模拟器检测中</span>
+        </div>
+        <button class="btn-icon" id="themeToggle" title="切换暗色/亮色模式" type="button">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-grid">
+    <!-- 01: Multi-URL Submission & Control Deck -->
+    <section class="panel control-deck" aria-labelledby="captureHeading">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <span class="section-badge">01 / BATCH INGEST</span>
+          <h2 id="captureHeading">多链接批量配置与提交</h2>
+        </div>
+        <div class="deck-controls">
+          <button class="btn btn-ghost btn-sm" id="btnLoadSamples" type="button">
+            📋 载入示例格式
+          </button>
+          <button class="btn btn-ghost btn-sm" id="btnClearUrls" type="button">
+            清空
+          </button>
+          <span class="badge badge-idle" id="globalBatchBadge">就绪</span>
+        </div>
+      </div>
+
+      <form id="batchForm" class="batch-form">
+        <div class="input-container">
+          <div class="textarea-wrapper">
+            <div class="textarea-header">
+              <label for="postUrlsInput">Facebook 帖子链接（支持每行一条，多链接排队采集）</label>
+              <span class="url-counter" id="urlCounter">0 条有效链接</span>
+            </div>
+            <textarea
+              id="postUrlsInput"
+              name="postUrls"
+              rows="4"
+              placeholder="https://www.facebook.com/61563119350848/posts/122106880826437311&#10;https://www.facebook.com/.../posts/...&#10;支持多链接批量输入。任务按单 active Worker 串行执行，使用独立任务目录并严格校验目标帖子。备用 Worker 仅用于故障接管。"
+              required
+            ></textarea>
+          </div>
+          <div class="action-column">
+            <button class="btn btn-primary btn-launch" id="btnStartBatch" type="submit">
+              <span class="btn-icon-inner">🚀</span>
+              <span>开始批量爬取</span>
+            </button>
+            <button class="btn btn-danger btn-stop" id="btnStopBatch" type="button" disabled>
+              <span class="btn-icon-inner">🛑</span>
+              <span>终止批次</span>
+            </button>
+            <div class="concurrency-note">
+              <span class="shield-icon">🛡</span>
+              <span>任务沙箱隔离 · 目标帖子校验</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="options-bar">
+          <span class="options-label">采集对象</span>
+          <label class="checkbox-pill" for="collectReactions">
+            <input id="collectReactions" name="collectTarget" type="radio" value="reactions" checked>
+            <span>点赞用户</span>
+          </label>
+          <label class="checkbox-pill" for="collectShares">
+            <input id="collectShares" name="collectTarget" type="radio" value="shares">
+            <span>分享(转发)用户</span>
+          </label>
+          <label class="checkbox-pill" for="collectCombined">
+            <input id="collectCombined" name="collectTarget" type="radio" value="combined">
+            <span>先点赞后分享</span>
+          </label>
+          <span class="text-muted">每批选择一种模式；同一链接可采点赞、分享或依次采集两者。分享仅限当前账号可见名单，暂仅支持 Windows。</span>
+          <span class="options-label">采集模式</span>
+          <label class="checkbox-pill" for="reactionFirstPageTest">
+            <input id="reactionFirstPageTest" name="reactionFirstPageTest" type="checkbox">
+            <span>点赞只抓第一页（测试模式）</span>
+          </label>
+          <span class="text-muted">关闭时按默认全量分页；仅分享模式不使用此选项，组合模式下只限制点赞阶段</span>
+          <span class="options-label">产物保留规则</span>
+          <label class="checkbox-pill locked">
+            <input type="checkbox" checked disabled>
+            <span>最终结果 CSV 与解析报告（必留）</span>
+          </label>
+          <label class="checkbox-pill">
+            <input type="checkbox" name="saveArtifact" value="pcap">
+            <span>原始 PCAP</span>
+          </label>
+          <label class="checkbox-pill">
+            <input type="checkbox" name="saveArtifact" value="mitm">
+            <span>MITM 解密流</span>
+          </label>
+          <label class="checkbox-pill">
+            <input type="checkbox" name="saveArtifact" value="safe_capture" checked>
+            <span>脱敏 GraphQL</span>
+          </label>
+          <label class="checkbox-pill">
+            <input type="checkbox" name="saveArtifact" value="progress" checked>
+            <span>实时进度快照</span>
+          </label>
+        </div>
+      </form>
+    </section>
+
+    <!-- 02: Multi-Link Batch Matrix & Post-User Record KPI -->
+    <section class="panel batch-matrix" aria-labelledby="matrixHeading">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <span class="section-badge">02 / SWARM MATRIX</span>
+          <h2 id="matrixHeading">多链接矩阵看板与帖子-用户记录</h2>
+        </div>
+        <div class="batch-time-info">
+          <span class="text-muted" id="batchUpdatedTime">等待批次启动</span>
+        </div>
+      </div>
+
+      <!-- KPI Ribbon -->
+      <div class="kpi-ribbon">
+        <div class="kpi-card">
+          <div class="kpi-label">目标帖子总数</div>
+          <div class="kpi-value" id="kpiTotal">0</div>
+        </div>
+        <div class="kpi-card kpi-success">
+          <div class="kpi-label">已完成</div>
+          <div class="kpi-value" id="kpiCompleted">0</div>
+        </div>
+        <div class="kpi-card kpi-active">
+          <div class="kpi-label">抓取 / 排队</div>
+          <div class="kpi-value" id="kpiActive">0</div>
+        </div>
+        <div class="kpi-card kpi-warn">
+          <div class="kpi-label">失败 / 停止</div>
+          <div class="kpi-value" id="kpiFailed">0</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">帖子-用户记录数</div>
+          <div class="kpi-value" id="kpiSum">0</div>
+        </div>
+        <div class="kpi-card kpi-primary-highlight">
+          <div class="kpi-label">同帖重复去重数</div>
+          <div class="kpi-value" id="kpiUnique">0</div>
+          <div class="kpi-subtext" id="kpiOverlapRate">跨帖重复出现 0 人次</div>
+        </div>
+      </div>
+
+      <!-- Batch Posts Table -->
+      <div class="table-responsive">
+        <table class="data-table" id="batchTable">
+          <thead>
+            <tr>
+              <th style="width: 60px;">序号</th>
+              <th>目标帖子 URL / Post ID</th>
+              <th style="width: 110px;">状态</th>
+              <th style="width: 170px;">当前执行流程</th>
+              <th style="width: 110px;">有效互动人数</th>
+              <th style="width: 90px;">分页深度</th>
+              <th style="width: 120px; text-align: right;">焦点透视</th>
+            </tr>
+          </thead>
+          <tbody id="batchTableBody">
+            <tr class="empty-placeholder">
+              <td colspan="7">
+                <div class="empty-state">
+                  <span class="empty-icon">📂</span>
+                  <p>暂无活跃采集批次。请在上方输入 Facebook 链接并点击“开始批量爬取”。</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Batch Aggregate Download Links -->
+      <div class="batch-downloads" id="batchDownloadsBar" style="display: none;">
+        <span class="downloads-label">📦 批次汇总文件</span>
+        <div class="downloads-links" id="batchDownloadLinks"></div>
+      </div>
+    </section>
+
+    <!-- 03 & 04: Focused Post Deep Inspector (Split View) -->
+    <div class="inspector-split">
+      <!-- Left: 8-Stage Pipeline -->
+      <section class="panel pipeline-panel" aria-labelledby="pipelineHeading">
+        <div class="panel-header compact">
+          <div class="panel-title-group">
+            <span class="section-badge">03 / STAGE PIPELINE</span>
+            <h2 id="pipelineHeading">单帖执行管道 (沙箱透视)</h2>
+          </div>
+          <span class="text-muted" id="focusPostLabel">未选择帖子</span>
+        </div>
+
+        <ol class="pipeline-flow" id="pipelineFlow">
+          <!-- Dynamically populated stages -->
+        </ol>
+      </section>
+
+      <!-- Right: Live Telemetry & Network Preview -->
+      <section class="panel telemetry-panel" aria-labelledby="telemetryHeading">
+        <div class="panel-header compact">
+          <div class="panel-title-group">
+            <span class="section-badge">04 / LIVE TELEMETRY & GRAPH</span>
+            <h2 id="telemetryHeading">实时指标与重叠拓扑</h2>
+          </div>
+          <div class="tab-switcher">
+            <button class="tab-btn active" id="tabTelemetryBtn" type="button">遥测指标</button>
+            <button class="tab-btn" id="tabGraphBtn" type="button">重叠网络拓扑</button>
+          </div>
+        </div>
+
+        <!-- Sub-panel 1: Telemetry Grid -->
+        <div class="tab-content" id="tabTelemetry">
+          <div class="telemetry-grid">
+            <div class="telemetry-box">
+              <span class="tel-label" id="telUsersLabel">点赞用户人数</span>
+              <strong class="tel-val tel-emerald" id="telUsers">0</strong>
+            </div>
+            <div class="telemetry-box">
+              <span class="tel-label">GraphQL 分页深度</span>
+              <strong class="tel-val" id="telPages">0</strong>
+            </div>
+            <div class="telemetry-box">
+              <span class="tel-label">原生滚动尝试</span>
+              <strong class="tel-val" id="telAttempts">0</strong>
+            </div>
+            <div class="telemetry-box">
+              <span class="tel-label">数据增长事件</span>
+              <strong class="tel-val" id="telGrowth">0</strong>
+            </div>
+            <div class="telemetry-box">
+              <span class="tel-label">限流退避次数</span>
+              <strong class="tel-val tel-amber" id="telRateLimits">0</strong>
+            </div>
+            <div class="telemetry-box">
+              <span class="tel-label">分页终点状态</span>
+              <strong class="tel-val" id="telTerminal">未到达</strong>
+            </div>
+          </div>
+
+          <div class="telemetry-grid" id="combinedShareTelemetry" style="display: none;" hidden>
+            <div class="telemetry-box"><span class="tel-label">可见分享用户（按 ID 去重）</span><strong class="tel-val" id="telShareUsers">—</strong></div>
+            <div class="telemetry-box"><span class="tel-label">分享分页深度</span><strong class="tel-val" id="telSharePages">—</strong></div>
+            <div class="telemetry-box"><span class="tel-label">分享结果状态</span><strong class="tel-val tel-amber" id="telShareTerminal">未验证</strong></div>
+          </div>
+          <div class="storage-box">
+            <p class="text-muted" id="collectionResultNote"></p>
+            <a class="btn btn-xs btn-outline" id="shareResultDownload" style="display: none;" hidden>下载分享用户结果 JSON（含完整性信息）</a>
+            <div class="storage-label">当前任务结果目录</div>
+            <div class="storage-path-row">
+              <code id="sandboxPathText">等待任务选择...</code>
+              <button class="btn btn-xs btn-outline" id="btnCopySandboxPath" type="button" disabled>
+                📋 复制完整路径
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-panel 2: Canvas Network Graph -->
+        <div class="tab-content" id="tabGraph" style="display: none;">
+          <div class="canvas-container">
+            <canvas id="networkCanvas" width="560" height="230"></canvas>
+            <div class="canvas-overlay-hint">
+              <span>🔵 目标帖子节点</span>
+              <span>🟢 独立互动用户</span>
+              <span>跨帖重叠互动</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 05: ARTIFACTS VAULT SECTION -->
+    <section class="panel artifacts-vault" aria-labelledby="vaultHeading">
+      <div class="panel-header compact">
+        <div class="panel-title-group">
+          <span class="section-badge">05 / ARTIFACTS VAULT</span>
+          <h2 id="vaultHeading">单帖证据包与分析产物</h2>
+        </div>
+        <span class="text-muted">支持查看分析结果与下载文件</span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 100px;">取证层级</th>
+              <th>产物文件名</th>
+              <th style="width: 90px;">状态</th>
+              <th style="width: 90px;">文件大小</th>
+              <th>本地存储位置</th>
+              <th style="width: 160px; text-align: right;">操作</th>
+            </tr>
+          </thead>
+          <tbody id="artifactTableBody">
+            <tr class="empty-placeholder">
+              <td colspan="6">
+                <div class="empty-state">
+                  <p>选中帖子后，此处将呈现该帖生成的 TLS PCAP、MITM 解密流、脱敏 JSONL 及最终 CSV 产物。</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- LIVE CONSOLE LOG TICKER -->
+    <footer class="console-ticker">
+      <div class="ticker-header" id="tickerHeader">
+        <div class="ticker-title">
+          <span class="console-dot"></span>
+          <span>系统实时事件（Live Event Log）</span>
+        </div>
+        <button class="btn-text" id="btnToggleTicker" type="button">收起/展开</button>
+      </div>
+      <div class="ticker-body" id="tickerBody">
+        <div class="log-line text-muted">[System] OmniCapture v2 Console 初始化就绪，连接到本地后端 127.0.0.1:8765...</div>
+      </div>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast-popup" role="alert" aria-live="assertive"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

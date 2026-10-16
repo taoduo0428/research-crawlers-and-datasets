@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Liepin Public JD Bridge",
+  "version": "1.0.0",
+  "description": "Collects public Liepin job descriptions through a local task bridge.",
+  "permissions": [
+    "alarms",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.liepin.com/*",
+    "https://wow.liepin.com/*",
+    "https://safe.liepin.com/*",
+    "http://127.0.0.1:8765/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "settings.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.liepin.com/*",
+        "https://wow.liepin.com/*",
+        "https://safe.liepin.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

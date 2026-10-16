@@ -1,0 +1,10 @@
+
+# Git LFS: all research tables and binary research sheets.
+projects/**/*.csv filter=lfs diff=lfs merge=lfs -text
+projects/**/*.jsonl filter=lfs diff=lfs merge=lfs -text
+projects/**/*.xlsx filter=lfs diff=lfs merge=lfs -text
+projects/**/*.xls filter=lfs diff=lfs merge=lfs -text
+projects/**/*.parquet filter=lfs diff=lfs merge=lfs -text
+projects/**/*.sqlite filter=lfs diff=lfs merge=lfs -text
+projects/**/*.sqlite3 filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text

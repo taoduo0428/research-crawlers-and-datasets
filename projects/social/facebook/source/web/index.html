@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reaction Capture Console</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-block">
+      <span class="brand-mark" aria-hidden="true">RC</span>
+      <div>
+        <h1>Reaction Capture Console</h1>
+        <p>Android · PCAP · MITM · GraphQL</p>
+      </div>
+    </div>
+    <div class="system-status" aria-live="polite">
+      <span id="serviceDot" class="status-dot"></span>
+      <span id="serviceLabel">正在连接本地服务</span>
+      <span class="divider"></span>
+      <span id="androidLabel">模拟器检查中</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="capture-band" aria-labelledby="captureTitle">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">01 / CAPTURE</p>
+          <h2 id="captureTitle">启动 Reaction 批量抓取</h2>
+        </div>
+        <span id="jobBadge" class="job-badge idle">未运行</span>
+      </div>
+      <form id="captureForm" class="capture-form">
+        <p>首次使用请先完成 <a href="/guide" target="_blank" rel="noopener">Android 与账号配置</a>。<button id="checkSetup" class="text-button" type="button">检查本机环境</button></p>
+        <p id="setupStatus" role="status">支持直连网络，也可在本机配置中指定上游代理。点赞总数不代表当前账号可查看完整名单。</p>
+        <label for="postUrls">Facebook 帖子链接（每行一个）</label>
+        <div class="input-row">
+          <textarea id="postUrls" name="postUrls" autocomplete="off" placeholder="https://www.facebook.com/..." required></textarea>
+          <div class="form-actions">
+            <button id="startButton" class="primary-button" type="submit">开始抓取</button>
+            <button id="cancelButton" class="secondary-button" type="button" disabled>停止批次</button>
+          </div>
+        </div>
+        <fieldset class="save-options">
+          <legend>保存文件</legend>
+          <label><input type="checkbox" checked disabled> 最终结果 CSV 与解析报告（必须保留）</label>
+          <label><input name="saveArtifact" value="pcap" type="checkbox" checked> 原始 PCAP</label>
+          <label><input name="saveArtifact" value="mitm" type="checkbox" checked> MITM 解密证据</label>
+          <label><input name="saveArtifact" value="safe_capture" type="checkbox" checked> 脱敏 GraphQL 记录</label>
+          <label><input name="saveArtifact" value="progress" type="checkbox" checked> 实时进度记录</label>
+        </fieldset>
+        <p id="formError" class="form-error" role="alert"></p>
+      </form>
+      <div class="run-location">
+        <span>当前目录</span>
+        <code id="storageRoot">任务启动后显示</code>
+        <button id="copyRoot" class="text-button" type="button" disabled>复制路径</button>
+      </div>
+    </section>
+
+    <section class="batch-section" aria-labelledby="batchTitle">
+      <div class="section-heading compact">
+        <div>
+          <p class="section-index">02 / BATCH</p>
+          <h2 id="batchTitle">批次总览</h2>
+        </div>
+        <span id="batchUpdated" class="muted">等待批次</span>
+      </div>
+      <dl class="batch-metrics">
+        <div><dt>链接总数</dt><dd id="batchTotal">0</dd></div>
+        <div><dt>已完成</dt><dd id="batchCompleted">0</dd></div>
+        <div><dt>进行 / 等待</dt><dd id="batchActive">0</dd></div>
+        <div><dt>失败 / 停止</dt><dd id="batchFailed">0</dd></div>
+        <div><dt>各帖人数之和</dt><dd id="batchUserSum">0</dd></div>
+        <div class="primary-metric"><dt>跨帖去重人数</dt><dd id="batchUniqueUsers">0</dd></div>
+      </dl>
+      <div class="batch-table-wrap">
+        <table class="batch-table">
+          <thead>
+            <tr><th>序号</th><th>帖子链接</th><th>状态</th><th>当前流程</th><th>有效人数</th><th>分页</th></tr>
+          </thead>
+          <tbody id="batchRows"><tr class="empty-row"><td colspan="6">提交链接后显示帖子队列</td></tr></tbody>
+        </table>
+      </div>
+      <div id="batchArtifacts" class="batch-artifacts" aria-label="批次汇总文件"></div>
+    </section>
+
+    <div class="workspace">
+      <section class="process-section" aria-labelledby="processTitle">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-index">03 / POST PIPELINE</p>
+            <h2 id="processTitle">单帖抓取流程</h2>
+          </div>
+          <span id="lastUpdated" class="muted">等待任务</span>
+        </div>
+        <ol id="stageList" class="stage-list" aria-live="polite"></ol>
+      </section>
+
+      <aside class="metrics-section" aria-labelledby="metricsTitle">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-index">04 / POST LIVE</p>
+            <h2 id="metricsTitle">单帖实时指标</h2>
+          </div>
+        </div>
+        <dl class="metric-grid">
+          <div><dt>有效爬取人数</dt><dd id="metricUsers">0</dd></div>
+          <div><dt>分页数</dt><dd id="metricPages">0</dd></div>
+          <div><dt>滚动尝试</dt><dd id="metricAttempts">0</dd></div>
+          <div><dt>增长事件</dt><dd id="metricGrowth">0</dd></div>
+          <div><dt>限流</dt><dd id="metricRateLimits">0</dd></div>
+          <div><dt>分页终点</dt><dd id="metricTerminal">未到达</dd></div>
+        </dl>
+        <div class="terminal-strip">
+          <span>当前阶段</span>
+          <strong id="currentStage">等待任务</strong>
+        </div>
+      </aside>
+    </div>
+
+    <section class="artifacts-section" aria-labelledby="artifactsTitle">
+      <div class="section-heading compact">
+        <div>
+          <p class="section-index">05 / POST FILES</p>
+          <h2 id="artifactsTitle">单帖数据包与解析产物</h2>
+        </div>
+        <span class="privacy-note">文本结果可查看，全部产物可下载</span>
+      </div>
+      <div class="artifact-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>层级</th>
+              <th>文件</th>
+              <th>状态</th>
+              <th>大小</th>
+              <th>存储位置</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="artifactRows">
+            <tr class="empty-row"><td colspan="6">任务启动后显示产物</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
