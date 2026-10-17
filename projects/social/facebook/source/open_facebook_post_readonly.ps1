@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
     [string]$Serial = "emulator-5554",
     [int]$ProxyPort = 8081,

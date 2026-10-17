@@ -16,6 +16,24 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def source_sha256_matches(path: Path, expected: str) -> bool:
+    """Check a Git-published source with portable LF/CRLF handling.
+
+    The manifest stores SHA-256 of *Git blob* bytes. On Windows, Git may
+    check out textual sources using CRLF while Linux/macOS use LF. The
+    fallback accepts only a newline-encoding difference (not other edits);
+    binary / UTF-16 files containing NUL bytes stay strictly byte-for-byte.
+    Historical research DATA is never normalized by this function.
+    """
+    content = path.read_bytes()
+    if hashlib.sha256(content).hexdigest() == expected:
+        return True
+    if b"\x00" in content or b"\r\n" not in content:
+        return False
+    lf_content = content.replace(b"\r\n", b"\n")
+    return hashlib.sha256(lf_content).hexdigest() == expected
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Verify research code and data manifests")
     parser.add_argument(
@@ -47,8 +65,14 @@ def main() -> int:
                 missing.append(relative)
                 continue
             if not args.manifest_only:
-                actual = sha256(path)
-                if actual != entry[digest_key]:
+                expected = entry[digest_key]
+                if label == "source":
+                    valid_digest = source_sha256_matches(path, expected)
+                else:
+                    # Published research data and LFS objects remain strictly
+                    # byte-exact, including their line endings and file size.
+                    valid_digest = sha256(path) == expected
+                if not valid_digest:
                     mismatched.append(relative)
                     continue
                 if label == "data" and path.stat().st_size != entry["bytes"]:

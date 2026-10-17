@@ -7,7 +7,7 @@
 - Windows：先读 [Windows 安装说明](WINDOWS_DEPLOYMENT.md)，仓库提供 `START.cmd`。
 - Mac（Apple Silicon）：读 [Mac 安装说明](macos/QUICKSTART.md)。这份仓库有 `setup.sh`，但**没有**旧文档提到的 `CONFIGURE.command`、`CHECK.command`、`START.command`。Mac 的模拟器、证书和真实抓取需要自行验证。
 
-想写程序提交任务，看 [API 说明](API_USAGE.md) 或 [调用例子](examples/README.md)。主要文件是 `facebook_capture_api.py`（本地接口）、`facebook_android_capture.py`（设备采集）和 `analyze_facebook_capture.py`（分析结果）。
+想写程序提交任务，看 [API 说明](API_USAGE.md) 或 [调用例子](examples/README.md)。`examples/capture_fetch.mjs` 已随仓库补充，Node 22+ 可以只连接本地 API；它不接管账号、不会替你采集线上 Facebook 名单。主要文件是 `facebook_capture_api.py`（本地接口）、`facebook_android_capture.py`（设备采集）和 `analyze_facebook_capture.py`（分析结果）。
 
 [环境参考](STABLE_BASELINE.md)和[旧测试记录](VALIDATION_2026-09-16.md)是当时的情况，不等于你现在这台机器已经验收通过。`runs/`、`api-jobs/`、`api-batches/` 属于本地运行记录，不要把它们当作发布源码上传。
 

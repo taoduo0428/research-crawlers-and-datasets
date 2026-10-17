@@ -35,6 +35,8 @@
 **/*local.json
 **/raw-private/
 **/.crawler-state/
+# Job51's offline unit tests write transient state in this directory.
+projects/market-platform/drv_crawler/job51/.state/
 
 # Amazon release: browser profiles, real credentials, local run outputs
 **/.edge-amazon-profile/

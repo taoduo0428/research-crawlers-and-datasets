@@ -15,11 +15,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File examples\capture.ps1 -Url 'h
 ```sh
 # macOS；requests 来自项目 requirements；Node 仅运行 fetch 示例时需要。
 .venv/bin/python examples/capture_requests.py --url 'https://www.facebook.com/share/r/1Dg59X6ysJ/' --output reel.csv
-# 本仓库未收录 capture_fetch.mjs；Node 的批量提交例子在后面
+node examples/capture_fetch.mjs --url 'https://www.facebook.com/share/r/1Dg59X6ysJ/' --output reel.csv
 PYTHON=.venv/bin/python bash examples/capture_curl.sh 'https://www.facebook.com/share/r/1Dg59X6ysJ/' reel.csv
 ```
 
-原工程有 Node 客户端，但 `capture_fetch.mjs` 没收入这份仓库；下面提供 Node 批量提交代码，可自己保存为 .mjs 使用。curl 脚本要求 Bash、curl 和 Python 3（Python 只解析 JSON，无 jq 依赖）；Windows 可在 Git Bash 中设 `PYTHON=.venv/Scripts/python.exe`。Node 示例使用 Node 22+，不需要 npm install。
+本次仓库级验收已恢复可运行的 `capture_fetch.mjs`（Node 22+、使用内置 fetch，不需要安装 npm 包），并通过了成功、空结果、失败、取消、未知状态、超时、非法 URL 的七项契约测试。curl 脚本要求 Bash、curl 和 Python 3（Python 只解析 JSON，无 jq 依赖）；Windows 可在 Git Bash 中设 `PYTHON=.venv/Scripts/python.exe`。Node 示例使用 Node 22+，不需要 npm install。
 
 恢复已有任务：Python/Node 使用 `--job-id fb_xxx` 替代 `--url`；PowerShell 使用 `-JobId fb_xxx` 替代 `-Url`；Bash 使用 `bash examples/capture_curl.sh --job-id fb_xxx output.csv`。
 

@@ -26,6 +26,12 @@ class TestLayoutTests(unittest.TestCase):
         required.update({"tests/__init__.py", "tests/README.md"})
         required.update(p.relative_to(ROOT).as_posix() for p in (ROOT / "tests" / "manual").glob("test_*.ps1"))
         self.assertFalse(required - manifest)
+        # A listed but absent file makes the CI source-export fail. This
+        # curated repo intentionally excludes old one-click Mac launchers
+        # and retired tests, so only publish files that actually exist.
+        missing = sorted(name for name in manifest if name.strip() and not name.startswith('#')
+                         and not (ROOT / name).is_file())
+        self.assertFalse(missing, f'Release manifest lists missing files: {missing}')
         self.assertFalse(any(name.startswith("test_") for name in manifest))
 
     def test_engineering_and_frontend_guards_are_in_both_ci_commands(self):

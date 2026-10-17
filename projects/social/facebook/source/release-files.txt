@@ -17,10 +17,10 @@ facebook_android_capture.py
 tests/test_facebook_android_capture.py
 tests/test_facebook_mac_device.py
 facebook_macos_runtime.py
-START.command
-CHECK.command
+
+
 setup.sh
-CONFIGURE.command
+
 facebook_setup.py
 facebook.setup.example.json
 tests/test_facebook_setup.py
@@ -56,9 +56,9 @@ tests/test_facebook_cancel_transport.py
 tests/test_analyze_facebook_capture.py
 tests/test_facebook_batch_pressure.py
 tests/test_facebook_batch_summary.py
-tests/test_facebook_live_progress.py
+
 tests/test_facebook_post_queue.py
-tests/test_facebook_raw_capture.py
+
 tests/test_reaction_rate_limit_progress.py
 tests/test_resolve_facebook_share_url.py
 facebook_release_gate.py

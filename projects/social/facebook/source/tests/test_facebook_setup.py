@@ -335,7 +335,17 @@ class SetupIntegrationTests(unittest.TestCase):
             self.assertNotIn("api.github.com", fetch.call_args.args[0])
 
     def test_configure_command_keeps_failure_visible(self):
-        text = (Path(__file__).resolve().parents[1] / "CONFIGURE.command").read_text(encoding="utf-8")
+        # This curated public repository omits the historical interactive
+        # macOS launcher. Test the documented setup.sh fallback instead;
+        # do not manufacture a fake one-click setup script.
+        source = Path(__file__).resolve().parents[1]
+        launcher = source / "CONFIGURE.command"
+        if not launcher.is_file():
+            setup_text = (source / "setup.sh").read_text(encoding="utf-8")
+            self.assertIn("set -eu", setup_text)
+            self.assertIn('exec "$PYTHON" facebook_local.py start', setup_text)
+            return
+        text = launcher.read_text(encoding="utf-8")
         self.assertIn("trap on_exit EXIT", text)
         self.assertIn("read -r -p", text)
         self.assertNotIn("exec /bin/bash ./setup.sh", text)

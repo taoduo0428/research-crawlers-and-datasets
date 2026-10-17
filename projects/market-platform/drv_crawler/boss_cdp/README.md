@@ -1,4 +1,4 @@
-# BOSS Chrome/CDP 子工程
+# BOSS Chrome/CDP 子工程（上游 v2.2.1）
 
 这是单独引入的一份 BOSS 抓取工具，原工程来自 [eatmoreduck/boss-zhipin-scraper](https://github.com/eatmoreduck/boss-zhipin-scraper)。它通过 Chrome DevTools Protocol (CDP) 连接隔离的 Chrome 采集岗位，与总仓库 `projects/market-platform/run.py` 的流程并不完全一样。
 

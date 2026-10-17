@@ -67,7 +67,7 @@ research-crawlers-and-datasets/
 - **各项目的 `README.md`**：先看这一份，里面写了文件在哪、怎么用、还有哪些问题没解决。像 `specs/`、`.agents/`、`SKILL.md`、`CHANGELOG.md` 这些是历史研发记录或工具配置，不是新同学的入门教程，没必要从头读。
 - **`projects/market-platform/tools/`**：专门处理外包/招聘数据。和仓库根目录的 `tools/` 不是一回事。
 - **`metadata/data-manifest.json`**：数据文件清单，记录路径、大小和校验值；`source-manifest.json` 用来核对源码副本。
-- **`docs/`**：全仓库的[数据说明](docs/DATA_GUIDE.md)、[成员使用流程](docs/RESEARCH_WORKFLOW.md)、[安全和已知问题](docs/SECURITY_AND_LIMITATIONS.md)、[逐项目检查记录](docs/REPOSITORY_AUDIT_2026-10-17.md)。
+- **`docs/`**：全仓库的[数据说明](docs/DATA_GUIDE.md)、[成员使用流程](docs/RESEARCH_WORKFLOW.md)、[安全和已知问题](docs/SECURITY_AND_LIMITATIONS.md)、[逐项目检查记录](docs/REPOSITORY_AUDIT_2026-10-17.md)，以及[2026-10-17 全仓库离线测试与发布验收报告](docs/REPOSITORY_VALIDATION_2026-10-17.md)。
 
 ## 第一次下载
 

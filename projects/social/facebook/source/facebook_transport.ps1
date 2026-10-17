@@ -1,4 +1,4 @@
-Set-StrictMode -Version 2.0
+﻿Set-StrictMode -Version 2.0
 
 $FacebookTransportPlatformTools = Join-Path $PSScriptRoot 'platform-tools'
 $FacebookTransportAdb = Join-Path $FacebookTransportPlatformTools 'adb.exe'

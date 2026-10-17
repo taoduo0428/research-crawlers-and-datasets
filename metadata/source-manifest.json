@@ -6,14 +6,14 @@
       "path": "projects/commerce/amazon-jiimore/source/amazon.py",
       "source_rel_desktop": "curated-local-Amazon/amazon.py",
       "source_sha256": "9de7cb6d5297ce2289c28854e522c3799ee8e277389d1d860873dd6fb2ca8de2",
-      "published_sha256": "9de7cb6d5297ce2289c28854e522c3799ee8e277389d1d860873dd6fb2ca8de2",
+      "published_sha256": "00853a457462b9833f1289adf45ee05360dac6d2baba3d039a45bdb57f8b9f78",
       "changed_for_publication": false
     },
     {
       "path": "projects/commerce/amazon-jiimore/source/amazon_extract.py",
       "source_rel_desktop": "curated-local-Amazon/amazon_extract.py",
       "source_sha256": "9e47bff1fc67b5d985c772f8372b9eb604cfb20cd0e6e36abaac442d43bf33ad",
-      "published_sha256": "9e47bff1fc67b5d985c772f8372b9eb604cfb20cd0e6e36abaac442d43bf33ad",
+      "published_sha256": "a5ae945bfbfc2c1e4605c410611e0c6b347e1de44698b14a92607dbe56280040",
       "changed_for_publication": false
     },
     {
@@ -76,973 +76,973 @@
       "path": "projects/market-platform/JD补采说明.md",
       "source_rel_desktop": "外包+岗位爬虫/JD补采说明.md",
       "source_sha256": "b526a2892bb3acea154376d41578f2aa5fa195a24ba85dc72e49150f37555691",
-      "published_sha256": "800c0a8cf980834172711eda565b8e0592f37320190ffb94869099c1eb1585b6",
+      "published_sha256": "9a9d8c10e575f8245a49fb546ff02673e86f991ac4a36b67f87a6a08a4e02fc6",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/boss_jd_backfill.py",
       "source_rel_desktop": "外包+岗位爬虫/boss_jd_backfill.py",
       "source_sha256": "ced412dc06c3ba6c32c2e6ea8797e1e15169d9661f4f4a203976ceeedcaed708",
-      "published_sha256": "ced412dc06c3ba6c32c2e6ea8797e1e15169d9661f4f4a203976ceeedcaed708",
+      "published_sha256": "8e8cf42c01803b2cb1db27189acb20c4f61c8e958f11e328c0db33ba305a8c09",
       "changed_for_publication": false
     },
     {
       "path": "projects/market-platform/crawler.config.yaml",
       "source_rel_desktop": "外包+岗位爬虫/crawler.config.yaml",
       "source_sha256": "7103905cdc6f5d068812cde6f7cec1c33ec50f7886de3353b616fcc13ccce037",
-      "published_sha256": "4a5df58127e1f33886ccd8fad9589509b4c7ad01c8547dde7d243322c70d1da2",
+      "published_sha256": "7103905cdc6f5d068812cde6f7cec1c33ec50f7886de3353b616fcc13ccce037",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/crawler.py",
       "source_rel_desktop": "外包+岗位爬虫/crawler.py",
       "source_sha256": "5386ebe6651c3f8daf4a8121122cea4c37fb7d663b69c50e8ce3471632861b3b",
-      "published_sha256": "64210bd66f3036bee6bfe9725b8dd9053c8fc265f2aee41c13174b1540d6b2c7",
+      "published_sha256": "5386ebe6651c3f8daf4a8121122cea4c37fb7d663b69c50e8ce3471632861b3b",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/docs/ORIGINAL_README.md",
       "source_rel_desktop": "外包+岗位爬虫/README.md",
       "source_sha256": "fdc65d14626abc0da1a595f951ac08a3285056da80d48c2671742d5d664cd018",
-      "published_sha256": "22a9647a03e5084570b964f20140aa84c994fbb920b5a57cfd9f34da392191da",
+      "published_sha256": "9bdc56d138dc21d9acb450c955a4aa6d8449763893396a95af0499b4481af6ce",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/docs/一品威客补充版交接说明.md",
       "source_rel_desktop": "外包+岗位爬虫/docs/一品威客补充版交接说明.md",
       "source_sha256": "3ad30c1cfa1ca8a95823ff9d922c955cc7c24a8637db776d39dea96295275db7",
-      "published_sha256": "ed8c590f3086be2252eec82f8b76d924b9cbcfd304fe69943216ab4c6f9e62aa",
+      "published_sha256": "0bf7b581177a457440e87e6dd8550b9dbfff4dd9cc08d6811f623cf4b6ff8800",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/docs/招聘数据说明.md",
       "source_rel_desktop": "外包+岗位爬虫/docs/招聘数据说明.md",
       "source_sha256": "10c3e06b6f86ef5ca51d211ead232cabffb2fb3009d4d42c17166840c4abfef3",
-      "published_sha256": "523015fe87d53ceefdc6cb3d79c9ee2a859ae805ed4c23d6e928efbfed2cc937",
+      "published_sha256": "d217c2bafe6e0e34806490e94e63bcb68d20823f92a3418c06d3cb1931cf7481",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/docs/招聘爬取失败原因复盘.md",
       "source_rel_desktop": "外包+岗位爬虫/docs/招聘爬取失败原因复盘.md",
       "source_sha256": "1643b8608a421fad2bb34f235c9d8dff0787dd9383d9935c50d415615db87a82",
-      "published_sha256": "b0a781f08734ebfea42910da4c2c18433a6a1f93b462bef885626404d6610f63",
+      "published_sha256": "ac37cb6bf4b7674d77c332eace62c786650e482ac22ed82dc9c0427c1b372ff0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/__init__.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/__init__.py",
       "source_sha256": "441925a1d15945a608197cd9c421d32a685a7f5627314cc583c505ba4e0a3f53",
-      "published_sha256": "70ea8d75395cdacc175cf0a4193b9c467211828e842c59f8c7f7c62294290984",
+      "published_sha256": "9463d3758b248e71c3559a1dd5f70b5e01b0a2d1130c8afde13f0e6f681f1d59",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_archive.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_archive.py",
       "source_sha256": "ac6c25d51d33424083681b1c94cd1bddadd4f53ec44177a87797ef9495640ba7",
-      "published_sha256": "fe94169e2a59ec71193bd42d1915e82eeef1b57a596e10902d4bf9a523d27abc",
+      "published_sha256": "ac6c25d51d33424083681b1c94cd1bddadd4f53ec44177a87797ef9495640ba7",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/AGENTS.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/AGENTS.md",
       "source_sha256": "10aa3741a469cf51a33ed5ce52034cdf01960ff54cd5cb9139d43f6bb4df760b",
-      "published_sha256": "10aa3741a469cf51a33ed5ce52034cdf01960ff54cd5cb9139d43f6bb4df760b",
+      "published_sha256": "0c838af6172d9ae64ef1a6338227b225a5180ff554332daa2242bb117e975d80",
       "changed_for_publication": false
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/CHANGELOG.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/CHANGELOG.md",
       "source_sha256": "a7ad024401e5ce418c2947b45a6e5cf95bbb12d53c7062851e925951d3a738c3",
-      "published_sha256": "31d8d8b738507010b695c31b0bdb8862a6d25363317c4308f2e6afdc76a2046a",
+      "published_sha256": "49605846598100462d1af9feb072732c9414a977870a84886eb16f2990e2a99e",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/CONTRIBUTING.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/CONTRIBUTING.md",
       "source_sha256": "d13a6b71ead6cbe7494b12bdedc9be566dd8e3bba08f34c8b6d49783dea7f5bf",
-      "published_sha256": "02e87aea7907b1e6c75d72277423651e3cfba88489f9ff0528c6b63d36ec8662",
+      "published_sha256": "7a649eac8a608dfce81a5e7962f0fdc3ac3b56d33988fd3ddc6367e83696f94b",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/README.en.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/README.en.md",
       "source_sha256": "c28f20e9bed2f82b60a578779ee59ea3ac7becb2c87b15f9c72320589e6667a4",
-      "published_sha256": "527de148c336029b6d6405c639183191f4b1a0e107b0941dcd9003cab57ccc18",
+      "published_sha256": "2fb04267d368f5337ff4d94a4f028bc76eb6c915015a41bd1286d9462106d4f8",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/README.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/README.md",
       "source_sha256": "d6c4f3f50dd5074abd8b8f22e02e31df870a7d9ec8ca4cd2e0ccce83278b2e04",
-      "published_sha256": "45ea1c04f1ee5961f68e13e2c00ebe5789d1a957aea3f6a107d7c57e6f0a5560",
+      "published_sha256": "356088fa63ca7a629631c60b63241327cf449c5856202b5b04982de149f1315a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/SKILL.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/SKILL.md",
       "source_sha256": "a682a515485a0ed431474acfb0c25930a3d39a6bd44397f943c010eafd1803a2",
-      "published_sha256": "7303b78cacf6a30ce5d5423ef9ceed4a9b623c9ad14340250a52dbe5856de2bb",
+      "published_sha256": "fe1a21b674b8897eda0febde4aa87f967ecea9f4bbe8534a48c7fed3f9d5fa6b",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/data/city_codes.json",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/data/city_codes.json",
       "source_sha256": "aac1ac55f4de892779ddbec0a41f3051d93e4f4fca2b19a9c2d724641ce8751c",
-      "published_sha256": "aac1ac55f4de892779ddbec0a41f3051d93e4f4fca2b19a9c2d724641ce8751c",
+      "published_sha256": "ea3cc88f9520244e2659df77b1496312f2c713e3c1126ad1a81566490fcfdd5f",
       "changed_for_publication": false
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/pyproject.toml",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/pyproject.toml",
       "source_sha256": "f2c4899d071fb04fe014b7d278582c31d284e47868df588c7eeaf6fc25cf93e4",
-      "published_sha256": "e130904edd1b6a1f7f18e8b4a96386dad589897f07784675bcf3e3e9825d45a0",
+      "published_sha256": "4412020b4631f2642ab931ceae660cb8a9aa8f1fa11b8a4518d9034be45a361b",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/requirements.txt",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/requirements.txt",
       "source_sha256": "e09181417a867341cd74152b4c8eab022a34e3d4e80d277706a6486f6bbe9cba",
-      "published_sha256": "e09181417a867341cd74152b4c8eab022a34e3d4e80d277706a6486f6bbe9cba",
+      "published_sha256": "24795b92bb3b6c788cf6375477807f77c765c4d3c517899b663decbc13094e83",
       "changed_for_publication": false
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/scripts/boss_cdp_raw.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/scripts/boss_cdp_raw.py",
       "source_sha256": "9d12b472a4cb67708db854566ad9af3a62770676ea05762dde41a76194452007",
-      "published_sha256": "9a13942d2779334f59f69bfbec3acc6b887ff5cf8ed2696e04578325ce628ef6",
+      "published_sha256": "f69f168706e91e963d4b8a47c9dacd56f8e80e0195ee529d75cc722aa8dfcdde",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/scripts/job_summary.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/scripts/job_summary.py",
       "source_sha256": "e93d22a3d363aba2f8edffbaa7899256f53375dfabc8863da1f00b3d0ca9bcb8",
-      "published_sha256": "e93d22a3d363aba2f8edffbaa7899256f53375dfabc8863da1f00b3d0ca9bcb8",
+      "published_sha256": "5ce9cec206b9fe2b91c20e3fe2db9389e272f19209fac74118d34490f96cfd67",
       "changed_for_publication": false
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/tests/test_chrome_setup.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/tests/test_chrome_setup.py",
       "source_sha256": "9ee08d650f1af72aa180977fd849d50583cf7d5adc206f73ac4b02d06547c721",
-      "published_sha256": "1158193a7a54b30e37320cb49d97405a2eeacc9ad19c033c6509b3ffb2d9ba17",
+      "published_sha256": "a653f39460ade8a050218f061081359590a6eb0af0cc8bdc3435ea452ff99418",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/tests/test_job_summary.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/tests/test_job_summary.py",
       "source_sha256": "7964cae8c0e32ef199ce3987618049dcce0ca46a17c4ab1c09b8d5b31c9f2b34",
-      "published_sha256": "7964cae8c0e32ef199ce3987618049dcce0ca46a17c4ab1c09b8d5b31c9f2b34",
+      "published_sha256": "25753837ff537c2b6887ceed23533450737d57351b6ba209c22db14c5cdad357",
       "changed_for_publication": false
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/tests/test_position_categories.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/tests/test_position_categories.py",
       "source_sha256": "3e5869fd3bb8533bea764f6d160ef7dea787987fc93504415bee079d76bd35f2",
-      "published_sha256": "dfe23bba7b95188a3b8fcb63d1729956956b8155f3af120b38a9097b19d535b4",
+      "published_sha256": "3e5869fd3bb8533bea764f6d160ef7dea787987fc93504415bee079d76bd35f2",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/uv.lock",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/uv.lock",
       "source_sha256": "9b9daf1694be6debd3a9fd0a284b4628da0b7464ed037e8ab128dd4274a2608a",
-      "published_sha256": "1db07bdf69724f0d6cf270c634827f004e525ec6537d6d03a201999f924010b3",
+      "published_sha256": "9b9daf1694be6debd3a9fd0a284b4628da0b7464ed037e8ab128dd4274a2608a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/browser.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/browser.py",
       "source_sha256": "9388258107e1d1838b742b074feb2ffd673c167a2d8433df05b3895648802fb8",
-      "published_sha256": "03b6e841f0ee3b5d8111b24ac355b638c81eaab0c8f6313160c2b510563057ac",
+      "published_sha256": "47c025a446c9199ded7b6bdd58d2a2422b10dcda821588d8e86673a609aa8de5",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/categories.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/categories.py",
       "source_sha256": "2c0afa6d86efe6c560ffc3e687d3cde0075f7f22d47ba30de620da5791e26cfa",
-      "published_sha256": "0bdff4052a7c5c94789677ffc72c47676f839b6705fec1f2fd7ed89ebf4b2d18",
+      "published_sha256": "2c0afa6d86efe6c560ffc3e687d3cde0075f7f22d47ba30de620da5791e26cfa",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/cli.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/cli.py",
       "source_sha256": "7dc54ee088b791ee7fa6240b1014a8fe84526aeba89279d80925617423900ccb",
-      "published_sha256": "d78039f2616c581198ab57d59b4521701d91ca3165e964409be6253ed1ffb35b",
+      "published_sha256": "7dc54ee088b791ee7fa6240b1014a8fe84526aeba89279d80925617423900ccb",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/core.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/core.py",
       "source_sha256": "b781f5895e0b7742be3d5e04ecdf763159d8cbca259e249a1d79a4df9e9e6505",
-      "published_sha256": "0c945ab26b1776f73a763fc637b17801f792e26806fe638e250b7add7c527fe9",
+      "published_sha256": "b781f5895e0b7742be3d5e04ecdf763159d8cbca259e249a1d79a4df9e9e6505",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/epwk_browser.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/epwk_browser.py",
       "source_sha256": "ea7ed292995e6bd07150a6ef37169ad463fbd5e448ffb88efad0c56311be460f",
-      "published_sha256": "de362ad2bfb6e121a9286e47850aeb1a7deab523ee13c7aaf3649546b95ca353",
+      "published_sha256": "ea7ed292995e6bd07150a6ef37169ad463fbd5e448ffb88efad0c56311be460f",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/exporters.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/exporters.py",
       "source_sha256": "ac4fde3216c211b61582f20672d3dd3cd97f7a572e80d22f13c6c3e353a4ab8b",
-      "published_sha256": "6de1a0b99cffb5ed2dd85a1e680dd9f2ef770ef55551c7616c0dec3987aaf6b2",
+      "published_sha256": "ac4fde3216c211b61582f20672d3dd3cd97f7a572e80d22f13c6c3e353a4ab8b",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/README.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/README.md",
       "source_sha256": "c2b58f4598fa68e95d1e17f0d7dc7b71d7f21587803daee9f9e6c698f5ac8fa9",
-      "published_sha256": "b0ef290e54b714143c28fe91689861b14b3c02089c010cc54d846ef8c88a9184",
+      "published_sha256": "8d6faba62d52686e943dd16451b54ef556901753c4f7ac81c119e72cf3a1495e",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/__init__.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/__init__.py",
       "source_sha256": "1312b581f0befbd44da36db662402c60839906f6f6c589c222868bc8b5cc3f43",
-      "published_sha256": "e27e960abf2153e2da8933880adfb019641b5e632021bb04050d2c0bc132ee59",
+      "published_sha256": "1312b581f0befbd44da36db662402c60839906f6f6c589c222868bc8b5cc3f43",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/__main__.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/__main__.py",
       "source_sha256": "0f7d54f3fbb1f79a85eb8110f11793db99da6f3c61ee979de5abe9a1b5f3fdb3",
-      "published_sha256": "956ac6e88ebe1ba1437c9173a2616e17bbbf9f9675b9960957a1e0fb67a7fb2c",
+      "published_sha256": "0f7d54f3fbb1f79a85eb8110f11793db99da6f3c61ee979de5abe9a1b5f3fdb3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/cli.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/cli.py",
       "source_sha256": "16da1ca1b10a66a146d67fa3fa585fb5e82895f4d4a907e046028d6b4b928d39",
-      "published_sha256": "efcdad357157dd35df57ce9f9818e0b5a3cbd80efbe711404b9500f079edeccc",
+      "published_sha256": "16da1ca1b10a66a146d67fa3fa585fb5e82895f4d4a907e046028d6b4b928d39",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/config.example.json",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/config.example.json",
       "source_sha256": "8ee77f0653ec8a33e3edf07587a9d174543414ce3d0508001dd3871d9c2cea71",
-      "published_sha256": "3b3cc26477a3a0fd7cfc56b7f13616f67b3af40485ee8504cee504d9f430d367",
+      "published_sha256": "8ee77f0653ec8a33e3edf07587a9d174543414ce3d0508001dd3871d9c2cea71",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/crawler.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/crawler.py",
       "source_sha256": "323352d2b8ec0d571fa1415d33ca2dc97cb20740a14467c3dad1c5b617373bdb",
-      "published_sha256": "a768ee1454044e4dd27efe6aae6a66c81a9226922385615cd2933389defad3ec",
+      "published_sha256": "323352d2b8ec0d571fa1415d33ca2dc97cb20740a14467c3dad1c5b617373bdb",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/data/categories.json",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/data/categories.json",
       "source_sha256": "1677fb35a0628ba09537853be06b20fbf1dba0d0dcc001558c406dcae3e9f5c5",
-      "published_sha256": "65ad53e1903823cf08daf88f262a3c32fe24e2607437f26194b864a36b9339ca",
+      "published_sha256": "1677fb35a0628ba09537853be06b20fbf1dba0d0dcc001558c406dcae3e9f5c5",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/models.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/models.py",
       "source_sha256": "c69bd026c12494ece5f50279074147adeb831cf57ce8ebcede59173218262bb0",
-      "published_sha256": "ff3fed4f8eb75b996a08b68c2cacc63de731cebe06b9d7ca08ef277b9d1e6940",
+      "published_sha256": "c69bd026c12494ece5f50279074147adeb831cf57ce8ebcede59173218262bb0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/requirements.txt",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/requirements.txt",
       "source_sha256": "ce4aa9772bcc7482ba7c5a65360a3933a017da13c3b582f30a24d3d3f1821312",
-      "published_sha256": "3cede073e398cd420bc45886bd2c4e6f68c60e112f48b2859b1defbfe277585d",
+      "published_sha256": "ce4aa9772bcc7482ba7c5a65360a3933a017da13c3b582f30a24d3d3f1821312",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/run.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/run.py",
       "source_sha256": "fe7f34519a69c16a6ea8ebd991614a0c582d7d2a5c5254ec6de16d86913bc5c2",
-      "published_sha256": "4fb831781c389033e3b2627d76921a20bdc1768b48ee9ca372cc7fc5e5ca646d",
+      "published_sha256": "fe7f34519a69c16a6ea8ebd991614a0c582d7d2a5c5254ec6de16d86913bc5c2",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/state.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/state.py",
       "source_sha256": "926f9a463a16867b01189c060ad602cfaff42cc25c2061ecc39a510ca9c621c3",
-      "published_sha256": "2b2e4c6be2d7526ccb564ed160d31be86d6626a84591fcf1f0c2357832a0170f",
+      "published_sha256": "926f9a463a16867b01189c060ad602cfaff42cc25c2061ecc39a510ca9c621c3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/tests/__init__.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/tests/__init__.py",
       "source_sha256": "04c2cbc987ddf1acd31c672375dcdddf5a1579fc0fbd159b7bbe4e0b25451f24",
-      "published_sha256": "7035475375a2bdccc7a2c7233e394a6dddaa5b9c10f5fb27cc5c393248b63ecb",
+      "published_sha256": "04c2cbc987ddf1acd31c672375dcdddf5a1579fc0fbd159b7bbe4e0b25451f24",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/job51/tests/test_job51.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/tests/test_job51.py",
       "source_sha256": "41c4f2729af5f72cc3714caffed09e26ed435ce2620ec0e5b697c9c788046343",
-      "published_sha256": "9a3ef5425143dd4b64325684953f3b4e31d7d895e1a1c711c16d989620e68419",
+      "published_sha256": "41c4f2729af5f72cc3714caffed09e26ed435ce2620ec0e5b697c9c788046343",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/README.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/README.md",
       "source_sha256": "a7487fac70f1da357732a998ac0aa89915825a547e3f0c297d935d9cea8e992d",
-      "published_sha256": "5edff0608346f562b07e6de25a86159392cd3f35470724b3fa2dd9469c00fb78",
+      "published_sha256": "3fae1b91c74b27432d33392562c53d108506a616bf9075baec4351b95078dbab",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/__init__.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/__init__.py",
       "source_sha256": "3a4d79bc08e4bf3c83f6c2900edca5f3f5f25de87332fc12f648ec21758f568b",
-      "published_sha256": "0962d4706d7c9569e0c7dc7a039027f63f367b74c5ffda96a9b4c30070425230",
+      "published_sha256": "34a890a371262b2d5af80eb18fb502ce84a05acfc8e9b51a1aa7eeface6d9130",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/__main__.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/__main__.py",
       "source_sha256": "e014c07c71c5daede3fe8520fd696eaaed07cb19d77c01c14147273d0f9ed71b",
-      "published_sha256": "956ac6e88ebe1ba1437c9173a2616e17bbbf9f9675b9960957a1e0fb67a7fb2c",
+      "published_sha256": "0f7d54f3fbb1f79a85eb8110f11793db99da6f3c61ee979de5abe9a1b5f3fdb3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/auth.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/auth.py",
       "source_sha256": "796f4b5088e104b124aacef15eacc534e3b88e98664a1170338a02f41274f5e3",
-      "published_sha256": "cf4e4d9fbd239d91f1f00436fb6206467c3f1fd86d7bed7cad9aa676220e1454",
+      "published_sha256": "796f4b5088e104b124aacef15eacc534e3b88e98664a1170338a02f41274f5e3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/cli.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/cli.py",
       "source_sha256": "92eeccfe70b3e37bc5b1948a13dde6efe1fb125e0be130bf1d6157f37e3c5094",
-      "published_sha256": "02172d5176df6f08ec1a1bfd71179e8b523a539dc9e5272b6ad7d0cf49a2f436",
+      "published_sha256": "92eeccfe70b3e37bc5b1948a13dde6efe1fb125e0be130bf1d6157f37e3c5094",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/crawler.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/crawler.py",
       "source_sha256": "e8684498c7e293a78937f5726938eae58e0d6c9933f87423de54db4481257395",
-      "published_sha256": "bb0a079c9edb1c329bea14519e1ff6044d556caa6af5476ec7cf8aa4c9b675e1",
+      "published_sha256": "e8684498c7e293a78937f5726938eae58e0d6c9933f87423de54db4481257395",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/errors.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/errors.py",
       "source_sha256": "f884e29157484b0d5d2fa51bf13b1343e0d08574fafdf1d1b9e18a2c913188ec",
-      "published_sha256": "2e9420a0cc4aaed30d7f2e90c462c9f1fb70b39c0aad87d0a27c83cda25035bb",
+      "published_sha256": "c23695c18eb782df58fed74c79dd5b44db16430c9862e453c2699c4cd0edacde",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/http.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/http.py",
       "source_sha256": "514b31b92eb07422d0aaee53f0aba8c7af8b22ed149a7e8cea527037bb7c1199",
-      "published_sha256": "8a006d38cfebb6d5e118015e30049ef21cc7908def7531536573f986daaaff00",
+      "published_sha256": "514b31b92eb07422d0aaee53f0aba8c7af8b22ed149a7e8cea527037bb7c1199",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/models.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/models.py",
       "source_sha256": "434b3b6b55c0baf468a60ec7f1a3ae687a80491026b1ff31260d0684d3dbabb9",
-      "published_sha256": "b9443111ef1901d1aeef98f5b9e4a5891c9231d3ac04518680d735ba3d73cefb",
+      "published_sha256": "434b3b6b55c0baf468a60ec7f1a3ae687a80491026b1ff31260d0684d3dbabb9",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/parser.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/parser.py",
       "source_sha256": "d95d668a1f3d854141649c5075297477155d8f1efe3fd41d4a7d2235d0d8b381",
-      "published_sha256": "9762b4cc026aafa9e2d5f5e3e6ff5dd513917f4b5bffdea4334fee20017ea38b",
+      "published_sha256": "d95d668a1f3d854141649c5075297477155d8f1efe3fd41d4a7d2235d0d8b381",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/requirements.txt",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/requirements.txt",
       "source_sha256": "35585aa3823f9c33c09068686b141263ea9d06527c6eef3a46a375aa1db621da",
-      "published_sha256": "38abaaa8df3ec3591265553b4ad4718d61d323b9a9e46026099f5b932f711270",
+      "published_sha256": "9e3613937c0326b0bb66426b5d9d4f03370a606ad7011a7deae5f8e946b6388c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/state.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/state.py",
       "source_sha256": "f52ea9006e4e91f6039f73a91c8a580aaa61c6546acd1a338c774a45b989d80c",
-      "published_sha256": "45bf766e6556d13fb95b57e0e724d158c86c06381125549b8048bc2ff433ecb0",
+      "published_sha256": "f52ea9006e4e91f6039f73a91c8a580aaa61c6546acd1a338c774a45b989d80c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/tests/__init__.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/tests/__init__.py",
       "source_sha256": "16826df94d8540ee49543b8d5393da8b55837e0433688fce687ea0d2d97f0b45",
-      "published_sha256": "68d320da70cb5df5fb5637bac893e8a3d4dc0ac79cd9a037b7e8385a69f965ab",
+      "published_sha256": "16491dcaaf41e2dc82553f02dd3cc93902784c1248626b972ab7f220d1edfaa3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/tests/fixtures.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/tests/fixtures.py",
       "source_sha256": "ccbcdf27b816c435818243ae0fabdd5be18d9d4c85de1131a5556a0f7d6917f7",
-      "published_sha256": "3191e4e162cbf255138767da004d0f91ad3c0c8fed303ca3606b098896fcdd9f",
+      "published_sha256": "ccbcdf27b816c435818243ae0fabdd5be18d9d4c85de1131a5556a0f7d6917f7",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/tests/test_auth.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/tests/test_auth.py",
       "source_sha256": "d14a760440e24410363c0800efc4b7607796d0c74b11809a05e581fceb5d532c",
-      "published_sha256": "371eedf49861b9bf4f52a5de87a33e396416238e7abf214d4829dfa3174701fa",
+      "published_sha256": "d14a760440e24410363c0800efc4b7607796d0c74b11809a05e581fceb5d532c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/tests/test_crawler.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/tests/test_crawler.py",
       "source_sha256": "0d0b3c8b6e9acbbd6e3399146ec1b53effdad29b55d5d511f56ca84925cdfecb",
-      "published_sha256": "a38931f45bdc82b87fe4fdc126163111fe7cc9ce0bdb36a7ff59c8f3773f88f8",
+      "published_sha256": "0d0b3c8b6e9acbbd6e3399146ec1b53effdad29b55d5d511f56ca84925cdfecb",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/tests/test_http.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/tests/test_http.py",
       "source_sha256": "99144d864ae63e39dbd0c8f0cbe36454e643e415cdec09acdca2cc7fd2ca526c",
-      "published_sha256": "1746468968f5468fd885972210a9d1d6bd579c0a7e57e6b0c1420699186a996d",
+      "published_sha256": "99144d864ae63e39dbd0c8f0cbe36454e643e415cdec09acdca2cc7fd2ca526c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/tests/test_parser.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/tests/test_parser.py",
       "source_sha256": "e593d6432f3f5dc3e3a54ac0a4d3d84cc789fceb00b008da4df21c29a49437b0",
-      "published_sha256": "2fbe87423d73c5321d47adf8d2ed41e6a681e8b640f1c7c7e19936ce09a01000",
+      "published_sha256": "e593d6432f3f5dc3e3a54ac0a4d3d84cc789fceb00b008da4df21c29a49437b0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/liepin/tests/test_state.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/tests/test_state.py",
       "source_sha256": "737448f0eead4b93d409359fd9197354f5d553862257c85a9585e4a68fa692a8",
-      "published_sha256": "be13c874b2473d523e509bb706f7a16c7bf6aa55460b743d90092272d7314c56",
+      "published_sha256": "737448f0eead4b93d409359fd9197354f5d553862257c85a9585e4a68fa692a8",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/models.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/models.py",
       "source_sha256": "f133e2218f09dfbf9ddff8e490badf086a8b64bb93ebbc340d598334d097cc0f",
-      "published_sha256": "1a1a7760b281450b5458ae7dd74368fb5926f7ab8ae0682550e24e146aba5a17",
+      "published_sha256": "f133e2218f09dfbf9ddff8e490badf086a8b64bb93ebbc340d598334d097cc0f",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/publication.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/publication.py",
       "source_sha256": "fbf98118d213c1bb080b2cc361f6e5935151805789749fd1328fb3f541be8426",
-      "published_sha256": "e3cbef194750076dd3d48c2a83a72df2cac98647c3f33210015328f37af0d75b",
+      "published_sha256": "fbf98118d213c1bb080b2cc361f6e5935151805789749fd1328fb3f541be8426",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/recruitment.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/recruitment.py",
       "source_sha256": "263cf0c274f9ec6f8b1a71c455016ff1a012a0db56380328480f2e094aa0a257",
-      "published_sha256": "3e575fc07721f6d7431b9208aee4f6c2739bf3e95c02d9050602cacf8ab52c00",
+      "published_sha256": "263cf0c274f9ec6f8b1a71c455016ff1a012a0db56380328480f2e094aa0a257",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/runner.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/runner.py",
       "source_sha256": "fd332f17690600d15f204a1f943fa8b862afaf92e0fa045cbec8159b8464d942",
-      "published_sha256": "c481a2f7bcb67f6d66262cc01a928292a2b2e26124364afd5038a6c8c3af45fe",
+      "published_sha256": "fd332f17690600d15f204a1f943fa8b862afaf92e0fa045cbec8159b8464d942",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/sites.py",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/sites.py",
       "source_sha256": "faf727510c53a11e9c904d88f11e14d4ee4471c5ba8d1504ecb357e91f4b8d97",
-      "published_sha256": "0bf539b0f1c5c516ca056a28538e3c7ec87cf4f9e114f45e2155bc7bc5e0de7e",
+      "published_sha256": "faf727510c53a11e9c904d88f11e14d4ee4471c5ba8d1504ecb357e91f4b8d97",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/pyproject.toml",
       "source_rel_desktop": "外包+岗位爬虫/pyproject.toml",
       "source_sha256": "b73a388945151ff38256c2a21e830720fcea57b0f25ea863f232566bcc8bb608",
-      "published_sha256": "a46fcd0ee2e43299aaff24e438faa99e431aed557c2bea62af79cd48100ffe71",
+      "published_sha256": "b73a388945151ff38256c2a21e830720fcea57b0f25ea863f232566bcc8bb608",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/requirements-ip-pool.txt",
       "source_rel_desktop": "外包+岗位爬虫/requirements-ip-pool.txt",
       "source_sha256": "ee99a119b262251f289a7eaf747ec8c438f8a91b889d8d23a0cd199840d0723c",
-      "published_sha256": "dfec82d12d7f3f227c35e6e573f024d61ed98f85e7bbec2abaf077d7ac98faa0",
+      "published_sha256": "ee99a119b262251f289a7eaf747ec8c438f8a91b889d8d23a0cd199840d0723c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/requirements.txt",
       "source_rel_desktop": "外包+岗位爬虫/requirements.txt",
       "source_sha256": "2bca9e0f495277210de3cc9ae62c6cbbc01ca9a2640e9f01611aca980769a261",
-      "published_sha256": "e646a7a71860a6c6aebaaff175b403c0ebc5d63da02f23634d0ba8a6a8fb5673",
+      "published_sha256": "2bca9e0f495277210de3cc9ae62c6cbbc01ca9a2640e9f01611aca980769a261",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/run.py",
       "source_rel_desktop": "外包+岗位爬虫/run.py",
       "source_sha256": "337724aa96b646c2a280ddaed1957f033d631e63cabd092124802412c3ff7674",
-      "published_sha256": "9c5bfdf373e813a5f7015cf5e8b185e3953b587d09dbd714ce48c09ef52790df",
+      "published_sha256": "337724aa96b646c2a280ddaed1957f033d631e63cabd092124802412c3ff7674",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/sample_proxies.txt",
       "source_rel_desktop": "外包+岗位爬虫/sample_proxies.txt",
       "source_sha256": "cd855586cf4ff92161bb6624eff2d74cb67a97d60e524e70d4d73fdfd824f20d",
-      "published_sha256": "5e4e85a7e2443dd3d6fc38a41b10c78a5563d1e78da2f0afe9df76b0435e33a9",
+      "published_sha256": "cd855586cf4ff92161bb6624eff2d74cb67a97d60e524e70d4d73fdfd824f20d",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/setup.ps1",
       "source_rel_desktop": "外包+岗位爬虫/setup.ps1",
       "source_sha256": "e81fc83a3088ee4e3b233158f4486a99b8280f38a3a6735a48369ac0df3b9e45",
-      "published_sha256": "3dbe3fe0718adf63daa59dc1bd7f19bcf7b2d673c1bdb5d9b6cb60bd64d6bf7f",
+      "published_sha256": "0be2f814c2ded7ed292016cf83b2ba615244702fa1c6711582ead5fbf0c4cfc3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/test_boss_jd_backfill.py",
       "source_rel_desktop": "外包+岗位爬虫/test_boss_jd_backfill.py",
       "source_sha256": "1eedfb8f9f54da88c7ca9780bf53e70538113dfbd04265a4b6e958cea743ec6c",
-      "published_sha256": "7c9d350d82f29780a13bfc8ffc0dbdb01e1bd734a069f23473c1a1d47ff1f6dc",
+      "published_sha256": "1eedfb8f9f54da88c7ca9780bf53e70538113dfbd04265a4b6e958cea743ec6c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/fixtures/epwk.html",
       "source_rel_desktop": "外包+岗位爬虫/tests/fixtures/epwk.html",
       "source_sha256": "1cc7f5ead9ade98475aa3ad3b8d20894b5feaf286a77f5a2093676dea478805a",
-      "published_sha256": "a764f1ee068357efba9858587090c64c8b7e2527a7abfeafffd2c3a69a1ca3ee",
+      "published_sha256": "1cc7f5ead9ade98475aa3ad3b8d20894b5feaf286a77f5a2093676dea478805a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/fixtures/proginn.html",
       "source_rel_desktop": "外包+岗位爬虫/tests/fixtures/proginn.html",
       "source_sha256": "0a93bfea178f9ff9c59a5d4ce6ab02eaf10d2076dc0688e8f7815e30ec62ddd1",
-      "published_sha256": "cc0ff4363f1eb61e7264d5ecec606b15164dcd64b2b02b5de985b542904f694a",
+      "published_sha256": "0a93bfea178f9ff9c59a5d4ce6ab02eaf10d2076dc0688e8f7815e30ec62ddd1",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/fixtures/shixian-full.html",
       "source_rel_desktop": "外包+岗位爬虫/tests/fixtures/shixian-full.html",
       "source_sha256": "8ef055ad7bf83072b95b66ec63f7d8f77e28543d5c5f6cca4cf86ada981f2100",
-      "published_sha256": "47d4bddc5f05343321c07d060bcd3e60e1af1285ad58cc9fd407acb8bfde3c67",
+      "published_sha256": "8ef055ad7bf83072b95b66ec63f7d8f77e28543d5c5f6cca4cf86ada981f2100",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/fixtures/shixian-part.html",
       "source_rel_desktop": "外包+岗位爬虫/tests/fixtures/shixian-part.html",
       "source_sha256": "93e42eb05e1b9d873a8908ac30b894ee14794f801ab7584f2ba22d2e0bd5d475",
-      "published_sha256": "2b68492d02cca157d7883b2ba77ada85cca8338de6cea4128c674ea69d66a549",
+      "published_sha256": "93e42eb05e1b9d873a8908ac30b894ee14794f801ab7584f2ba22d2e0bd5d475",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/fixtures/zbj.html",
       "source_rel_desktop": "外包+岗位爬虫/tests/fixtures/zbj.html",
       "source_sha256": "eb6f68d9d140ecafbb3b6ba7a1623894cb733a2d7d9ccc2f4f5621fc59091469",
-      "published_sha256": "e1b1a2865258e3e73c80fc226fa1281816b903ea4090766809275c0243eec101",
+      "published_sha256": "eb6f68d9d140ecafbb3b6ba7a1623894cb733a2d7d9ccc2f4f5621fc59091469",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_analyze_category_prices.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_analyze_category_prices.py",
       "source_sha256": "49044852cb18378d0af55c5edc995a28a900a365dd1b2b91dab4ff3e8eaf6cde",
-      "published_sha256": "063c2e11954f7ad6f2d86eb00e44d5c0559e75eab5b1967dc2dacc864fb22db1",
+      "published_sha256": "49044852cb18378d0af55c5edc995a28a900a365dd1b2b91dab4ff3e8eaf6cde",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_boss_archive.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_boss_archive.py",
       "source_sha256": "2a2406c5a75ccf78f77f6aa18ef08692fc0788eaed93fb1a3a8139858a5a3540",
-      "published_sha256": "8db55d3d7137ede4940d8c98635810df0d9f058c18882caeb4774441ec110275",
+      "published_sha256": "2a2406c5a75ccf78f77f6aa18ef08692fc0788eaed93fb1a3a8139858a5a3540",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_boss_auth.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_boss_auth.py",
       "source_sha256": "243082a17dc7c4723110de042666dc19f46362209bc0655ffbced8e491a67275",
-      "published_sha256": "54221b814310ca3eba04761c72394407e54d9bc350932a9b5177d643c6e19b8a",
+      "published_sha256": "243082a17dc7c4723110de042666dc19f46362209bc0655ffbced8e491a67275",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_boss_detail_parallel.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_boss_detail_parallel.py",
       "source_sha256": "89e675747ce8942819034d077532878e96b0db57709527399218fc04f64617ff",
-      "published_sha256": "dd038dedb1e98d32bace4ffbd3c6af925600f5e2e0c65401213c16fbe0e7d76e",
+      "published_sha256": "89e675747ce8942819034d077532878e96b0db57709527399218fc04f64617ff",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_boss_parser.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_boss_parser.py",
       "source_sha256": "92950ea7a2def46a77700e0aae43e3bd341b166a80008460ba3cba1879aa888f",
-      "published_sha256": "b56a92bb959a7f11dfeb2290c1501678531d567e3353a36328e38e8fd5fb773e",
+      "published_sha256": "af303b7754adf87a605914f29be1276d01fcf92425d0bd40fa0a527f4a6c7dd3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_boss_public_card_backfill.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_boss_public_card_backfill.py",
       "source_sha256": "426dc52fbe723e85b816d7cc3fda4f37db1209c3ec767f0bf06eeed7b7decf8d",
-      "published_sha256": "ff02ea3a45c6a794fe45abccf5e29a4081006a055b9bb2c9393bb373a1b4d65d",
+      "published_sha256": "426dc52fbe723e85b816d7cc3fda4f37db1209c3ec767f0bf06eeed7b7decf8d",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_boss_public_details.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_boss_public_details.py",
       "source_sha256": "c8c652e78b0e5c43bd90e6a69f2fb9d29e13f60fce8aca594cff7c2a0ac2154f",
-      "published_sha256": "18275c60b46700609cc9a020b34c3593ffdf7c33a7369f0675189fda7977c4cf",
+      "published_sha256": "c8c652e78b0e5c43bd90e6a69f2fb9d29e13f60fce8aca594cff7c2a0ac2154f",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_build_recruitment_clean_dataset.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_build_recruitment_clean_dataset.py",
       "source_sha256": "3df9fe277d6895d5fa05e68b66ce4f85dfc953e5af0fe4c00264eda6efcb5428",
-      "published_sha256": "16e1f71b63ef1017e8383febab830544724be765e9605f8b80daba1f20d27080",
+      "published_sha256": "3df9fe277d6895d5fa05e68b66ce4f85dfc953e5af0fe4c00264eda6efcb5428",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_cli_doctor.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_cli_doctor.py",
       "source_sha256": "119a3539373661d0c085fea6fcf75d43a111a09e8eb2f109f755904693bef6ac",
-      "published_sha256": "127e1cc137b89b427bc29afce8e22701114cde9eacb8f181175fee150edcd144",
+      "published_sha256": "119a3539373661d0c085fea6fcf75d43a111a09e8eb2f109f755904693bef6ac",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_edge_cdp_runtime.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_edge_cdp_runtime.py",
       "source_sha256": "db78f45f26e2f247c5a5b5106b26c96a56e1c40516de2086f38bd43bee38a6de",
-      "published_sha256": "7d4025bab20cff11e98332853fc487758abac5fe813756612f8d5d06532f6b9b",
+      "published_sha256": "db78f45f26e2f247c5a5b5106b26c96a56e1c40516de2086f38bd43bee38a6de",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_enrich_original_categories.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_enrich_original_categories.py",
       "source_sha256": "156b7ae91761c4f8f633e787352f6e8ccd7d1c93f1c3bd6c446d6bdb9f07f661",
-      "published_sha256": "7baffe1a54fbb76359dc626aa0ba2cfc88534ebbf5d74923663cc131ea848493",
+      "published_sha256": "156b7ae91761c4f8f633e787352f6e8ccd7d1c93f1c3bd6c446d6bdb9f07f661",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_epwk_detail_quality.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_epwk_detail_quality.py",
       "source_sha256": "bf168e00e0275aec29776eb73da82000542482527ca7d6bfa0ab1491cb5e89b3",
-      "published_sha256": "6d6d554cfc75ed8872530b00174f69ed06408ff5118857178cdc778bdaaa91e8",
+      "published_sha256": "bf168e00e0275aec29776eb73da82000542482527ca7d6bfa0ab1491cb5e89b3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_failure_contracts.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_failure_contracts.py",
       "source_sha256": "48a49b41e27af7e60e24880028441494a766837daf8e1ba4b0cec087c87915c0",
-      "published_sha256": "d5b39992d6709283ba2cf0c13cdac73993baba4ac1276d4f9312ea68d7344ae8",
+      "published_sha256": "48a49b41e27af7e60e24880028441494a766837daf8e1ba4b0cec087c87915c0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_finalize_recruitment_results.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_finalize_recruitment_results.py",
       "source_sha256": "f85a888d731401977fb666bc711474ccacce10801f183d8df1351fe5443dd7f7",
-      "published_sha256": "e2811c9e608ec272509b151621aa3398c11f08b7b194779e41dac0fb8f92620c",
+      "published_sha256": "f85a888d731401977fb666bc711474ccacce10801f183d8df1351fe5443dd7f7",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_finalize_shixian_boundary_notes.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_finalize_shixian_boundary_notes.py",
       "source_sha256": "8917d3b4b5e992cd44ac545d6e239ff115b11e3e03626a84a829a532e863552a",
-      "published_sha256": "d5f0423e50e412a4a01eaa82ee129248d20bc1f73749beab0f13f53731663c0f",
+      "published_sha256": "8917d3b4b5e992cd44ac545d6e239ff115b11e3e03626a84a829a532e863552a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_http_transport.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_http_transport.py",
       "source_sha256": "c5307ba00b2ef4f256400ff297e60e49281a3198cb010b120c1a04afab86151c",
-      "published_sha256": "09e7e91b55cfccd155c4715dc9a1357614e443fb81da1f0225c3b7bd20033c84",
+      "published_sha256": "c5307ba00b2ef4f256400ff297e60e49281a3198cb010b120c1a04afab86151c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_browser_single.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_browser_single.py",
       "source_sha256": "218f898c9bf3872969eee5bfc05efab75ac0bda5d8d3638ecf9d192b67d6bc4f",
-      "published_sha256": "f833702a57b159d3dcd3a52ad83e6645d7018ec67525c61064ad2b74c7e3baba",
+      "published_sha256": "218f898c9bf3872969eee5bfc05efab75ac0bda5d8d3638ecf9d192b67d6bc4f",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_browser_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_browser_supervisor.py",
       "source_sha256": "e107ce7adda805d6046c2f5192b690d5939303b3e9c0ac1a0bcf1372e455d948",
-      "published_sha256": "8eda58685292377bce3d66fd544de95ec79f908ab88e6940084cd11ee1753213",
+      "published_sha256": "e107ce7adda805d6046c2f5192b690d5939303b3e9c0ac1a0bcf1372e455d948",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_camoufox_dual.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_camoufox_dual.py",
       "source_sha256": "1db9d243cf253844b94fb3bdcf00eb8964526e1c5c46e97350d88669b51c5ae2",
-      "published_sha256": "0fd09b3e358edb83a2a5019f2fe8d66ae3ffa7c780554e9a23de3ae0a807d646",
+      "published_sha256": "1db9d243cf253844b94fb3bdcf00eb8964526e1c5c46e97350d88669b51c5ae2",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_camoufox_forward.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_camoufox_forward.py",
       "source_sha256": "7c3955857c232a0cfcd2ed22ef8f886f553a798d6469036f810bc7c13966fd09",
-      "published_sha256": "e9b7be2aa0275e2d0c4c87a6ca966fc8f477843c652585c0048d37c7effb898d",
+      "published_sha256": "7c3955857c232a0cfcd2ed22ef8f886f553a798d6469036f810bc7c13966fd09",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_camoufox_reverse.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_camoufox_reverse.py",
       "source_sha256": "379f2c0a263e31f18e91ce7dc8c1aa3f3f14a2a283c8ace4fefc451b623cb7d7",
-      "published_sha256": "326a225fd6fa7bb932e5e757b0d3ec62c2d6e7baabc78eb647f0b5acfbe56519",
+      "published_sha256": "379f2c0a263e31f18e91ce7dc8c1aa3f3f14a2a283c8ace4fefc451b623cb7d7",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_coordination.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_coordination.py",
       "source_sha256": "d2d5dc1a4b2ec41016f9732c7179fddf801a37fef18477a2b1394be703a35ce0",
-      "published_sha256": "f4069ee6371931083e1fae4cc08951bb93bc02009d9225b4cddb21d7742d6cd9",
+      "published_sha256": "d2d5dc1a4b2ec41016f9732c7179fddf801a37fef18477a2b1394be703a35ce0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_edge_cdp_worker.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_edge_cdp_worker.py",
       "source_sha256": "0c18c262c42318f006570f3e1f2f774cfec961364f126cd7d5449e64e3cb4efb",
-      "published_sha256": "cae15123af91450bd3b80718921c06bcdd3697e58e557b6d99c90701d651555d",
+      "published_sha256": "0c18c262c42318f006570f3e1f2f774cfec961364f126cd7d5449e64e3cb4efb",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_edge_extension_bridge.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_edge_extension_bridge.py",
       "source_sha256": "26f1ed0cdba70ea4fe0510e5be9fbbd312c8373b8c5ef5e7e55cee931170fea2",
-      "published_sha256": "86484598fbab19f12fb9b71a23402a03f5433d5bba5ebc18d9157ebfea3d6f12",
+      "published_sha256": "26f1ed0cdba70ea4fe0510e5be9fbbd312c8373b8c5ef5e7e55cee931170fea2",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_liepin_public_supervisors.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_liepin_public_supervisors.py",
       "source_sha256": "92879a5a82a9e7cbb4404f4f682c88b5ed1874efbd866821304a3b678da2d093",
-      "published_sha256": "685c0e62380507f3a8050443b5d466f1781d33a6103793b73639527ed9750626",
+      "published_sha256": "92879a5a82a9e7cbb4404f4f682c88b5ed1874efbd866821304a3b678da2d093",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_merge_detail_enrichments.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_merge_detail_enrichments.py",
       "source_sha256": "ba7273123afae143433ce7a923971dad89cac1536084bc1786a29f979b69ba15",
-      "published_sha256": "058ae25fa0fe7a0910857d930a70d5256359015c737edaed49503bd8229e9daf",
+      "published_sha256": "ba7273123afae143433ce7a923971dad89cac1536084bc1786a29f979b69ba15",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_merge_epwk_runs.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_merge_epwk_runs.py",
       "source_sha256": "db1e2366d70927c4c68fccdde10ac97da831bccd4285f7e3786b29078b3d458c",
-      "published_sha256": "8233de872d3bd86fad52fa5d6739b74d43a3056f7573a0d96437923e071ba5b6",
+      "published_sha256": "db1e2366d70927c4c68fccdde10ac97da831bccd4285f7e3786b29078b3d458c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_merge_liepin_detail_outputs.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_merge_liepin_detail_outputs.py",
       "source_sha256": "63cf451cc1a7d0b469f330ccdb9bef25314c6c7d23cf466b055e13ba259af59a",
-      "published_sha256": "0c837fb5fe0581e0147cadeb2b2c52f5aa69a608cbed5f53c0d229afc4df429b",
+      "published_sha256": "63cf451cc1a7d0b469f330ccdb9bef25314c6c7d23cf466b055e13ba259af59a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_models.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_models.py",
       "source_sha256": "93dcce4e2c1fe84135b087e5669b8f7c37976acb0ce66650f67319743743f62b",
-      "published_sha256": "652266c6fe625e6d0129d08659392e7bc5219e7fdb75892dc47fef6d5e659ea1",
+      "published_sha256": "93dcce4e2c1fe84135b087e5669b8f7c37976acb0ce66650f67319743743f62b",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_numeric_price_cli.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_numeric_price_cli.py",
       "source_sha256": "57be730f7dcc4b8cd2b05e4588d9e9000fbac7cbf0ec46b0a58e055eae8a3220",
-      "published_sha256": "5da093d82b20091b4fbb6fc5ba721ed34c561b3da3865ea4afb8883dda9781a7",
+      "published_sha256": "57be730f7dcc4b8cd2b05e4588d9e9000fbac7cbf0ec46b0a58e055eae8a3220",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_original_categories.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_original_categories.py",
       "source_sha256": "8b6c71cf5e805e44bfd1e9c11cd1040f72ffb2e172bf101eece4aed6e57a0c35",
-      "published_sha256": "fe1b5e8b7e9b430523600f3d362f9bc48613adde4cf8b9f461936229bd4f6c10",
+      "published_sha256": "8b6c71cf5e805e44bfd1e9c11cd1040f72ffb2e172bf101eece4aed6e57a0c35",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_package_final_results.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_package_final_results.py",
       "source_sha256": "0a3970d3080d40ce6c6f2608d0430bdf40e79fe6b78882e4d13c58ac75e9e9da",
-      "published_sha256": "bb73550bde8f87f77536553b5e8fc112ef3a7c6ca604cc84eac10e1618828865",
+      "published_sha256": "0a3970d3080d40ce6c6f2608d0430bdf40e79fe6b78882e4d13c58ac75e9e9da",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_publication_filter.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_publication_filter.py",
       "source_sha256": "a4f88a7ccecc3df2cc2b5597eb99419bf3fac31d53b524aa0083b09ca40c62d0",
-      "published_sha256": "156ab5c0144de078fe17f1b87babd4778d335164354d3c3780ac5ce27bfd209d",
+      "published_sha256": "a4f88a7ccecc3df2cc2b5597eb99419bf3fac31d53b524aa0083b09ca40c62d0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_recover_epwk_failures.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_recover_epwk_failures.py",
       "source_sha256": "aedbcef0452f41a2d62d13c3a025c327399264a9ad4c9d29f798bba1350e8bf0",
-      "published_sha256": "a051642678a4173d26101723e34f4886cc9d30e3c3ecd9b320b0e761ce372505",
+      "published_sha256": "aedbcef0452f41a2d62d13c3a025c327399264a9ad4c9d29f798bba1350e8bf0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_recruitment.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_recruitment.py",
       "source_sha256": "db82124623855c2b0f3e4126a2efad23cf659da7598719c585a79547774522ca",
-      "published_sha256": "8da65ce5fa33a191dc83e24d83c061847104edd2b59ff35135f54e58eb670a0f",
+      "published_sha256": "db82124623855c2b0f3e4126a2efad23cf659da7598719c585a79547774522ca",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_recruitment_detail_results.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_recruitment_detail_results.py",
       "source_sha256": "c0d7762b38b29bfd69042d4793b815cf3eff4aa14b83669b815e41faf6a9b265",
-      "published_sha256": "24bda38c1b8c14cb5b6e2990e6fae3251aa4fe7ebfe5653db8b7395b6e07bca4",
+      "published_sha256": "c0d7762b38b29bfd69042d4793b815cf3eff4aa14b83669b815e41faf6a9b265",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_reporting.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_reporting.py",
       "source_sha256": "9c427e92af6f749d516a51f72f8df235b19142b7fb21d73e58f8bc21289d7ae2",
-      "published_sha256": "9243753a50db835a6db8cbca827fdb5a0ef9d581f9f34426c389577dc257fa4d",
+      "published_sha256": "9c427e92af6f749d516a51f72f8df235b19142b7fb21d73e58f8bc21289d7ae2",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_sample_epwk_quality.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_sample_epwk_quality.py",
       "source_sha256": "ff877c1c6d1d570bb72303f8733448a828bff65c5b08ac714ffb11b03bc9dc01",
-      "published_sha256": "2f5430a05e37a39b04f13faab4a6ea28cece55cbfe45223db6f2449457be67f4",
+      "published_sha256": "ff877c1c6d1d570bb72303f8733448a828bff65c5b08ac714ffb11b03bc9dc01",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_shixian_window.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_shixian_window.py",
       "source_sha256": "ba80166ff7d1075398824fb9c2ec22eded7a471db43e46b0377c448dc32955e4",
-      "published_sha256": "17eeb1e825a05528ee3ed596c5f659e01a63a324deb4b26e37e462874d6f79b0",
+      "published_sha256": "ba80166ff7d1075398824fb9c2ec22eded7a471db43e46b0377c448dc32955e4",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_standalone_distribution.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_standalone_distribution.py",
       "source_sha256": "a7e2dc477dc798762466009f291271e437f58e350b8cfae3f7f0776b2df35175",
-      "published_sha256": "6f609599c0089a3ab99f6a764c73b46939457a39f9ef4bc03ca2d15bf2d18252",
+      "published_sha256": "a7e2dc477dc798762466009f291271e437f58e350b8cfae3f7f0776b2df35175",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tests/test_static_adapters.py",
       "source_rel_desktop": "外包+岗位爬虫/tests/test_static_adapters.py",
       "source_sha256": "35b9c300ce39d123c44ea8a8fc306fb9392f542728e23137cf48f5ea75731267",
-      "published_sha256": "69f134e36b6520b7ecadceaf5f334996b65a05f0c863b38fd61484ea22b9da7b",
+      "published_sha256": "35b9c300ce39d123c44ea8a8fc306fb9392f542728e23137cf48f5ea75731267",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/analyze_category_prices.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/analyze_category_prices.py",
       "source_sha256": "8429a7b9929c21dc3638252e97a684685c314378b32f2f59a4748526d0ed0ba5",
-      "published_sha256": "1e62f7cd24764a92f22d03cc4837c02945d963ee801b6d939709a059c8f43028",
+      "published_sha256": "8429a7b9929c21dc3638252e97a684685c314378b32f2f59a4748526d0ed0ba5",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/apply_epwk_manual_reviews.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/apply_epwk_manual_reviews.py",
       "source_sha256": "941ddbf12a39b63725bf28c7b62424c0b05230e7b6b55113ad32ff311dba370a",
-      "published_sha256": "d9d3aa1c24a4174c68a4f3dcc4033c0336557108b0fc2fa97ef6ba62b7b14b7e",
+      "published_sha256": "941ddbf12a39b63725bf28c7b62424c0b05230e7b6b55113ad32ff311dba370a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/backfill_boss_public_card_jd.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/backfill_boss_public_card_jd.py",
       "source_sha256": "b486ed6a90d2837a4138112eb390844930c0545021577d2bc79eb32871cb56d2",
-      "published_sha256": "a3758965597cae444e0e37c753d1b2ee8ea3bab5a63a46fd6bc5bb3a8a102abe",
+      "published_sha256": "b486ed6a90d2837a4138112eb390844930c0545021577d2bc79eb32871cb56d2",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/backfill_liepin_details.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/backfill_liepin_details.py",
       "source_sha256": "f2c4ee23c9f5c62a58eac3636678046a3ff40ffcbcca2dee13febce8f4b8ae15",
-      "published_sha256": "1bc0f7af9d638680f5245e0289695e85242a8fb9838e97e5e9f14131a7eedfc9",
+      "published_sha256": "f2c4ee23c9f5c62a58eac3636678046a3ff40ffcbcca2dee13febce8f4b8ae15",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/build_epwk_compact_9col.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/build_epwk_compact_9col.py",
       "source_sha256": "7c33235c36f5d6ed8adaf05933c45b4a2cdff6f6a8e51460321099842a8b9444",
-      "published_sha256": "8abca012c46d076d28593579699c34aa7877283896552c72ca8d03720fce1935",
+      "published_sha256": "7c33235c36f5d6ed8adaf05933c45b4a2cdff6f6a8e51460321099842a8b9444",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/build_epwk_review_packets.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/build_epwk_review_packets.py",
       "source_sha256": "fccee050e061ec8e709d63ff27503c496735425a6cc23d614a2e8af0f10589c7",
-      "published_sha256": "b5f489230c323b94ea2d57445f403e7cda11495a162df5a34a2d7239375276de",
+      "published_sha256": "fccee050e061ec8e709d63ff27503c496735425a6cc23d614a2e8af0f10589c7",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/build_recruitment_clean_dataset.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/build_recruitment_clean_dataset.py",
       "source_sha256": "cac08111755b46ffd2062118e551b6446caf3c16581dd3000083ce3a7e4c9da2",
-      "published_sha256": "b04d239ccafeaa504ed3dccc9627bb01c8104cbbd6707804a12cd03257e1a7c1",
+      "published_sha256": "cac08111755b46ffd2062118e551b6446caf3c16581dd3000083ce3a7e4c9da2",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/build_recruitment_compact_results.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/build_recruitment_compact_results.py",
       "source_sha256": "35b256343bc5193bf880238b73bd73430f0c6ce5ad09152027731d1b75a58edd",
-      "published_sha256": "d93411442e30f2713e2bc5648272da00c6e8971b7e1dea88a2a41219dd05e650",
+      "published_sha256": "35b256343bc5193bf880238b73bd73430f0c6ce5ad09152027731d1b75a58edd",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/build_recruitment_detail_results.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/build_recruitment_detail_results.py",
       "source_sha256": "42150a9b63be4ff791562663d54aba07621a896484150e63c46ee35dd06df0d1",
-      "published_sha256": "692d9a4334c07ff2ca87111213685d556f0625c4980ec3747a7cb2a29f7ac251",
+      "published_sha256": "42150a9b63be4ff791562663d54aba07621a896484150e63c46ee35dd06df0d1",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/check_liepin_camoufox_profile.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/check_liepin_camoufox_profile.py",
       "source_sha256": "e0c98dce39ae42b87db4f4ba1f480ec6f27458f0190a0b2a9682ecca37d8fa07",
-      "published_sha256": "c795a69add4ffb00c8159ab8fc665f659cc9a533e5a25e9f2382532579f2324b",
+      "published_sha256": "e0c98dce39ae42b87db4f4ba1f480ec6f27458f0190a0b2a9682ecca37d8fa07",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/clone_edge_profile_for_cdp.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/clone_edge_profile_for_cdp.py",
       "source_sha256": "f5e14f6093e9900fadb11f1376ae643029e0fc1d9eddc99ddfa4aaaa5a9a836c",
-      "published_sha256": "f556122467add79efa6ab6587e69a865b2d6bc9d1a072d46dad4ed8cb37f79f3",
+      "published_sha256": "f5e14f6093e9900fadb11f1376ae643029e0fc1d9eddc99ddfa4aaaa5a9a836c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/diagnose_job51_search.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/diagnose_job51_search.py",
       "source_sha256": "ff5918c22339af37710b2a76f7d3441d1a31efed8083da145904c6145c1a55f9",
-      "published_sha256": "9f4dc268d0ffec1f336b83ec784d4a01639a478c54dfd7d41cb3e1eeedeae12f",
+      "published_sha256": "ff5918c22339af37710b2a76f7d3441d1a31efed8083da145904c6145c1a55f9",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/edge_cdp_runtime.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/edge_cdp_runtime.py",
       "source_sha256": "63dea9e04af42ecaf5a57723a6cec2e20dd00d2f5f6299c8257cef12b451ca66",
-      "published_sha256": "07c49556ebc40793f0b9157b904e4e4aeb6544e9c5b85e637a28b17ddf79fe12",
+      "published_sha256": "63dea9e04af42ecaf5a57723a6cec2e20dd00d2f5f6299c8257cef12b451ca66",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/enrich_original_categories.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/enrich_original_categories.py",
       "source_sha256": "67e8f906f5599bc1e8026943c8cd260f551220274690a889b4677e13ce10226d",
-      "published_sha256": "07b7487eec86bb2376ed4d249b027e901a89bc04eabe614aebdffe707d618015",
+      "published_sha256": "67e8f906f5599bc1e8026943c8cd260f551220274690a889b4677e13ce10226d",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/finalize_recruitment_results.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/finalize_recruitment_results.py",
       "source_sha256": "b528a238294c31a6df2353a42286b3039115198dca73b077deff0b91a0ecd75d",
-      "published_sha256": "5ba8362308d93d794f64ab367717cba570cb05cc33f967fcec4c26443c585436",
+      "published_sha256": "b528a238294c31a6df2353a42286b3039115198dca73b077deff0b91a0ecd75d",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/finalize_shixian_boundary_notes.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/finalize_shixian_boundary_notes.py",
       "source_sha256": "aa6cb292ff35e27719dcd67cf263bc04f673f84c1114ea6302ea3b414b763005",
-      "published_sha256": "13599cd1cd7d6a09624621346c2b1f29c87744345f6c0777ca9e8f75159c4b57",
+      "published_sha256": "aa6cb292ff35e27719dcd67cf263bc04f673f84c1114ea6302ea3b414b763005",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/inspect_epwk_current_inventory.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/inspect_epwk_current_inventory.py",
       "source_sha256": "48153530fd5dd7abe08236878507413c33239442d71315b641ad5a97205b9f6f",
-      "published_sha256": "a3f25bc0d06a97d44eeb19f4e6c4b04f6fd15a0d5c6a3418d54ee9090a369c8e",
+      "published_sha256": "48153530fd5dd7abe08236878507413c33239442d71315b641ad5a97205b9f6f",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/liepin_coordination.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/liepin_coordination.py",
       "source_sha256": "cb90e0ee14abf99b9f02f2225664306026e16e1a94af2862f433717fbbcd7af1",
-      "published_sha256": "f8fd0edba8cabaab3f1a3defb12a36d2652f9c989c3b085473808131f285e728",
+      "published_sha256": "cb90e0ee14abf99b9f02f2225664306026e16e1a94af2862f433717fbbcd7af1",
       "changed_for_publication": true
     },
     {
@@ -1056,1723 +1056,1724 @@
       "path": "projects/market-platform/tools/liepin_edge_extension/background.js",
       "source_rel_desktop": "外包+岗位爬虫/tools/liepin_edge_extension/background.js",
       "source_sha256": "9600a2e718ef562ca24454f68691f753d6f9a619b2845ffc9999119617c40594",
-      "published_sha256": "5e32e2f507a91b34091cbbcd77e33d33a78983ef9901df4b6cf34fca1a289c7d",
+      "published_sha256": "9600a2e718ef562ca24454f68691f753d6f9a619b2845ffc9999119617c40594",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/liepin_edge_extension/content.js",
       "source_rel_desktop": "外包+岗位爬虫/tools/liepin_edge_extension/content.js",
       "source_sha256": "f1296935306834fa81a85fe50256a167884dc3894334693513ac76c6686eb9c8",
-      "published_sha256": "ac35884650df6da1474f49433f07590e0e72ab767df0d56d835d65860ea1ee06",
+      "published_sha256": "f1296935306834fa81a85fe50256a167884dc3894334693513ac76c6686eb9c8",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/liepin_edge_extension/manifest.json",
       "source_rel_desktop": "外包+岗位爬虫/tools/liepin_edge_extension/manifest.json",
       "source_sha256": "95b65d346820dbc585ab2219a47b9e8b3fa49f96c1aa8f7b60518a7670212064",
-      "published_sha256": "83790117b9dfbffe98eea7640ee837025f3bbccb642665a61c13b2b3ab833a96",
+      "published_sha256": "95b65d346820dbc585ab2219a47b9e8b3fa49f96c1aa8f7b60518a7670212064",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/liepin_edge_extension/settings.html",
       "source_rel_desktop": "外包+岗位爬虫/tools/liepin_edge_extension/settings.html",
       "source_sha256": "f8d28438d1b364ebb99d8e9abb5aeec8d0de59283165f5eaa8c71bf31cdf912e",
-      "published_sha256": "ce5d28b7c6361a9ad3a31fa51d0370ded494d526cd10c3ee8a1037c3f067e044",
+      "published_sha256": "f8d28438d1b364ebb99d8e9abb5aeec8d0de59283165f5eaa8c71bf31cdf912e",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/liepin_edge_extension/settings.js",
       "source_rel_desktop": "外包+岗位爬虫/tools/liepin_edge_extension/settings.js",
       "source_sha256": "e54638ab61c03b7e286a55e89a44775dede2a38de01ee63afbedc6af8393e74f",
-      "published_sha256": "26e4162a0cb5b4d6cd2f8fb3c2eee59da97a0f8fb0cd1d69cd1fa19fb80d39be",
+      "published_sha256": "e54638ab61c03b7e286a55e89a44775dede2a38de01ee63afbedc6af8393e74f",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/merge_detail_enrichments.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/merge_detail_enrichments.py",
       "source_sha256": "5bf2aecd2402a6022ba9260e8b7c391588f8fda9620a5917de7e0ba8bb5e429a",
-      "published_sha256": "a8f0be58ec7c62735f2600385e46a9ff09db02a07cb109183711116102b60089",
+      "published_sha256": "5bf2aecd2402a6022ba9260e8b7c391588f8fda9620a5917de7e0ba8bb5e429a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/merge_epwk_runs.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/merge_epwk_runs.py",
       "source_sha256": "ffaa73c33732b6e76543ae406db9562c2a7052e767e637c34d3b8719c0612083",
-      "published_sha256": "157d4e016e92465054726aa755a31a2f47e407bc0d8899fd78edc9f75a485dda",
+      "published_sha256": "ffaa73c33732b6e76543ae406db9562c2a7052e767e637c34d3b8719c0612083",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/merge_liepin_detail_outputs.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/merge_liepin_detail_outputs.py",
       "source_sha256": "3fb7b2135485f18c3168226a38e05faf1fb5e554a651c33e6f1c597e5ac311c1",
-      "published_sha256": "9f195e1b37cb90ac5a4a78fb7503f8cb449b37929b28f5da2e446d4599da3ef6",
+      "published_sha256": "3fb7b2135485f18c3168226a38e05faf1fb5e554a651c33e6f1c597e5ac311c1",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/open_liepin_camoufox_login.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/open_liepin_camoufox_login.py",
       "source_sha256": "9be55c19f7fb33f1d4cf40cac42827797c236b6f70ef34c31f80a9a649f9a01c",
-      "published_sha256": "1a4d9103f79e99490bd7c434c16f63b1e2896c780e52c54fcc1ea002133b6b23",
+      "published_sha256": "9be55c19f7fb33f1d4cf40cac42827797c236b6f70ef34c31f80a9a649f9a01c",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/package_epwk_final_delivery.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/package_epwk_final_delivery.py",
       "source_sha256": "ca8eb93f13a64c57620e274306bd2ffdf86a9415a0deb2cd73e8ebae6fdfb0b3",
-      "published_sha256": "18ff5c1aece7693c24dd2d5b7fd942a7a55d5a5e5d206fe23931b852ede83446",
+      "published_sha256": "ca8eb93f13a64c57620e274306bd2ffdf86a9415a0deb2cd73e8ebae6fdfb0b3",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/package_final_results.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/package_final_results.py",
       "source_sha256": "9633a8acbdac10d3ef5fb7029893ce3f5a0712db30f4bd0d4c5f32bc49814587",
-      "published_sha256": "8a48f4c137e6eeefddb47474fc6a0a747d0d8b01215fdabc156097bbd9408586",
+      "published_sha256": "9633a8acbdac10d3ef5fb7029893ce3f5a0712db30f4bd0d4c5f32bc49814587",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/recover_epwk_failures.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/recover_epwk_failures.py",
       "source_sha256": "844bbd086e55dff4508964b030862bcc6f6d42b3eaae8dae44bf9033c5f526a9",
-      "published_sha256": "fea40cade6a85124b7554d45fbf42a6721b09db1dd6cb48a8b680feb084b3ad3",
+      "published_sha256": "844bbd086e55dff4508964b030862bcc6f6d42b3eaae8dae44bf9033c5f526a9",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/rollback_boss_public_card_backfill.ps1",
       "source_rel_desktop": "外包+岗位爬虫/tools/rollback_boss_public_card_backfill.ps1",
       "source_sha256": "6d531479893682d7c9bc2c3ab34be35cc67e24ed2a514bef1194bf72bd5ed22e",
-      "published_sha256": "7e1cebff75d8a7fe446d53156b05e916b072050013dc320b2c134a4e7e4ca2ea",
+      "published_sha256": "6d531479893682d7c9bc2c3ab34be35cc67e24ed2a514bef1194bf72bd5ed22e",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_boss_detail_workers.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_boss_detail_workers.py",
       "source_sha256": "996959a62a2e3a27873449345f1bcc903578e91a60b476331864c28cd9ee81fa",
-      "published_sha256": "b0812e9c192eff9179c0db532d2e2388f7f54e5c4bcea5a62aa07e32ddf7238a",
+      "published_sha256": "996959a62a2e3a27873449345f1bcc903578e91a60b476331864c28cd9ee81fa",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_boss_direct_batches.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_boss_direct_batches.py",
       "source_sha256": "f51009366214e0deaa1da39747d100c219d6d1b6ac3777762a85f9f57a0e1533",
-      "published_sha256": "ced8ab4014a2e28e7f4039126733ecf7f04a0c07fca200fb35599c139342a78a",
+      "published_sha256": "f51009366214e0deaa1da39747d100c219d6d1b6ac3777762a85f9f57a0e1533",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_boss_public_card_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_boss_public_card_supervisor.py",
       "source_sha256": "0ca85da25584f0c8ebf69567756aa43bf2d4e753631e351af861412507ab4c51",
-      "published_sha256": "b5c72b6ab32bbc21a23b2a7c0105b466dac47730a5f8b2581059c603d3d4f151",
+      "published_sha256": "0ca85da25584f0c8ebf69567756aa43bf2d4e753631e351af861412507ab4c51",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_boss_public_details.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_boss_public_details.py",
       "source_sha256": "9e8df88f5e351c49aab2c1cc5274bf22bffc20a273299f13f4e61d5f8839d270",
-      "published_sha256": "15835854a7a8b015ac7bac2a1bb882e351ea25195a4cdc947d3d39e2d5f22d96",
+      "published_sha256": "9e8df88f5e351c49aab2c1cc5274bf22bffc20a273299f13f4e61d5f8839d270",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_browser_single.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_browser_single.py",
       "source_sha256": "b216fa72594caea5f096f5f6ed9fe7f421ede5fc2a4484555be05f437d5ac238",
-      "published_sha256": "3c935266a333ba310fe57f1f90a3380862a902898a22f6947b696d2bc5241593",
+      "published_sha256": "b216fa72594caea5f096f5f6ed9fe7f421ede5fc2a4484555be05f437d5ac238",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_browser_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_browser_supervisor.py",
       "source_sha256": "a97b1a52e5a766b0e0d2a4ba29b21d3c273009c2c10eb7f77b4d7a718ebb2761",
-      "published_sha256": "7a2c3ffef8b2f3f6f99f5b504ce2fb20175b8e3927dbc5672b31e68d397199af",
+      "published_sha256": "a97b1a52e5a766b0e0d2a4ba29b21d3c273009c2c10eb7f77b4d7a718ebb2761",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_camoufox_dual.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_camoufox_dual.py",
       "source_sha256": "c0440a60c067cbc2136c4f9f48cc2d396ce3c369ffe12466dbb56f575c101b3e",
-      "published_sha256": "101e72b05aa2ca99ccabd0c740fc7b2b374e4655353fe5dc614ba035d98a3d1f",
+      "published_sha256": "c0440a60c067cbc2136c4f9f48cc2d396ce3c369ffe12466dbb56f575c101b3e",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_camoufox_forward.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_camoufox_forward.py",
       "source_sha256": "270fe12eed48bf7e840c2b61ebd77228e7b6f9341eee44faf3113b374355dd19",
-      "published_sha256": "bc65fd16189fe63e2fa18036ce435feba414f54a02eac286b908ade16775877c",
+      "published_sha256": "270fe12eed48bf7e840c2b61ebd77228e7b6f9341eee44faf3113b374355dd19",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_camoufox_middle_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_camoufox_middle_supervisor.py",
       "source_sha256": "76e05e3899dad767b4cd6063ff47ed68f3de54da808e833f93385f443ee97eae",
-      "published_sha256": "601d0c7e47cacbf37f912ae0c02ecb1b21ce67ff77303d3b8ac477b2c8626617",
+      "published_sha256": "76e05e3899dad767b4cd6063ff47ed68f3de54da808e833f93385f443ee97eae",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_camoufox_reverse.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_camoufox_reverse.py",
       "source_sha256": "2db6fcdd4dd5b2aedf296b2333f0814568fd34db689924321a34c70634d4846a",
-      "published_sha256": "4405689ee5419cc04dd14134e95cb0d007bde3535a988677e322d99bccee5688",
+      "published_sha256": "2db6fcdd4dd5b2aedf296b2333f0814568fd34db689924321a34c70634d4846a",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_camoufox_reverse_2_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_camoufox_reverse_2_supervisor.py",
       "source_sha256": "6569196914fba5b9fb1d56df7a6f7a4fc0bcb2ff3fb7d504617b2285f5d0d0cd",
-      "published_sha256": "7a135e47f6121af6b4140fc19377c0e8d29c7c87a1d7dd6a756ab60571763af6",
+      "published_sha256": "6569196914fba5b9fb1d56df7a6f7a4fc0bcb2ff3fb7d504617b2285f5d0d0cd",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_camoufox_reverse_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_camoufox_reverse_supervisor.py",
       "source_sha256": "12aa3a14e8b0b0097188a13f206ffdcc228c9b24419db834c0067778878ddf69",
-      "published_sha256": "c6697705ee82202d3601ad05d6f718a3e3f55cf470e94ebcf7061d0cc7c3786e",
+      "published_sha256": "12aa3a14e8b0b0097188a13f206ffdcc228c9b24419db834c0067778878ddf69",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_deferred_public.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_deferred_public.py",
       "source_sha256": "4163c9e7cd840c235002abb8ded52998dab56f58852630739d8d3f2b04a9a611",
-      "published_sha256": "2de1f01f6379438778e01d1851f5a1b47d1c9ea8cba64c728fe06267bb47a960",
+      "published_sha256": "4163c9e7cd840c235002abb8ded52998dab56f58852630739d8d3f2b04a9a611",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_detail_workers.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_detail_workers.py",
       "source_sha256": "05edb7c5f4cdc1c8d51a4f6902836fcc41fc8b972032cc65306e5d9482dd85cc",
-      "published_sha256": "34684b237296cfaa581015543263ea5539a698d17e5f3fb5d46bc649b7915878",
+      "published_sha256": "05edb7c5f4cdc1c8d51a4f6902836fcc41fc8b972032cc65306e5d9482dd85cc",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_edge_cdp_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_edge_cdp_supervisor.py",
       "source_sha256": "4066e5b7d2e234cca90692b07124f4d9143374c3ff33d684cf507e4aeeb62ce8",
-      "published_sha256": "46c3a00cd7a08fbd4245f55432cc47926a6ae85e0688678e0aad295edbd22ec0",
+      "published_sha256": "4066e5b7d2e234cca90692b07124f4d9143374c3ff33d684cf507e4aeeb62ce8",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_edge_cdp_worker.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_edge_cdp_worker.py",
       "source_sha256": "f7c249a92e0fa7b558cd6039e00dff6a30e65f4e0ea2bcb7da8d2d739ab3de72",
-      "published_sha256": "c16bc4558ffa414be31cf71e7058cd1ed94d4e26cbc6e30890e89dbd8fd5b56e",
+      "published_sha256": "f7c249a92e0fa7b558cd6039e00dff6a30e65f4e0ea2bcb7da8d2d739ab3de72",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_edge_extension_bridge.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_edge_extension_bridge.py",
       "source_sha256": "6305a75d0f306adebae0769fa38ff9fadfe2476911034f278063c5b5d8357413",
-      "published_sha256": "90e7f8c64827cf601ecbab050a3b44a41b427d110e4a438a9bc160c5aa96beba",
+      "published_sha256": "6305a75d0f306adebae0769fa38ff9fadfe2476911034f278063c5b5d8357413",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_edge_forward_supervisor.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_edge_forward_supervisor.py",
       "source_sha256": "c65d67d8fb0ffbcaea183f0c4900b7b44d9a6a118aea134409544d4ef86c15de",
-      "published_sha256": "c4bc6b3b5f4393f30c2c379840ead01e74542615c035e4c87ed7bb4363160ae6",
+      "published_sha256": "c65d67d8fb0ffbcaea183f0c4900b7b44d9a6a118aea134409544d4ef86c15de",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/run_liepin_single_rotating.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/run_liepin_single_rotating.py",
       "source_sha256": "c18063b84599c9221e97a91d2df9b54b89f3c570c67884963a48076711e3b786",
-      "published_sha256": "933959da7e12d42d487afdb6b42070ea5772753acc5022d47ee99d601cea0854",
+      "published_sha256": "c18063b84599c9221e97a91d2df9b54b89f3c570c67884963a48076711e3b786",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/sample_epwk_quality.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/sample_epwk_quality.py",
       "source_sha256": "c85aaec1f8bf901175c12dacc041e5347241b7b9340c35c98b624dd80a8c0172",
-      "published_sha256": "11df2b912ed6ffba048816d2ea8f7d6514ddf75c4428f36f8cbe4fa3a3e1f7c8",
+      "published_sha256": "c85aaec1f8bf901175c12dacc041e5347241b7b9340c35c98b624dd80a8c0172",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/update_epwk_current_3m.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/update_epwk_current_3m.py",
       "source_sha256": "b6ba752f91cf4ea836acaa379881ba8b0ce309505ebebad5ece18948c7104fb0",
-      "published_sha256": "35f3101fde5a36075d254136d2485482902b44e918ebdeca89c467c90a3c5151",
+      "published_sha256": "b6ba752f91cf4ea836acaa379881ba8b0ce309505ebebad5ece18948c7104fb0",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/tools/validate_epwk_final.py",
       "source_rel_desktop": "外包+岗位爬虫/tools/validate_epwk_final.py",
       "source_sha256": "f63efbd0c39866720e8ab80914952fdca874bb5cecee4ef6d0d229c4d5e0df22",
-      "published_sha256": "133dd1182e1b8f7024c2d941ed45082777fd8ad6325a7226f49501fc086c3904",
+      "published_sha256": "f63efbd0c39866720e8ab80914952fdca874bb5cecee4ef6d0d229c4d5e0df22",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/uv.lock",
       "source_rel_desktop": "外包+岗位爬虫/uv.lock",
       "source_sha256": "37486bdb03dfa00e0c7a945c3db88ff9ab609335c0ed6bab0bedaab8789a1902",
-      "published_sha256": "ea91f3fafbab8c77f10d1c90958ec877d678ae786438b5763c979b1b780d43c2",
+      "published_sha256": "37486bdb03dfa00e0c7a945c3db88ff9ab609335c0ed6bab0bedaab8789a1902",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/1.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/1.py",
       "source_sha256": "2593542b537510c22195b24793dfe878e7756b7139deb112c6bb5574e89a92be",
-      "published_sha256": "2df952e589020b2952b4c144cbb303f26963b518bad7aef47c2ef4a931046bdf",
+      "published_sha256": "a5b7dae61940bbf1fc996b96d706a78ed2f7a181d46b2d8476e40d38c6fb3969",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/2.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/2.py",
       "source_sha256": "d90c1fa2e20c4aff4a0da2452af86be994fca13deebfa8b6d6c6a97c33291f81",
-      "published_sha256": "d90c1fa2e20c4aff4a0da2452af86be994fca13deebfa8b6d6c6a97c33291f81",
+      "published_sha256": "638d005d44f54bcba659917fa3cda75f89583196b45284244fb22e90f1c2ee89",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/bilibili/source/main/3.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/3.py",
       "source_sha256": "7ab904f08b86cc37ff347e9cb5dc5d0fd067444d36756e8500df340ce207c192",
-      "published_sha256": "5b9508a18b8b89a8d9729bca9b6660f9340e71a856926290bfe4b3e705dc607c",
+      "published_sha256": "73818d8e118ac59c703330de56ce5260f95e877d2fd31c53a7d3a9bf4d327fae",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/bilibili_API.ipynb",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/bilibili_API.ipynb",
       "source_sha256": "86bbc8dc923989d6f5ee47d350f9532424489b50365ac07eb14717b4b73c08fe",
-      "published_sha256": "82dbb739d803a64caf63e5951473a013c1ec733bb31f357414242e16ca397105",
+      "published_sha256": "5268edc9beaaf931e98f988f2a1d79b69bdc41162d629f0279852ccb76805bf4",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/封面/b站封面.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/封面/b站封面.py",
       "source_sha256": "060d0c117b7c55f769eb25e072efada1185089c30f97fdd792bc5f997ddede49",
-      "published_sha256": "060d0c117b7c55f769eb25e072efada1185089c30f97fdd792bc5f997ddede49",
+      "published_sha256": "18249b007e0bbb91509addea368c6c3d32bee3b19275abda539a7e59853fe1ec",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/bilibili/source/main/封面/图片.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/封面/图片.py",
       "source_sha256": "fb522f4bff251dc18ff53e42fded4dc839c14ea90289747a8daa7aa060d51e2e",
-      "published_sha256": "34902d2c5ab6dcb2bc3edc15ea18a5af782e33e86ba4e3ecd4a30d165b0e2582",
+      "published_sha256": "a1490037286038a4ce18fd07612d419db071f05c529e8012e7158f2b87d8a768",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/检查.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/检查.py",
       "source_sha256": "58fe2a059a823c99dc606279e093e83725882ff80ba9f6336dcfe435a16cd007",
-      "published_sha256": "7907c72f633317b64150b20e48e17e5b2e9654be21b5dc0550b3f77117f26bc9",
+      "published_sha256": "db167211991dd6df01b3bae96ed277767f25552e254f1f303fa978e3bb78ab8e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/编码.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/编码.py",
       "source_sha256": "f323946890a2075541bc356946741759c6a83dbaec1d5c5582fcc57f60416cc7",
-      "published_sha256": "f323946890a2075541bc356946741759c6a83dbaec1d5c5582fcc57f60416cc7",
+      "published_sha256": "03f4f1669cab3af7c7e8118990b9f0f006033b7dc03235fbdf3f869948e76965",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/bilibili/source/supplement/b站信息爬取.py",
       "source_rel_desktop": "个人知识库/项目/B站/b站信息爬取.py",
       "source_sha256": "ad05197fc24c2030a14e31af9269661f1e8b9f20d2f03b31b3cc016476075f9f",
-      "published_sha256": "6817067a187d6aa9e797da5a00b36176ee6b166d9006745e957f5b4b20d9f955",
+      "published_sha256": "9cd8884490d3da21fde5cec9c3f01ca08e67756e4f219ab001f248469ca33ad8",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/supplement/b站封面.py",
       "source_rel_desktop": "个人知识库/项目/B站/b站封面.py",
       "source_sha256": "060d0c117b7c55f769eb25e072efada1185089c30f97fdd792bc5f997ddede49",
-      "published_sha256": "060d0c117b7c55f769eb25e072efada1185089c30f97fdd792bc5f997ddede49",
+      "published_sha256": "18249b007e0bbb91509addea368c6c3d32bee3b19275abda539a7e59853fe1ec",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/bilibili/source/supplement/字幕(csv).py",
       "source_rel_desktop": "个人知识库/项目/B站/字幕(csv).py",
       "source_sha256": "7ab904f08b86cc37ff347e9cb5dc5d0fd067444d36756e8500df340ce207c192",
-      "published_sha256": "5b9508a18b8b89a8d9729bca9b6660f9340e71a856926290bfe4b3e705dc607c",
+      "published_sha256": "73818d8e118ac59c703330de56ce5260f95e877d2fd31c53a7d3a9bf4d327fae",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/supplement/字幕.excel.py",
       "source_rel_desktop": "个人知识库/项目/B站/字幕.excel.py",
       "source_sha256": "ad0e3f23a5b6558d3097cf083a54b51eb8980db70ca1d5efcd3edf3419dfeb22",
-      "published_sha256": "1c44bb47539ec208572d1dee82e0e0d1d81ec12455d78c5c8c19cdd192aea798",
+      "published_sha256": "2a1491b36562e920f9a0b74bfd9ce940d124384ad19b43944badf99d265fa25b",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/douban/source/course-legacy/dbfcrs2/pipelines.py",
       "source_rel_desktop": "大学/大二下/网络爬虫/自学爬虫/dbfcrs2/dbfcrs2/pipelines.py",
       "source_sha256": "cf6dbc6d04c563efe7303b7da7ecf4a12d231ba109502907b06614b469cccfa6",
-      "published_sha256": "cf6dbc6d04c563efe7303b7da7ecf4a12d231ba109502907b06614b469cccfa6",
+      "published_sha256": "77c26bfa18c9ee7dc452475a64ea1fbb148ecd2d7cf79297844682cd547474b0",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/douban/source/course-legacy/scrapy.cfg",
       "source_rel_desktop": "大学/大二下/网络爬虫/自学爬虫/dbfcrs2/scrapy.cfg",
       "source_sha256": "b5643e3894bf5efc5f3f37d6a3b4424eb123756ccb0da84ccc675c331e5e2059",
-      "published_sha256": "b5643e3894bf5efc5f3f37d6a3b4424eb123756ccb0da84ccc675c331e5e2059",
+      "published_sha256": "6bc2004f4809575d3131c39e82ea9a91864ddfad1c6150d6971b5b1b28281b3c",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/__init__.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/__init__.py",
       "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "published_sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "published_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/items.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/items.py",
       "source_sha256": "05e74e2c29aa4bbd36546111283e72582318da841bd571f16ad6377aa3f2ad64",
-      "published_sha256": "6789299c89cd5cf19e058867a9e6f6cc5a2be0c276b15877b4c2f35400d80b71",
+      "published_sha256": "7163dc025c2475062281ad169e8f962040eaab2513fc3671b21b421e99aec16d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/middlewares.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/middlewares.py",
       "source_sha256": "a7d93b1045ee541f2c3e11fbc607408dd560450459e8e8638ec7d71bc2aba99f",
-      "published_sha256": "a7d93b1045ee541f2c3e11fbc607408dd560450459e8e8638ec7d71bc2aba99f",
+      "published_sha256": "9f0062a7c7364e70aa5e4f978489232306d2ae50e71f7220802531dac583b0ab",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/pipelines.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/pipelines.py",
       "source_sha256": "9bc42cc1ebc2981c80eb9f0b65832833c6c4e7a401d8714e621e3f557bee5e55",
-      "published_sha256": "9bc42cc1ebc2981c80eb9f0b65832833c6c4e7a401d8714e621e3f557bee5e55",
+      "published_sha256": "abec985626cdc003ffe97f908ecdd963f7b2dc22d6371249cb792034c636d21c",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/settings.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/settings.py",
       "source_sha256": "23cf4fce4805f1b8aaa5e91a2298ee51c2cf9fe5035284c1a160ea5c1a1dd3b2",
-      "published_sha256": "a8858ffd41341d0a4b96643b6e62248eca1708a27c77ec4f63350c03a0c3816a",
+      "published_sha256": "f311ff9d3c367a7757e7d56ba69eb385f2b9dba93e3e00fad14fc3c6547b65ad",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/spiders/__init__.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/spiders/__init__.py",
       "source_sha256": "50bc1e719931dff353a61933ef2fea89acc1794a071670825a72928e80c2663d",
-      "published_sha256": "6be25ac7a3133190b61cec3799405c36ef93e3874e5070ec6f6d8e972e074e73",
+      "published_sha256": "50bc1e719931dff353a61933ef2fea89acc1794a071670825a72928e80c2663d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/spiders/ceshi.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/spiders/ceshi.py",
       "source_sha256": "1e8458bb690c51a7b6112f10f07fde654722a34ecf8fa5ee12f62eae1ae1ea60",
-      "published_sha256": "1e8458bb690c51a7b6112f10f07fde654722a34ecf8fa5ee12f62eae1ae1ea60",
+      "published_sha256": "19d71d6c5dc835163fcaf43f31d519630bb292ee7a9296f772292f4941ce063b",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/douban/source/fcrs2/fcrs2/spiders/movie.py",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/fcrs2/spiders/movie.py",
       "source_sha256": "00fe2e6d008b1e602cad034dd27261fd8e8afec805a157768dc850682e71c639",
-      "published_sha256": "00fe2e6d008b1e602cad034dd27261fd8e8afec805a157768dc850682e71c639",
+      "published_sha256": "77d69436ce98c25b015ff9eaa557691f05cfa038944604241ca9081392c7bde5",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/douban/source/fcrs2/scrapy.cfg",
       "source_rel_desktop": "个人知识库/项目/豆瓣/fcrs2/scrapy.cfg",
       "source_sha256": "e333b4c95ff576d7597166d4f9f2fa65541b231ff3bd4aad1dee1a445cb85a60",
-      "published_sha256": "e333b4c95ff576d7597166d4f9f2fa65541b231ff3bd4aad1dee1a445cb85a60",
+      "published_sha256": "85a95239290fc3770329269418acfd3b363b3b88385a9ecb89b417a339bd6ce7",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/.agents/rules/spec-driven-workflow.md",
       "source_rel_desktop": "facebook/.agents/rules/spec-driven-workflow.md",
       "source_sha256": "e408c525e119ef9f85c809eece6e411b4cfe6faefd2fc6c6766f14a204d40909",
-      "published_sha256": "020515abd94521cf2536ed899f0a2907bed2236c55c20dc6488744caf8756251",
+      "published_sha256": "401187c18602561cd59fbb3d64df2f37f39995aeb9b53704fb9ac1c131169dcf",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-analyze/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-analyze/SKILL.md",
       "source_sha256": "fad1c37a451e017995b15fc3eefe243274642fbb3ff7c8a5ab021908df71aa93",
-      "published_sha256": "a8a894a87ff085e7b042699453510824c2bafa3e194b1bbd30aa3a759f2a5f8a",
+      "published_sha256": "fad1c37a451e017995b15fc3eefe243274642fbb3ff7c8a5ab021908df71aa93",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-checklist/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-checklist/SKILL.md",
       "source_sha256": "5c1dce9333a2b733422e2dc75de7fc4d63ba91a460833d14ef3966a672328b9d",
-      "published_sha256": "92cae5abcaadc5caf1ec38aeb1d1f59bd2da08b6fe9a8c38b369423745959347",
+      "published_sha256": "5c1dce9333a2b733422e2dc75de7fc4d63ba91a460833d14ef3966a672328b9d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-clarify/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-clarify/SKILL.md",
       "source_sha256": "1e9de2b2a673c923f7ca650fc40e4d5f24654163c577e0f1ceb70edfaa08114b",
-      "published_sha256": "31e8829ea79be98a048ed0b0cba53e6b33ad51d06188b35556cb279cf79dc7d1",
+      "published_sha256": "1e9de2b2a673c923f7ca650fc40e4d5f24654163c577e0f1ceb70edfaa08114b",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-constitution/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-constitution/SKILL.md",
       "source_sha256": "ff6604c8424d4f4edf80f19ccfda1ede1a1dc5091a397cc1f0078a0bc3b0a538",
-      "published_sha256": "889702c370fe440143a0b1d9aea6e24e809efa5e2076144367e63b30fb06a65b",
+      "published_sha256": "ff6604c8424d4f4edf80f19ccfda1ede1a1dc5091a397cc1f0078a0bc3b0a538",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-converge/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-converge/SKILL.md",
       "source_sha256": "369e168cbcc9f903d1b8f3f360a32d24a7ebf3d07066b8676032cffcafbebd9e",
-      "published_sha256": "23302fc8ae6c852c8fac3977ec773be3cd3245da2698984fa9c9305beed6a4a0",
+      "published_sha256": "369e168cbcc9f903d1b8f3f360a32d24a7ebf3d07066b8676032cffcafbebd9e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-implement/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-implement/SKILL.md",
       "source_sha256": "4d58a80ede8d837798d13a838b83a88fd4335104d0806d27f8018664a1ee0b85",
-      "published_sha256": "aa57fcf508929e6686c05ab8d729ae10633df485c0628ba38aad1b33351e7aeb",
+      "published_sha256": "4d58a80ede8d837798d13a838b83a88fd4335104d0806d27f8018664a1ee0b85",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-plan/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-plan/SKILL.md",
       "source_sha256": "0834b2298c078b0a89ee64a3e47e140cc9b31c4049492bd504491199a0fe3e73",
-      "published_sha256": "3bdce69c90ee2a7d52c675baff8834f0587e194b00e5f1f97b99604102c88144",
+      "published_sha256": "0834b2298c078b0a89ee64a3e47e140cc9b31c4049492bd504491199a0fe3e73",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-specify/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-specify/SKILL.md",
       "source_sha256": "a505028de7f6489878696d6656c7d057f3a66119ebb8c0cc82d69fabb7b344ff",
-      "published_sha256": "e6b880a4ed6af8d8a9de01f3f771f5f633b09f951f05e4ba5bd9ee9d94b6a3e7",
+      "published_sha256": "a505028de7f6489878696d6656c7d057f3a66119ebb8c0cc82d69fabb7b344ff",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-tasks/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-tasks/SKILL.md",
       "source_sha256": "1e1d18b34e39d62d6388297f035505905741b07973102e0d44aa8647d85ab093",
-      "published_sha256": "d508d6a031e07ed0e753605c81327ea01fbca23266f31b3cb97c291caa9fa3a7",
+      "published_sha256": "1e1d18b34e39d62d6388297f035505905741b07973102e0d44aa8647d85ab093",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.agents/skills/speckit-taskstoissues/SKILL.md",
       "source_rel_desktop": "facebook/.agents/skills/speckit-taskstoissues/SKILL.md",
       "source_sha256": "9bfc9d47910598f700ec3f51344c396c94e0d65e206a2c04bcfeedd079a72eb0",
-      "published_sha256": "02c91339c2ce2dabc5d5c072098eab0a0f4f1fd33287934b41be67e1d79156a1",
+      "published_sha256": "9bfc9d47910598f700ec3f51344c396c94e0d65e206a2c04bcfeedd079a72eb0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.gitattributes",
       "source_rel_desktop": "facebook/.gitattributes",
       "source_sha256": "3b7884923a4a95e0a574269438fe729e2d9e85a23624be6428aa0ab2e77574bc",
-      "published_sha256": "7b7db0e4f0bea99126f26b3b8d94d8c2509f1fcb171cf8f353c2074b12e7bec4",
+      "published_sha256": "3b7884923a4a95e0a574269438fe729e2d9e85a23624be6428aa0ab2e77574bc",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.github/workflows/check.yml",
       "source_rel_desktop": "facebook/.github/workflows/check.yml",
       "source_sha256": "54f40bddbb70f00879affea4422bb7ab869e2e041e4b49451331ac1b357f3f31",
-      "published_sha256": "54f40bddbb70f00879affea4422bb7ab869e2e041e4b49451331ac1b357f3f31",
-      "changed_for_publication": false
+      "published_sha256": "0dd2427c09ad9b71685b0bf473898a4f126b46c5320d3733de8e5ba678358b87",
+      "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.gitignore",
       "source_rel_desktop": "facebook/.gitignore",
       "source_sha256": "5a5098eb738031eacdc1cc0846be5d0f8ee58e16323c10d0d8a95072f40857a1",
-      "published_sha256": "7e3ba56927ca9453c1cc793821ee6d728133c72480b5d8a258aef690e33b1839",
+      "published_sha256": "30fbc008785db9a0921a3b31e82f11cb672ff13dfb34f9972e8d49b2826a9e3e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/.gitignore",
       "source_rel_desktop": "facebook/.specify/.gitignore",
       "source_sha256": "8c908410d177a1ef3d0dee16d7ad55f2ac3333df3104c4d4adee1c9b82f1dbc1",
-      "published_sha256": "05c2054a5f5ca103ed62daa73191675013ee1d3d44eafb8e49891898b5368878",
+      "published_sha256": "8c908410d177a1ef3d0dee16d7ad55f2ac3333df3104c4d4adee1c9b82f1dbc1",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/init-options.json",
       "source_rel_desktop": "facebook/.specify/init-options.json",
       "source_sha256": "009131cdab2e35645c5f8e2135749d53a114c8e10e456865fa009315196381d1",
-      "published_sha256": "009131cdab2e35645c5f8e2135749d53a114c8e10e456865fa009315196381d1",
+      "published_sha256": "a5b9158f1e5cc69fe45027c6491ff9ee6de125e2976317d29c5d62342b813091",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/.specify/integration.json",
       "source_rel_desktop": "facebook/.specify/integration.json",
       "source_sha256": "c2afe152a5e43efbcd97b5ece0867825fbcb38fe35523d9c6fb29836e43d60bc",
-      "published_sha256": "c2afe152a5e43efbcd97b5ece0867825fbcb38fe35523d9c6fb29836e43d60bc",
+      "published_sha256": "f751c4127d1a0788fd49a6f62dd0bff8bdfbcda50982d4d9e5f45e50873c8697",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/.specify/integrations/codex.manifest.json",
       "source_rel_desktop": "facebook/.specify/integrations/codex.manifest.json",
       "source_sha256": "ba7490eb243dd1a54e29651187e0531a70632bd947b03118cd032679cfe66b3b",
-      "published_sha256": "ba7490eb243dd1a54e29651187e0531a70632bd947b03118cd032679cfe66b3b",
+      "published_sha256": "6c36908e414769e3d9f015a2195649361d4dd178582b032990e0d6592ee6d863",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/.specify/memory/constitution.md",
       "source_rel_desktop": "facebook/.specify/memory/constitution.md",
       "source_sha256": "8f146fd7f72819c0e626be6d43c9f3ae08213fa51cbaf2814e8addca4c83a8fc",
-      "published_sha256": "b58b547fc9fa3e0119d76b7ae6f1b29b099b28211068760091f299de48df3fb9",
+      "published_sha256": "82d423ab4a53fcd5a7c7c65f0abe803e40ca3d219f8150b4e6661be799fcd6b0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/scripts/powershell/check-prerequisites.ps1",
       "source_rel_desktop": "facebook/.specify/scripts/powershell/check-prerequisites.ps1",
       "source_sha256": "ef7fe740091441e5aeadccb8dc36b08d840f524513d79e2fcf258133ee6568b4",
-      "published_sha256": "e71c1273020aa9888cf15cd7e895c3c6133041db590fe34324ac6b8b94b93b79",
+      "published_sha256": "ef7fe740091441e5aeadccb8dc36b08d840f524513d79e2fcf258133ee6568b4",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/scripts/powershell/common.ps1",
       "source_rel_desktop": "facebook/.specify/scripts/powershell/common.ps1",
       "source_sha256": "8b188a9c3a2e979cfcb874acc4452175c00e9095cb0caef18374ea0cfbc384c0",
-      "published_sha256": "20890e2d773dfd319539dcb05ba6b18abdfae02080dbb1035bc6599547c5ac25",
+      "published_sha256": "8b188a9c3a2e979cfcb874acc4452175c00e9095cb0caef18374ea0cfbc384c0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/scripts/powershell/create-new-feature.ps1",
       "source_rel_desktop": "facebook/.specify/scripts/powershell/create-new-feature.ps1",
       "source_sha256": "916f79f0487151a2034cd2eb2aab2fc6fa12bc3e636cb35f311baf8c945902ab",
-      "published_sha256": "6c37e53b7fa1c796d49afaf970ea64a451d99fa896c2c77be8f979be50f227ed",
+      "published_sha256": "916f79f0487151a2034cd2eb2aab2fc6fa12bc3e636cb35f311baf8c945902ab",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/scripts/powershell/resolve-template.ps1",
       "source_rel_desktop": "facebook/.specify/scripts/powershell/resolve-template.ps1",
       "source_sha256": "e49c565a09902e4ebd4b5a51c4e014d5067fdee5b1592f15cb44ef31f430d745",
-      "published_sha256": "99a4589963895d07146ccc195873832c67141ee7d9dd4cb2c1e47bf39f933778",
+      "published_sha256": "e49c565a09902e4ebd4b5a51c4e014d5067fdee5b1592f15cb44ef31f430d745",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/scripts/powershell/setup-plan.ps1",
       "source_rel_desktop": "facebook/.specify/scripts/powershell/setup-plan.ps1",
       "source_sha256": "3b8173f1553bbf67ae021af949a29e2d3e3bb35805be95e4ba8d0ab83173c66f",
-      "published_sha256": "dda307ce74dcdf7a72d438746e67df488a40f202cb9ec670031c1527908e9e12",
+      "published_sha256": "3b8173f1553bbf67ae021af949a29e2d3e3bb35805be95e4ba8d0ab83173c66f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/scripts/powershell/setup-tasks.ps1",
       "source_rel_desktop": "facebook/.specify/scripts/powershell/setup-tasks.ps1",
       "source_sha256": "578c19c7fa196327c1c6791e3179accffab049fe62851961139d67bd699f336e",
-      "published_sha256": "7b0c10d7b0fa1856689114724141375fcc2ca8b7accaae32bb46d1e64b707335",
+      "published_sha256": "578c19c7fa196327c1c6791e3179accffab049fe62851961139d67bd699f336e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/templates/checklist-template.md",
       "source_rel_desktop": "facebook/.specify/templates/checklist-template.md",
       "source_sha256": "70bbc48e884fab372ffb09e83e78ff983e28b69caebf8cd9964a02b6836683ac",
-      "published_sha256": "0915ed5d49a922cbf5a23415b13a56adc47145eb489486d3877d48438d043dca",
+      "published_sha256": "70bbc48e884fab372ffb09e83e78ff983e28b69caebf8cd9964a02b6836683ac",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/templates/constitution-template.md",
       "source_rel_desktop": "facebook/.specify/templates/constitution-template.md",
       "source_sha256": "ce7549540fa45543cca797a150201d868e64495fdff39dc38246fb17bd4024b3",
-      "published_sha256": "29fc1837b20f493d302203554923322a245123b4be9ed5734d9e1af96cd5ef0b",
+      "published_sha256": "ce7549540fa45543cca797a150201d868e64495fdff39dc38246fb17bd4024b3",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/templates/plan-template.md",
       "source_rel_desktop": "facebook/.specify/templates/plan-template.md",
       "source_sha256": "a828ad6206526574ab3fc99be6d0154588cb1c9774c5919d71b81ab5b2dbffa0",
-      "published_sha256": "eddcad4c5b6fcefb81a29b0495d060a87764ed89cc3d393f04aabcc40ad3e688",
+      "published_sha256": "a828ad6206526574ab3fc99be6d0154588cb1c9774c5919d71b81ab5b2dbffa0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/templates/spec-template.md",
       "source_rel_desktop": "facebook/.specify/templates/spec-template.md",
       "source_sha256": "3945437fc35cd30a5b2bf7beea680337c3516826d3efa5a6b92c4a7eca1ba28e",
-      "published_sha256": "cfc2f4605b4366d798d184956ca848a8301ad701d548e0c2c1a33ad7aeda7289",
+      "published_sha256": "3945437fc35cd30a5b2bf7beea680337c3516826d3efa5a6b92c4a7eca1ba28e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/templates/tasks-template.md",
       "source_rel_desktop": "facebook/.specify/templates/tasks-template.md",
       "source_sha256": "b0f527d41e546af0c31903e04f9b20965b6b497b573792198f663a64ce128863",
-      "published_sha256": "85d2141d85f50f124874a9579b4410f4e6c0049e36a478e972b451e43bec8fca",
+      "published_sha256": "b0f527d41e546af0c31903e04f9b20965b6b497b573792198f663a64ce128863",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/workflows/speckit/workflow.yml",
       "source_rel_desktop": "facebook/.specify/workflows/speckit/workflow.yml",
       "source_sha256": "177761c5e7df28126beea043b5cb45aeaf7958090c022dc11ac71399422fcfbc",
-      "published_sha256": "ea636ff77e01aafdd5d44097e16d47ddb62264ea66b09b63f560aa4d543af082",
+      "published_sha256": "177761c5e7df28126beea043b5cb45aeaf7958090c022dc11ac71399422fcfbc",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/.specify/workflows/workflow-registry.json",
       "source_rel_desktop": "facebook/.specify/workflows/workflow-registry.json",
       "source_sha256": "49d3177d9cb529ccf6f742808d551ad213f895f76e542326ee037725e663658b",
-      "published_sha256": "a0e30e781a54bd1ec7eef87e9510dc4a0ba9dc61cdc9c73da5a79e113ac9a5f9",
+      "published_sha256": "880a4e7a0ca967ea3ca8adba1402b5653de670d5df77126d8e5e2ad749f4cc13",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/AGENTS.md",
       "source_rel_desktop": "facebook/AGENTS.md",
       "source_sha256": "0aa07a89a004233a1d08c0504d464c35e2a095a9d9b6ca3c2394a0b44f260b6a",
-      "published_sha256": "e63b7e4e90e68d498220893b92ccb0d9f6eac58fec7d7a2585d69e3623987359",
+      "published_sha256": "3307e1fbdb2bbd7c2b8105d4250b0021f000361a0e9f335ea776a8bf9770a0da",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/API_USAGE.md",
       "source_rel_desktop": "facebook/API_USAGE.md",
       "source_sha256": "688719967deb0c13821a96924ecb5a039d89f3cd84d4cdb7e1dc47185f4ce26f",
-      "published_sha256": "018f93f14bdcd401f63ccfa034fa1f4addd8613bde9a339b8f31c8313f4ed6b4",
+      "published_sha256": "1b21648558661e7bdb2b55ba8488003c156c69eebe23dbda7b08005e5366d338",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/CHANGELOG.md",
       "source_rel_desktop": "facebook/CHANGELOG.md",
       "source_sha256": "c4ec55eeb70ba984b66f1361c26e4ba4439aef5cf53b0f9632a835b1e40ea041",
-      "published_sha256": "a9caf14621cd7db6a88cde652dff698cd81c9effa9b1f372023778b8cb1c60b1",
+      "published_sha256": "c4ec55eeb70ba984b66f1361c26e4ba4439aef5cf53b0f9632a835b1e40ea041",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/CHECK.cmd",
       "source_rel_desktop": "facebook/CHECK.cmd",
       "source_sha256": "372dce9db3c53adc72d986dda091437c5abcb9d531033448ad0585713b12c06d",
-      "published_sha256": "ecb266e384a65c7b2fc065410dca72c6f2b692316994d02a8dfd213a2fd52e11",
+      "published_sha256": "372dce9db3c53adc72d986dda091437c5abcb9d531033448ad0585713b12c06d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/CODEX_PROJECT_GUIDE.md",
       "source_rel_desktop": "facebook/CODEX_PROJECT_GUIDE.md",
       "source_sha256": "0198c0fa1cf6985ba6a6a7763719126513b29e1f6bffa5c571430c5572e5f5a4",
-      "published_sha256": "566dc14af49d49be597033001407086818b236cf8ec36011835f866d188a8d09",
+      "published_sha256": "74bf38484277a457324a115035dd7730b9cbe8b7fde83d51afed5b2edc9f84fd",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/CURRENT_STATUS_2026-09-09.md",
       "source_rel_desktop": "facebook/CURRENT_STATUS_2026-09-09.md",
       "source_sha256": "4dc18a066916dbbaae2542f14cf27e21467472fb74fa78367f2d24d0a29cb16c",
-      "published_sha256": "903f9d9f4c745cb14fbdaab3932d3d4a69d73783e643bba3ad577092e1b87875",
+      "published_sha256": "9725b18419248db2a7cf9032827097e70f3d36dab4d3352207151c22d8557bc8",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/ENGINEERING_WORKFLOW.md",
       "source_rel_desktop": "facebook/ENGINEERING_WORKFLOW.md",
       "source_sha256": "7222e2d8689bc4900fcc9b83a3782d29b57aec533b1c9fb142f5612c64f5a6ed",
-      "published_sha256": "213de64623cc76dfa7a74178d577de1584dd9b89cb2bccc1914fde75ff0b5ce5",
+      "published_sha256": "cf943beef1722dca21ab35e8324ac7e094637945a9c26e7ced60a86930ba956f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/FACEBOOK_BROWSER_SAMPLES.md",
       "source_rel_desktop": "facebook/FACEBOOK_BROWSER_SAMPLES.md",
       "source_sha256": "6f53f09a76fa2179f6bc3531b510dd060adc6c8ce92b2c8ab6e4a4402eae929d",
-      "published_sha256": "d45fe08a94e76790ab30a141ffcf0aaf55db17ae2390f22dd970d16750750315",
+      "published_sha256": "d08350d05426a115ba166cf6b9f4c2b0065bcabed5138cb4638beaef2d41365b",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/FACEBOOK_LINK_SUPPORT.md",
       "source_rel_desktop": "facebook/FACEBOOK_LINK_SUPPORT.md",
       "source_sha256": "cee346b891e97414df9623fcbb4257680c4d303302f3efd2323263c8a8e7ffe2",
-      "published_sha256": "e6a0e341138bdbeaa4fbb88c639faa040884da2c9f85317b4012a99ffe8a7d2f",
+      "published_sha256": "939da4354bd4dac908c47fc3e879e8d791a3bb5b33234242bd7dbcf42ee3359b",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/FACEBOOK_WORKER_BOOTSTRAP.md",
       "source_rel_desktop": "facebook/FACEBOOK_WORKER_BOOTSTRAP.md",
       "source_sha256": "6a81b09b74bef19556ddb9b73f78f68ad13c676c32b28de8ada78aaaaf7a7a18",
-      "published_sha256": "d11886d66556b7616cd71580b41517b9b7e9e05f4ccb6962e4507cbd7c4fe98e",
+      "published_sha256": "7962a7e433c85030eda15a8fec6fbfc3380eb814a96b0d320ffbd92c6616fbea",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/README.md",
       "source_rel_desktop": "facebook/README.md",
       "source_sha256": "dc21a1cff5892bafc8d8cf9ee7f82d8f429473b5bf0020233ba3806437190d13",
-      "published_sha256": "e23f8c013aa64a30fcafe33a968afdf7435b1c295b577291e93d5969d5e74c63",
+      "published_sha256": "8e644ecb18bc71a010eaf2068e9ab240f33702e536718346aa19fafc5e86b22d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/STABLE_BASELINE.md",
       "source_rel_desktop": "facebook/STABLE_BASELINE.md",
       "source_sha256": "62ace0d0e3a4866323a792d3b488107f41c56457a5aef26e5c39d1d152bd2d8b",
-      "published_sha256": "ee72dea2c4c2a10a67b1863eaf10c1ab4103e94eb5d1351d62fcd88f5152dc5a",
+      "published_sha256": "49f32927610add1c5a6b8e8350a39bcde69832e78ca21b80df2beda5b94af73f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/START.cmd",
       "source_rel_desktop": "facebook/START.cmd",
       "source_sha256": "05dce486599268eef2da70f88fb11b83da9c2aa18a2c09ae372c6a380eec067d",
-      "published_sha256": "9fdffd7a6a8e48c6e152a51de9de8a803b2c37e1e18c34eee7369d0f23bbfdb1",
+      "published_sha256": "f26fe3069f761a287ad64d8eee2d3943b2733634b33aa71d6757bc97399ac1bd",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/START_API_AND_EMULATOR.cmd",
       "source_rel_desktop": "facebook/START_API_AND_EMULATOR.cmd",
       "source_sha256": "a440fd68b7a2733cec8e7b59706b88a257b292d9556b1efda59af96fc9ea87df",
-      "published_sha256": "bf24ea14ea8cbf960d17adc185e9508b4e7ac3f74ff72c4e856da6559b8158d0",
+      "published_sha256": "a440fd68b7a2733cec8e7b59706b88a257b292d9556b1efda59af96fc9ea87df",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/STOP.cmd",
       "source_rel_desktop": "facebook/STOP.cmd",
       "source_sha256": "5a66940da68fe4dc1b5f8f2418885da46b4971a3acb152b0424a8dd24b998af8",
-      "published_sha256": "5a66940da68fe4dc1b5f8f2418885da46b4971a3acb152b0424a8dd24b998af8",
+      "published_sha256": "e1366de25c2731cdf95c1cfe18c149f57fa9d9364bc93480139c7fa2ef1d1662",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/VALIDATION_2026-09-16.md",
       "source_rel_desktop": "facebook/VALIDATION_2026-09-16.md",
       "source_sha256": "cc11dbb485737e93676e778d33b6dfa4cc70ef531600d5d11bb8ad2d34eaf1fc",
-      "published_sha256": "def8eda864c7bf9ea84cb554fe205e37870534faff7f90e337b3977ecc8fdbec",
+      "published_sha256": "b8e3a9526b2e6dd9d6b8989ac89058c33af377b38d85a428a87f1358bfcb4a3c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/WINDOWS_DEPLOYMENT.md",
       "source_rel_desktop": "facebook/WINDOWS_DEPLOYMENT.md",
       "source_sha256": "cb81cdf4b7a09e01b8d0dec5b577b322dde84bd94b858be9fb86e3c9ec47f292",
-      "published_sha256": "508f796e05ed65f70b76e245f8af7698c094b396d6fe0f08bdf9d23119335ff4",
+      "published_sha256": "1575c3852c8b2aa3be680523a6c2d891e50e1956c4b80d7048c9e81360127c61",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/add_facebook_worker.cmd",
       "source_rel_desktop": "facebook/add_facebook_worker.cmd",
       "source_sha256": "8d233b930375b18d49977ecbf331da358dd2c99327152c21be67c05f5f981df6",
-      "published_sha256": "70f008f5406ae29b92c5d75ab5d0314361437c3ac69aa3645ba60651e026bcb4",
+      "published_sha256": "8d233b930375b18d49977ecbf331da358dd2c99327152c21be67c05f5f981df6",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/add_facebook_worker.ps1",
       "source_rel_desktop": "facebook/add_facebook_worker.ps1",
       "source_sha256": "ca279461c250cae931d0dd686cafc3a69caddeb6754ab65578884352dc4faf6e",
-      "published_sha256": "71bec1db9d86b15e2b536520b5fe8f2bccd2f80d59ddef303ddfe5f58718386c",
+      "published_sha256": "ca279461c250cae931d0dd686cafc3a69caddeb6754ab65578884352dc4faf6e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/analyze_facebook_capture.py",
       "source_rel_desktop": "facebook/analyze_facebook_capture.py",
       "source_sha256": "7f62b51c4e3e341f621bea787bfcdb3d72b05ff09c7e9a80f1dae2e172ff22e5",
-      "published_sha256": "159f61d8bd13a63304758b615d7c7913aeae18e8962a13655eb23d8d18eeafdf",
+      "published_sha256": "7f62b51c4e3e341f621bea787bfcdb3d72b05ff09c7e9a80f1dae2e172ff22e5",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/android-ui-dump-helper/AndroidManifest.xml",
       "source_rel_desktop": "facebook/android-ui-dump-helper/AndroidManifest.xml",
       "source_sha256": "6b04aa58bff82caac3685ac134a46a5761b63ac24d2ef83ff69ae4019c32b90e",
-      "published_sha256": "2ae798022da07b24c0dadf5d2f95a67423471227c92389047a597e3e211cbd64",
+      "published_sha256": "49475e2d901b89efc9f3e02540f9be91522ccfe1785e7aadd80d13867934979b",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/android-ui-dump-helper/build-helper.ps1",
       "source_rel_desktop": "facebook/android-ui-dump-helper/build-helper.ps1",
       "source_sha256": "475370a17a102a4315e450eb87d30229a141ee0dbffcdb2d6414a31359990834",
-      "published_sha256": "381176609b0a580e528ab1c62aa74ae78fbd52a9d1fffae86acbe5080e6e408d",
+      "published_sha256": "475370a17a102a4315e450eb87d30229a141ee0dbffcdb2d6414a31359990834",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/android-ui-dump-helper/src/com/openai/facebookuidump/DumpInstrumentation.java",
       "source_rel_desktop": "facebook/android-ui-dump-helper/src/com/openai/facebookuidump/DumpInstrumentation.java",
       "source_sha256": "16876073d2827f6de00a8f423627cdd760dce6455134349ec93588b7a86f1c77",
-      "published_sha256": "69d357d30aa1041dc4412e4cebfffb8e05d662347233926c388690a72450a70c",
+      "published_sha256": "72c0f48589909f1f84a09c8e7cd059f801d6755655346a377649728df875395a",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/build_network_data.py",
       "source_rel_desktop": "facebook/build_network_data.py",
       "source_sha256": "f56408b83e0f7454bf3cd3c449227629a8ca375b328661f1b92aa3dbe3ea234a",
-      "published_sha256": "30872b3e5a26fa80761ff6b7eb2192396c016680cbdc37368f60081aec69b6b3",
+      "published_sha256": "f56408b83e0f7454bf3cd3c449227629a8ca375b328661f1b92aa3dbe3ea234a",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/examples/README.md",
       "source_rel_desktop": "facebook/examples/README.md",
       "source_sha256": "a158a4b15e403c54ef118ee52cb75456afc5beb76ad7c49efa46f758246d4a68",
-      "published_sha256": "35b657837f135317fd734b65e89c0805856ecca35b4e826ed99575de04364d8c",
+      "published_sha256": "2e2c196b214df9bd44e0384dce5c7596d0606f492cb10ca3c945d76ade22472a",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/examples/capture.ps1",
       "source_rel_desktop": "facebook/examples/capture.ps1",
       "source_sha256": "65d19944e66c1da9911fd57924f0f5445c01e35f6abfc61ce4ed0518dd50687c",
-      "published_sha256": "7a1b93fb9f9426c1a1a56638f6a5780ade37cbf7f3bf660ea1505dd149c0134c",
+      "published_sha256": "65d19944e66c1da9911fd57924f0f5445c01e35f6abfc61ce4ed0518dd50687c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/examples/capture_curl.sh",
       "source_rel_desktop": "facebook/examples/capture_curl.sh",
       "source_sha256": "a83e2f9b8007441cd5aeb83d8e55766f93d19f3172981052ec4ff46fc1ac762e",
-      "published_sha256": "8c4fe26cf7b5ce958817319285b20f7d0d5db2aed0ea77a84c3d60382a63980b",
+      "published_sha256": "a83e2f9b8007441cd5aeb83d8e55766f93d19f3172981052ec4ff46fc1ac762e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/examples/capture_requests.py",
       "source_rel_desktop": "facebook/examples/capture_requests.py",
       "source_sha256": "5a9c56c6c88838792b00f44792f932c6e02959719a30eb9ea8986a9107638cae",
-      "published_sha256": "a551170fefdd5cdfb6dea334716b8db26b58749aef6510c5e2955881f29d401a",
+      "published_sha256": "5a9c56c6c88838792b00f44792f932c6e02959719a30eb9ea8986a9107638cae",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/explore_facebook_readonly.ps1",
       "source_rel_desktop": "facebook/explore_facebook_readonly.ps1",
       "source_sha256": "d50de37797607e746bf5cd6495ab956b95fcff4464cec9b8ba7263b1562e05ef",
-      "published_sha256": "2ecf1e1897136e2a0e5b0a45b476ecd613c814d97364582fa6717150bf989248",
+      "published_sha256": "415896c9480e4daa9858e4cdfc86d698debadcb04d224d449443657f61d9b919",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook.local.example.json",
       "source_rel_desktop": "facebook/facebook.local.example.json",
       "source_sha256": "794cf0a205230ac5c73d7beb8b184cb39db922eb11507ceb1ede75c4ef77dfbd",
-      "published_sha256": "794cf0a205230ac5c73d7beb8b184cb39db922eb11507ceb1ede75c4ef77dfbd",
+      "published_sha256": "91f3d4befec9a00b718c7b6e784a69c79cf62064e4c2051a59900cc52de74721",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/facebook.setup.example.json",
       "source_rel_desktop": "facebook/facebook.setup.example.json",
       "source_sha256": "33b935c83f794d9d93b8217e83978177f707b6665e99a44736f536c1b5e30af3",
-      "published_sha256": "086086b8e9379ae0beb9f7b1e90c48f4569f50329745519ebd92b68887940a88",
+      "published_sha256": "33b935c83f794d9d93b8217e83978177f707b6665e99a44736f536c1b5e30af3",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_android_capture.py",
       "source_rel_desktop": "facebook/facebook_android_capture.py",
       "source_sha256": "c62e3995f48e12ecdd46d1e0f06baf64fb682c2bd7e1178922d0b1e61c9331d2",
-      "published_sha256": "7e44af4c219f34195daf740651949f74bb5ffaa3542385e39de617115a1901a3",
+      "published_sha256": "c62e3995f48e12ecdd46d1e0f06baf64fb682c2bd7e1178922d0b1e61c9331d2",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_api_client.py",
       "source_rel_desktop": "facebook/facebook_api_client.py",
       "source_sha256": "b2faea8b433c3f8948b1734b302ac06517bde3e56d0e68ae7dac63040a00f973",
-      "published_sha256": "b0f7d67bb6e2acce1259ceba903ee1b55e16094320df80c380bd96e84b1c9daa",
+      "published_sha256": "b2faea8b433c3f8948b1734b302ac06517bde3e56d0e68ae7dac63040a00f973",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_batch_pressure.py",
       "source_rel_desktop": "facebook/facebook_batch_pressure.py",
       "source_sha256": "cfbb62a5db90a1f9bc59074d5ca39f862559d8d080ae0a2c8cf1d9827eefa7a8",
-      "published_sha256": "e09bcfcdbca434ffd7e31e712e7b27e79b714fc6586cc12cae057798c75b4f8e",
+      "published_sha256": "cfbb62a5db90a1f9bc59074d5ca39f862559d8d080ae0a2c8cf1d9827eefa7a8",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_batch_summary.py",
       "source_rel_desktop": "facebook/facebook_batch_summary.py",
       "source_sha256": "f4ad40fa51ca2e295002006c2975008bd5b97e1fd729969095b87dea549571a9",
-      "published_sha256": "f4ad40fa51ca2e295002006c2975008bd5b97e1fd729969095b87dea549571a9",
+      "published_sha256": "c86320c87a00e2a79f13fc2ff9db1851f46ce803dc51e3c7c1b5ce363c7e6bf8",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/facebook_cancel_transport_cleanup.ps1",
       "source_rel_desktop": "facebook/facebook_cancel_transport_cleanup.ps1",
       "source_sha256": "12724a8cb5c23914b6c5198dff4d5751ea23064a40f00ab2202322b27eb51a8e",
-      "published_sha256": "eb5e60b38c8ab6cb416968640b95c55d3e6e9f4153c721d9a320dac3a1b9c421",
+      "published_sha256": "12724a8cb5c23914b6c5198dff4d5751ea23064a40f00ab2202322b27eb51a8e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_capture_addon_safe.py",
       "source_rel_desktop": "facebook/facebook_capture_addon_safe.py",
       "source_sha256": "551fdcd2e4345d19ebfa1f574a43255cb0d14ba6e4ec76003bc8cfa2e8001138",
-      "published_sha256": "19e78fd5ff486b279212260c773adaacf41305fa0e1076abd310c3949bc4e362",
+      "published_sha256": "7c3f3a90620ec338d8e44dc825a99c2752fd7235431865269bffd568de79f67a",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_capture_api.py",
       "source_rel_desktop": "facebook/facebook_capture_api.py",
       "source_sha256": "4b9b3896f6c0796ad937bd0fcbc8a4f50fc21200241a3a96e3317ca825576e84",
-      "published_sha256": "00594b73d220a6b2b6e5b4f69cba8711c9bec0c4af87de4e479d82d84aef7573",
+      "published_sha256": "4b9b3896f6c0796ad937bd0fcbc8a4f50fc21200241a3a96e3317ca825576e84",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_capture_progress.py",
       "source_rel_desktop": "facebook/facebook_capture_progress.py",
       "source_sha256": "9754d25e3c9b3f7b93d9dc744a3683a5be1e5e405b40eaf4fddcf8d13f7546fb",
-      "published_sha256": "7f95c6bb3a8b49f43e1941cd89dd01e53c9c0e218e074e82172655ff264e0462",
+      "published_sha256": "5673ae53eb5652cab6c59998fbf003623eff343feff70d15f292897766b6ca12",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_certificate.ps1",
       "source_rel_desktop": "facebook/facebook_certificate.ps1",
       "source_sha256": "27fa18924a06fe81e3b3f417a9318cee1b1da9474482e2f753463de2234c9fd7",
-      "published_sha256": "49740f1a2d8ead03ca4a97ce4e288e2e56e4eb1ce19505d25b69d98a3e78faa8",
+      "published_sha256": "27fa18924a06fe81e3b3f417a9318cee1b1da9474482e2f753463de2234c9fd7",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_group_inline_route.py",
       "source_rel_desktop": "facebook/facebook_group_inline_route.py",
       "source_sha256": "ec33ffd476768111c9862e4197f98792bdf8b22c90bdb7638d45940f631d1c2c",
-      "published_sha256": "8d4189709ab6fa5cc31a8b2072ad10256723db13034ebb3a6f517f5b4aaa16f0",
+      "published_sha256": "ec33ffd476768111c9862e4197f98792bdf8b22c90bdb7638d45940f631d1c2c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_http_security.py",
       "source_rel_desktop": "facebook/facebook_http_security.py",
       "source_sha256": "2e3670154844b6b9907c9826c9f47425085d3305afd41c0a8fd682ab5b0083a7",
-      "published_sha256": "3fb7a062efd5a5894189fdf83211102d9a8d0cbd055705fc808d8772f8ecebb2",
+      "published_sha256": "2e3670154844b6b9907c9826c9f47425085d3305afd41c0a8fd682ab5b0083a7",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_local.py",
       "source_rel_desktop": "facebook/facebook_local.py",
       "source_sha256": "0a285c571da9027b61977e66fbff204409b17a8e17483dc26fd16c1a9e7069c1",
-      "published_sha256": "7a3372406556f83f8e2c291dac02eb0a8ffdd2954b8a155f2fd8275bc3d6c9c4",
+      "published_sha256": "0a285c571da9027b61977e66fbff204409b17a8e17483dc26fd16c1a9e7069c1",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_macos_runtime.py",
       "source_rel_desktop": "facebook/facebook_macos_runtime.py",
       "source_sha256": "3d1e326a59b16006f9a509914671d23565f26918f65872655e08d4405682a0be",
-      "published_sha256": "6699d992769aa6e3d24fd366c6106551642f7d080c298c82221915bc1048243c",
+      "published_sha256": "3d1e326a59b16006f9a509914671d23565f26918f65872655e08d4405682a0be",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_network.py",
       "source_rel_desktop": "facebook/facebook_network.py",
       "source_sha256": "193ca0100f09904ebe6a37b33ab8bde1bd7a95850135cf4e4924fe7fbad07f1d",
-      "published_sha256": "1c672eb6f4e1580be3dd2dd3e88c3fe71d8d69e06ef5db67f93a30afb7860e5e",
+      "published_sha256": "193ca0100f09904ebe6a37b33ab8bde1bd7a95850135cf4e4924fe7fbad07f1d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_network_watch.ps1",
       "source_rel_desktop": "facebook/facebook_network_watch.ps1",
       "source_sha256": "20c2a06d730ffa8d3c8abcd915e9bf4cef7fb487047785fd717c2a0db95d7cf5",
-      "published_sha256": "20c2a06d730ffa8d3c8abcd915e9bf4cef7fb487047785fd717c2a0db95d7cf5",
+      "published_sha256": "4aafce4946a9f1e53a3d73c02de0ad36f1a53c48b5b55eb0e1b22f989b61a725",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/facebook_raw_flow_writer.py",
       "source_rel_desktop": "facebook/facebook_raw_flow_writer.py",
       "source_sha256": "1116569041b571dd8e510ff344b7ba54ebe73fc851d8b5a36bf0989cf50b3aad",
-      "published_sha256": "e1c08cc964f1a73018fbab09ccbecf61d24d47cdc1276d30a5ebc3fcf0fb4bcd",
+      "published_sha256": "1116569041b571dd8e510ff344b7ba54ebe73fc851d8b5a36bf0989cf50b3aad",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_release_gate.py",
       "source_rel_desktop": "facebook/facebook_release_gate.py",
       "source_sha256": "6afd1b21913fe49b18bc25b662322c307b2514b0388040606324333d273932fc",
-      "published_sha256": "2ad4895677cc5ed7b811c3b3dc82c69b08911a69cfa7532deac905aa821b9765",
+      "published_sha256": "6afd1b21913fe49b18bc25b662322c307b2514b0388040606324333d273932fc",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_release_report.py",
       "source_rel_desktop": "facebook/facebook_release_report.py",
       "source_sha256": "68427eb23e34bfdfa9b23902af047bc4d6534923db3417020c5c99af58fd906e",
-      "published_sha256": "8e5f6d56bd5be1a2a3a298f8f984e426839b6092272dc367d13b1d3d6418015e",
+      "published_sha256": "68427eb23e34bfdfa9b23902af047bc4d6534923db3417020c5c99af58fd906e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_runtime.ps1",
       "source_rel_desktop": "facebook/facebook_runtime.ps1",
       "source_sha256": "264b8ab17e506fc7bb736a4f96af667b1364646abc4c7784cefdc102ebf2b9d7",
-      "published_sha256": "264b8ab17e506fc7bb736a4f96af667b1364646abc4c7784cefdc102ebf2b9d7",
+      "published_sha256": "c10cdbd2bf81833b7767c69e5569f856f2a1cb0e9f350e42c0c73d957d1546a4",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/facebook_setup.py",
       "source_rel_desktop": "facebook/facebook_setup.py",
       "source_sha256": "a4aac2f30b67221f373ca22196a02b04507be7bc9d6aad7b6ef5583635df8d01",
-      "published_sha256": "38b6d6f0af74151fa1d40c2d61067519b20268e1c867823ef85335f78da2a585",
+      "published_sha256": "a4aac2f30b67221f373ca22196a02b04507be7bc9d6aad7b6ef5583635df8d01",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_share_contract.py",
       "source_rel_desktop": "facebook/facebook_share_contract.py",
       "source_sha256": "f71db6841cee8e35bdd040105e700416404f2d0d2b2a55cc0bad05ef87b8d272",
-      "published_sha256": "ae4ca362c0553f425fbfc786f103bb500bba93a25ac4f3e5500b98073adc0d28",
+      "published_sha256": "ca88c10cc607c2d080567b39e8c95940cf7b40d3f437cd4656a22d269a5994b8",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_ssl_unpin.js",
       "source_rel_desktop": "facebook/facebook_ssl_unpin.js",
       "source_sha256": "d970b93fa8142ffd9fc4bd63943259dc3c03c391130f3f078cb7f1c313f2073c",
-      "published_sha256": "f7d0f5456df19265d2d8961bb3e84ed4964c4acf5783d169c85d9597b7683c4f",
+      "published_sha256": "d970b93fa8142ffd9fc4bd63943259dc3c03c391130f3f078cb7f1c313f2073c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_target_readiness.py",
       "source_rel_desktop": "facebook/facebook_target_readiness.py",
       "source_sha256": "c29072696452fee4552ece1d593dccd27169d2b3a30393be136cfcdf73397e32",
-      "published_sha256": "cd580f79dc1bc4999c7402db9310f35406c4a79751378aaa70902f28663bc7f9",
+      "published_sha256": "c29072696452fee4552ece1d593dccd27169d2b3a30393be136cfcdf73397e32",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_transport.ps1",
       "source_rel_desktop": "facebook/facebook_transport.ps1",
       "source_sha256": "73313b92992b9bccf05bf11aa16ee39dc8f9bd10f5f3eb01fe1207dfa792add4",
-      "published_sha256": "4781969918cf7b7c5501957ecc399a394cdd4d279513440917d5ba1d587e4f80",
+      "published_sha256": "11d296580c768b502a201f195b6fea8bcb9e9f5eb3c9669b2963b34bcfbaad71",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_visible_emulator.py",
       "source_rel_desktop": "facebook/facebook_visible_emulator.py",
       "source_sha256": "8658ece815fd8ff6ac1755f831efc5f6e3fd022a3f66d2b274bba76807730f68",
-      "published_sha256": "bf96ebe72540da80d2e0b61185af6ea10d42811061be51b814f90181c1d5a70c",
+      "published_sha256": "8658ece815fd8ff6ac1755f831efc5f6e3fd022a3f66d2b274bba76807730f68",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_worker_bootstrap.py",
       "source_rel_desktop": "facebook/facebook_worker_bootstrap.py",
       "source_sha256": "6a163a5ec86fa61b9eb14a0bd6de029f52ec6498bff27fedf7675e2c10342202",
-      "published_sha256": "a703f1154c0448eb129789b1e66cb6c6439e7121dbec80f528453c77849f91a9",
+      "published_sha256": "6a163a5ec86fa61b9eb14a0bd6de029f52ec6498bff27fedf7675e2c10342202",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/facebook_workers.example.json",
       "source_rel_desktop": "facebook/facebook_workers.example.json",
       "source_sha256": "7c35034d14d567972a8ee1b7d2525511828ae93bab52117afbe0ee72631fed6e",
-      "published_sha256": "8e8941662a625ff4447b085cce3973ded8126ad639d800eb6708e16a90605e0a",
+      "published_sha256": "7c35034d14d567972a8ee1b7d2525511828ae93bab52117afbe0ee72631fed6e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/inspect_facebook_raw_capture.py",
       "source_rel_desktop": "facebook/inspect_facebook_raw_capture.py",
       "source_sha256": "4f6262f0b49960ab18eb4e7ea6e79b43f138e1efbebd12710ef67154bda49fa9",
-      "published_sha256": "8d066e5047bea453da34d15ae4504e12336ddbfa2188c7dca38c99fc41047433",
+      "published_sha256": "4f6262f0b49960ab18eb4e7ea6e79b43f138e1efbebd12710ef67154bda49fa9",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/launch_visible_in_user_session.ps1",
       "source_rel_desktop": "facebook/launch_visible_in_user_session.ps1",
       "source_sha256": "77794166cb38944b188bfa74d095f1b172315b2dbc34afa85b7fb442dd4cdd06",
-      "published_sha256": "778bcc503137d30054bf9a6a310a892be3e4328801f1d8de7402e79dbd2f1b1c",
+      "published_sha256": "77794166cb38944b188bfa74d095f1b172315b2dbc34afa85b7fb442dd4cdd06",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/CODEX_DEPLOYMENT_RUNBOOK.md",
       "source_rel_desktop": "facebook/macos/CODEX_DEPLOYMENT_RUNBOOK.md",
       "source_sha256": "9a819e1a8a44e108daa592ad5f9d516582dfcee30aff6076ace79fa4ed00e917",
-      "published_sha256": "d7bfae2a15d1ed8b306dc2868b844df2d2c8b0b024a73383939cb1a7e2b33c9e",
+      "published_sha256": "6234517b1f18f30a8f9a2407142a83af92c7a721e245ffd154ad4d7386e33be5",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/QUICKSTART.md",
       "source_rel_desktop": "facebook/macos/QUICKSTART.md",
       "source_sha256": "c7a982586a559a7574be9b54b7f0fd03d670ceea53c27df499d65084df04fefd",
-      "published_sha256": "4c403cf06a70f549b2d5c5b4bf1dce38b8b5f31eb0a6f77fd0272717a291c9df",
+      "published_sha256": "f024ec5193cbcbd06ed1039280045d4e0d4690a69ba2c215c76959eec82769b7",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/README.md",
       "source_rel_desktop": "facebook/macos/README.md",
       "source_sha256": "82c512ab609195ed072bf896037ac51fbeab34809047770b9df15e3f3abd58f3",
-      "published_sha256": "2326e12559c50f4544bb8a76fe1baa3b68cbe19be05da586a86d43e583f2e5f1",
+      "published_sha256": "d3a7c5f71cec2018914ab49df34f140f15ef23f139a4b5d7dd41f26887230458",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/facebook_macos.py",
       "source_rel_desktop": "facebook/macos/facebook_macos.py",
       "source_sha256": "ed941ef7dbe25a3015e88f828b3419454c3af22ff23ff206542f2b274e5a0f05",
-      "published_sha256": "fa9cb6db3ec8b797624ca58b793ee35a1a318037f9317a3fcd504b39ba1371cb",
+      "published_sha256": "ed941ef7dbe25a3015e88f828b3419454c3af22ff23ff206542f2b274e5a0f05",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/facebook_workers.macos.example.json",
       "source_rel_desktop": "facebook/macos/facebook_workers.macos.example.json",
       "source_sha256": "911aa7131553d56e8956c077aba0c1704384810c0a1fb162bcbd15724814c5f0",
-      "published_sha256": "d2c3d796221897fc82191342ddfa3917e6ed5e171f051f2d101026ae0ed085c8",
+      "published_sha256": "911aa7131553d56e8956c077aba0c1704384810c0a1fb162bcbd15724814c5f0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/prepare_device.py",
       "source_rel_desktop": "facebook/macos/prepare_device.py",
       "source_sha256": "8d6f35bacc9a66225eb2e91584741f829a0c136c6d8ce780fca77fc436769d48",
-      "published_sha256": "12e8c31c672d4552b0b756f0deeea4728b982c053de9d8ab138d14f2d64b84a0",
+      "published_sha256": "8d6f35bacc9a66225eb2e91584741f829a0c136c6d8ce780fca77fc436769d48",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/start_facebook_workers.sh",
       "source_rel_desktop": "facebook/macos/start_facebook_workers.sh",
       "source_sha256": "2e63f1c7cda223580a6e8de0da125aa2ef8dc93c825381347d573c5c97c4922c",
-      "published_sha256": "05ddb4cf4aebc87148d4ab3584edaffe26d9357c1bc4d8a0a2f32f4a7831d2c6",
+      "published_sha256": "2e63f1c7cda223580a6e8de0da125aa2ef8dc93c825381347d573c5c97c4922c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/manage_facebook_workers.ps1",
       "source_rel_desktop": "facebook/manage_facebook_workers.ps1",
       "source_sha256": "37152e92b8ee8d03276ec397c71d7dc7212026c9560936f778c20569a8e12e31",
-      "published_sha256": "e525351b94a41b2d699367f854c6dfed9b4b19d714fd12d832ab7b0f4ba89e2e",
+      "published_sha256": "37152e92b8ee8d03276ec397c71d7dc7212026c9560936f778c20569a8e12e31",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/mine_facebook_query_shapes.py",
       "source_rel_desktop": "facebook/mine_facebook_query_shapes.py",
       "source_sha256": "6c8d220c97ef79368428a9087a8b5a1d45ad830d187acf21b2417ac33f7ea186",
-      "published_sha256": "2d7178459614fa55cc8bd07d951b0b406da1d62d1c51334e40adb041ca81851b",
+      "published_sha256": "6c8d220c97ef79368428a9087a8b5a1d45ad830d187acf21b2417ac33f7ea186",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/open_facebook_post_readonly.ps1",
       "source_rel_desktop": "facebook/open_facebook_post_readonly.ps1",
       "source_sha256": "f1027d0cc02b8d879e0be469da8a2cc24f762829879147d1a1c83b82aab01b6b",
-      "published_sha256": "4772ee0b7df7fea875d19eea052e0ffd5956c96f7d146f1b547a5ef71d704962",
+      "published_sha256": "d524a8da83d837b6c4b536a9be6f3b76d51335369d095542194cec9bb398a945",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/probe_facebook_reaction_health.ps1",
       "source_rel_desktop": "facebook/probe_facebook_reaction_health.ps1",
       "source_sha256": "45c5eb27df9ffadd3dccc47208d2edec6f374c2af7bcddf3e5a9c033c63a07ae",
-      "published_sha256": "8e03170f9a35b234501576a83bfb8ec853d7f63de5752612400c135d2acbaf4f",
+      "published_sha256": "45c5eb27df9ffadd3dccc47208d2edec6f374c2af7bcddf3e5a9c033c63a07ae",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/release-files.txt",
       "source_rel_desktop": "facebook/release-files.txt",
       "source_sha256": "1e674b3bcd7ab73e1ee3108c252f55f0ab9aaf0d38c8cdca8fb2d60e4667fef9",
-      "published_sha256": "0be4efbd8cd419389092153460ee1ae74c70e46bfb21ebcef951f1d33e6c6710",
+      "published_sha256": "ea0dd21d68f8d964746e3ecc18d2e24ee4b8e0f2d98b200ccb48238b9cbaeba7",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/requirements.txt",
       "source_rel_desktop": "facebook/requirements.txt",
       "source_sha256": "21fe69316c9ec6f14e374d6878f9c6654ff4db464c1aa8d899325016757bfb84",
-      "published_sha256": "dd0616bd80010a0c36d9941c18d032860ac5ca065bceaa020c2391750474b103",
+      "published_sha256": "21fe69316c9ec6f14e374d6878f9c6654ff4db464c1aa8d899325016757bfb84",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/resolve_facebook_share_url.py",
       "source_rel_desktop": "facebook/resolve_facebook_share_url.py",
       "source_sha256": "cb060f09b2ba4f6938a5e4aca7c7a6174d1734a62cb806db2dbde0e04a30cb2d",
-      "published_sha256": "e2ba3c9a81bf34e104cd8ce9846900baf0782fb6d9ac8d0f5fcd77f86a17cbe8",
+      "published_sha256": "cb060f09b2ba4f6938a5e4aca7c7a6174d1734a62cb806db2dbde0e04a30cb2d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/run_facebook_batch.ps1",
       "source_rel_desktop": "facebook/run_facebook_batch.ps1",
       "source_sha256": "e147a368e070cc92f6f44be54111badee4593264dfe98f2ecda3ccc7f53c9ee5",
-      "published_sha256": "a68d8b5d5f691ed5fe3fb752d6fadc811449908a9a4669d3833578e81d5412aa",
+      "published_sha256": "afe30d5600e070d9540f89f0e775c75da6dfc8a2ca37f82c4a1a7397c7600e04",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/run_facebook_capture.ps1",
       "source_rel_desktop": "facebook/run_facebook_capture.ps1",
       "source_sha256": "dc3d676723862f71dc7f7a4eca5a6e09de366b69c7b8e66d7553618d83ffe4e0",
-      "published_sha256": "cad2bd410bcceeac458ea96b72530769e33443b3b47f571550fa97f78740b56a",
+      "published_sha256": "dc3d676723862f71dc7f7a4eca5a6e09de366b69c7b8e66d7553618d83ffe4e0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/run_facebook_post_queue.ps1",
       "source_rel_desktop": "facebook/run_facebook_post_queue.ps1",
       "source_sha256": "821a4ebe66aec69839d2a1ce11add139128049ac8a8ff374da98a6c6bdb0b1f9",
-      "published_sha256": "a9c0c2fee1182dd49831045896c2979fb389b6696e05d4d97b307d8ce1ef78ac",
+      "published_sha256": "34b74b01cf321652cf4b0b2b34175de5f0c97551d51fa29f5ab0551a239e9241",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/run_facebook_release_gate.ps1",
       "source_rel_desktop": "facebook/run_facebook_release_gate.ps1",
       "source_sha256": "20c4e4d42d70d4d2cdccca3556e95143583d43d69edc236c736069a1d1f46468",
-      "published_sha256": "20c4e4d42d70d4d2cdccca3556e95143583d43d69edc236c736069a1d1f46468",
+      "published_sha256": "34d6575e1712da46ca65943615d25c128422b68f116ced6dbea537fdcc10d6d8",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/setup.ps1",
       "source_rel_desktop": "facebook/setup.ps1",
       "source_sha256": "52e269b837005e9cc729a2f33f20f1490544a99fdcfe2c0c9bae91eca227bbc9",
-      "published_sha256": "3220646418b187fbc8c1dd3d48f468c39bbdbdfb4783d46f92be329f63bf46b4",
+      "published_sha256": "52e269b837005e9cc729a2f33f20f1490544a99fdcfe2c0c9bae91eca227bbc9",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/setup.sh",
       "source_rel_desktop": "facebook/setup.sh",
       "source_sha256": "deefa7d95cf279637cf39f520a52f6bf9c596eee6813c97fe6eab186570b8637",
-      "published_sha256": "3bd5a86205f0f787af9d07fecf144b652460db52e04bf36bda957cd5d61ede0d",
+      "published_sha256": "deefa7d95cf279637cf39f520a52f6bf9c596eee6813c97fe6eab186570b8637",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/completion-audit.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/completion-audit.md",
       "source_sha256": "ccf2e95c02cebcf9f791c816acc97fbfb681eb2c831c0f7d7eeb2fe67a2c6fcd",
-      "published_sha256": "b9d56815b5d94bbe0ecd9b3132e7945bfa65a7f2813a42ca169b149874b1928c",
+      "published_sha256": "c9040952177b5c41c6e0956b90e40b4da5881690b2f1fdd07f76ca01ab7b0b3f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/content-history-audit.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/content-history-audit.md",
       "source_sha256": "4f561a4162246f19160a21a9cdb7aa3573b50ae70401811fdde2697fc3013f6e",
-      "published_sha256": "5549d6002593cdc8fab2e6c690e50961cffc8d35b830588cdc6e0309c1a4cbbb",
+      "published_sha256": "6358a9f5d18723962234726f263d35e5f053e822dc2fd7c67ef77dca19bad9e3",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/independent-export-review.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/independent-export-review.md",
       "source_sha256": "dfd527e1be22f1a8fb0cd53a67c46f02b63084601c2cc75559bb3a1b3a12f79b",
-      "published_sha256": "40993f3a8ecca2571c97ba4193e21db12875f835d4e07fbdbb6538f9e078c8eb",
+      "published_sha256": "255e697b40c2aca9a57fafe290bcbc67a77b15ff5db4f6331da68e9594ac7ab2",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/independent-late-callback-review.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/independent-late-callback-review.md",
       "source_sha256": "315cccc2edadee6908c763ba84f64dde7e4fbada5b6ca7ae51b3ec81edd0a3d2",
-      "published_sha256": "9c15e5d65c5c396f04dbd693bbde652742e94a24eceb85d8db443cf9b6dd07ec",
+      "published_sha256": "418a9ff7d3c569b9ceb9be59ec0c5114b0f729a2c71b8027e5ca9f897ad28696",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/independent-log-review.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/independent-log-review.md",
       "source_sha256": "1803a05f9a1e11c8b1649105945036b5a8e06a2e3d6800bcf243ac16bbb6e936",
-      "published_sha256": "0eb3379e05ef37efe2b1625c069e3f38e6e6b26a773a5ebcac66815b85523b18",
+      "published_sha256": "af32ec3330bf215a27e257bd5a5d9f7a54470dc24ca31c3b6d9d8b0058b85bad",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/independent-reconcile-review.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/independent-reconcile-review.md",
       "source_sha256": "2a33633f2164bdd7c5948c24fb1a0c75a6f76d24816e91144f209327fa1e4f84",
-      "published_sha256": "2f7585524dd15e3588d6d6bf5b36ce7e5114ad67f77a1ffc7c17d800df421378",
+      "published_sha256": "f2677897c78e1391ab86ed26e2c5f9d5d668511f44375e7e5bffa6fd8c0c485b",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/independent-restart-storage-review.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/independent-restart-storage-review.md",
       "source_sha256": "f840bfe9803162396332b3346940039d706a8563b8cb1c51560790c5ef367fe6",
-      "published_sha256": "f0bdea00edfe90fadaee7dc4874b7e5d634976a81ed534b86a32403a1f521978",
+      "published_sha256": "a9423b9f89644591d09b6a5ec267de2b0a6123285d2ccbf20e3749b127afa3eb",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/independent-result-review.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/independent-result-review.md",
       "source_sha256": "694af7c377ba7cdc4e4695ebdc44a66c9af4afac8b5ceac70da313e082bd6e06",
-      "published_sha256": "375d9b4c0d0deaad263d4495527c8a85fbd5e045b33e3ee56511205b7094e5b4",
+      "published_sha256": "05aeb7d5b2256be8f09b3b96ae966b6c23a658e653edd51a15631ecdecf62ab3",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/plan.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/plan.md",
       "source_sha256": "2a971dc0c6a077876e915f889cb25bad4fda0060b3e358fdc55b960dce508c42",
-      "published_sha256": "df2564f7647c2889ff7f187c73bb331f42c6f46ef328cbcc13c742ff03464f7f",
+      "published_sha256": "785b47ca6367d04a8f13fa8ee4cc2acc2273e4e260d3d660ce10576c6e0fffda",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/quickstart.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/quickstart.md",
       "source_sha256": "01bb4d930fcf1c1cf7f6fb0ae4e33f22e87ddb075430e2ba372d36f2e0c490db",
-      "published_sha256": "b2152a07a0e0b7df431d1984b786c8a5fa9613c6d01be0fd0acacbdb6d0ad0d8",
+      "published_sha256": "8af42b898d96d818e220b97ffbcfe926982e5aa21d6b4323d1be878976d006c2",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/real-platform-acceptance-matrix.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/real-platform-acceptance-matrix.md",
       "source_sha256": "39af1d10e14320ef112c9e6218e0db78314103a1541f28eacb9ab8ba44589d3e",
-      "published_sha256": "52b23776be567f6ece5ccaf6c95a1aef55986ec9ef15ebde14c253f53f7a5733",
+      "published_sha256": "39af1d10e14320ef112c9e6218e0db78314103a1541f28eacb9ab8ba44589d3e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/research.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/research.md",
       "source_sha256": "83051e611303254f18512b4a66cf194a28184a29fb83cad5d4f1eabaf74f5202",
-      "published_sha256": "f3547befe3209c33967a28ec7f04e3aa9af449dfed160d1ee9c8f938165eed05",
+      "published_sha256": "437af246ef466e57402a0c5ec6e9b5737b6f78284303bb83468052f2fc288348",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/spec.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/spec.md",
       "source_sha256": "9a1e56bdf443f9cbd30de6eeaab9b53440fd38e831eda5ffd39700a8a36341b6",
-      "published_sha256": "688d6003ec89220eeb564e244654fd71ec816ffe4a9ad0aaed4115148f923bbd",
+      "published_sha256": "1daaedc35c7af7cdd27136f68d84d67dc72edc362f79253777a94c1ec86adcfe",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/tasks.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/tasks.md",
       "source_sha256": "27e72ebaa10d4234468c4f6a52b65a7a708f51d55b1d558262c38dd122e7534d",
-      "published_sha256": "85d3db9e00a22c30f5d1f0f88cd7a953e5ff4efe7ea172b3558e9bdf7ece5021",
+      "published_sha256": "27e72ebaa10d4234468c4f6a52b65a7a708f51d55b1d558262c38dd122e7534d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/specs/001-system-maintenance/verification.md",
       "source_rel_desktop": "facebook/specs/001-system-maintenance/verification.md",
       "source_sha256": "fc005f2847bb20ff817bc88b5f0e97cfcd81ad92c9d0a454ef39ce553c1100fa",
-      "published_sha256": "652518820dd3a6d54bfebed5fd413042b4290430ad118e210a45e240a9f24ad7",
+      "published_sha256": "dd6cd23c2d85d82e08ec8a73ae284dc4e47265b67f55c2b47561400f42a74df5",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/start_api_and_emulator.ps1",
       "source_rel_desktop": "facebook/start_api_and_emulator.ps1",
       "source_sha256": "d6b7db53fb9e4d257f4d107e0b687532ea4c3414fdd48c890504ca0137d0306c",
-      "published_sha256": "48218993af00d4fb54aa3d486fd33483f0b0654051a419d14eb6ac7ff7dbbc0c",
+      "published_sha256": "d6b7db53fb9e4d257f4d107e0b687532ea4c3414fdd48c890504ca0137d0306c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/start_facebook_capture_api.ps1",
       "source_rel_desktop": "facebook/start_facebook_capture_api.ps1",
       "source_sha256": "fb65ed892a6f7104f8c1e7e8e1b3bfa729f944b96d10a9e253e218462d123161",
-      "published_sha256": "cbcbe2ca2ceb25ec0f65001c467c1f329aaf6ea2825b6a9f7ca4f8089afab274",
+      "published_sha256": "fb65ed892a6f7104f8c1e7e8e1b3bfa729f944b96d10a9e253e218462d123161",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/start_facebook_capture_ui.ps1",
       "source_rel_desktop": "facebook/start_facebook_capture_ui.ps1",
       "source_sha256": "ee6ba493fcc3b416d2ed24c27843d36cec61c0c96a2cff61454d83f6284305e9",
-      "published_sha256": "10b1e7201a4947d0872e3b98c298a853f8f4d509de96e2562e458859f437e55c",
+      "published_sha256": "ee6ba493fcc3b416d2ed24c27843d36cec61c0c96a2cff61454d83f6284305e9",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/start_facebook_stable.ps1",
       "source_rel_desktop": "facebook/start_facebook_stable.ps1",
       "source_sha256": "cbbaf33e7c0a352288a2795c8588138b9c986bc44bed7fa2ebf139d91bd66eb6",
-      "published_sha256": "0c19835fce59c48dd2952639240c91083cad3c7040eb590f4b25390fa0578442",
+      "published_sha256": "39bd916db4e55ca0984f202073e49a74ab284f48c526d82987c8043484e85c25",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/start_ui_v2.ps1",
       "source_rel_desktop": "facebook/start_ui_v2.ps1",
       "source_sha256": "dea4924ebb29a70e0f583b39ea1c76750c2deb3cf84d0f60e16cb6bd58fe81d8",
-      "published_sha256": "77883a73159e7cb154283b0048f0fb0ac4994f53297e94fa6789b5996294e9b1",
+      "published_sha256": "dea4924ebb29a70e0f583b39ea1c76750c2deb3cf84d0f60e16cb6bd58fe81d8",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/start_ui_v2.py",
       "source_rel_desktop": "facebook/start_ui_v2.py",
       "source_sha256": "a749822b498ec4eff73899a998b6d6e9b5dfa37568bf7e5162187f42b6a2af5f",
-      "published_sha256": "16cccfc74c32f24f1a776dde1f0ac3aa02f63b53079507b800ca36828c827b2a",
+      "published_sha256": "a749822b498ec4eff73899a998b6d6e9b5dfa37568bf7e5162187f42b6a2af5f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/stop_all_facebook.ps1",
       "source_rel_desktop": "facebook/stop_all_facebook.ps1",
       "source_sha256": "55b1674dae6b653ff29962dd194c9e0d72eb416b71bd172a345c4b0c0996f67e",
-      "published_sha256": "b2f16188b7532234d5d118f526639d3f1d1d1ad4ec134a898ad7710ce33918ff",
+      "published_sha256": "55b1674dae6b653ff29962dd194c9e0d72eb416b71bd172a345c4b0c0996f67e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/stop_facebook_avd_clean.ps1",
       "source_rel_desktop": "facebook/stop_facebook_avd_clean.ps1",
       "source_sha256": "19f72e8ab86dfd9265477ad353bcc2972ac198d4176241c7aafb2bf4af989368",
-      "published_sha256": "6a4219b6269bda0672093298fe0b2fe3543f8f5a2978637b9949f57602f18a79",
+      "published_sha256": "19f72e8ab86dfd9265477ad353bcc2972ac198d4176241c7aafb2bf4af989368",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/README.md",
       "source_rel_desktop": "facebook/tests/README.md",
       "source_sha256": "26ab33d1618d26c96fd44d3bd4e7f1e17a68483623d645cf875f0c92eddef21a",
-      "published_sha256": "42c4d2929e1d5c4c635699a269ecadb8f50c6dfe5d41cc90d1775d22a68cb560",
+      "published_sha256": "43146a16c101820a9b32eb3b70a7af75a0d08718ea026871fae3fe4cf78f8090",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/__init__.py",
       "source_rel_desktop": "facebook/tests/__init__.py",
       "source_sha256": "fff613ce7637a8daed8debff017c05ef2ae4fb0c5ca4cca83d0e8352f893dc8c",
-      "published_sha256": "6621989a6e6884bbfd476b4490afadd0618374682d9d3b60980dd86f731a65f6",
+      "published_sha256": "fff613ce7637a8daed8debff017c05ef2ae4fb0c5ca4cca83d0e8352f893dc8c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/manual/test_reel_reaction_selector.ps1",
       "source_rel_desktop": "facebook/tests/manual/test_reel_reaction_selector.ps1",
       "source_sha256": "38ae8725f026e4ad084619098208b450ef24e0f3250f1153625f36c58e9f3258",
-      "published_sha256": "14b274d8a5fc02ca7e235db2e0f4619921b8907c120153c2a5ac1416c9d351e9",
+      "published_sha256": "38ae8725f026e4ad084619098208b450ef24e0f3250f1153625f36c58e9f3258",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/manual/test_reel_reaction_sheet_state.ps1",
       "source_rel_desktop": "facebook/tests/manual/test_reel_reaction_sheet_state.ps1",
       "source_sha256": "bb025f4ed8a66b34528173bf22f838ef86c9c681646e59afde89f40190e299ca",
-      "published_sha256": "9485ab4be5fd0ee3471efb10ac74928a0d8c800e8d1047b05f9a1d915d36dbc6",
+      "published_sha256": "bb025f4ed8a66b34528173bf22f838ef86c9c681646e59afde89f40190e299ca",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_analyze_facebook_capture.py",
       "source_rel_desktop": "facebook/tests/test_analyze_facebook_capture.py",
       "source_sha256": "0aada668ea936307d94e4b3f44f0aa49cc5655c6a223be4226538d7e8d4dee86",
-      "published_sha256": "a2832e90ca7850ff0f789ee38bf5fb63ac3b6bd8237e4d94255c1f139f406ca8",
+      "published_sha256": "0aada668ea936307d94e4b3f44f0aa49cc5655c6a223be4226538d7e8d4dee86",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_api_examples.py",
       "source_rel_desktop": "facebook/tests/test_api_examples.py",
       "source_sha256": "6e19694b3d1fed62879fbe882bbfff68eb54e6a76c37b88ae6944b6cd6625d7f",
-      "published_sha256": "4cceb248826f9cc1873235194f59c788991e960a66d17ec9b080a7264ff44f32",
+      "published_sha256": "6e19694b3d1fed62879fbe882bbfff68eb54e6a76c37b88ae6944b6cd6625d7f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_android_capture.py",
       "source_rel_desktop": "facebook/tests/test_facebook_android_capture.py",
       "source_sha256": "09b56d39f8f49d6ad4e0453b1a48c9f3d71eaa55afc83b1ed3d942ddf97077f0",
-      "published_sha256": "89a0a8063b032d76884ec844c819c579ddc2e629095b570baae86a8916438b30",
+      "published_sha256": "09b56d39f8f49d6ad4e0453b1a48c9f3d71eaa55afc83b1ed3d942ddf97077f0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_api_client.py",
       "source_rel_desktop": "facebook/tests/test_facebook_api_client.py",
       "source_sha256": "558d22835ab115e4903488a3989be4aef8528fc200b05983b82bca79a7f9bd5f",
-      "published_sha256": "54735d569bc4dd0579b1b9f69f04390fbc9e385ef1c89277a9479763d41c82d6",
+      "published_sha256": "558d22835ab115e4903488a3989be4aef8528fc200b05983b82bca79a7f9bd5f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_batch_pressure.py",
       "source_rel_desktop": "facebook/tests/test_facebook_batch_pressure.py",
       "source_sha256": "504ca9a32b96bf16269877488ad9bd19cdc4336bc00c6a5b0aecbf42712368ca",
-      "published_sha256": "d9fe542b729c088030c3d9e800c84263abb30e8c8257d3fc30fc476aa15639ef",
+      "published_sha256": "504ca9a32b96bf16269877488ad9bd19cdc4336bc00c6a5b0aecbf42712368ca",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_batch_summary.py",
       "source_rel_desktop": "facebook/tests/test_facebook_batch_summary.py",
       "source_sha256": "869ccd9029396226849e6cfd36984f81c904c09a40921955bc7289263bc2e228",
-      "published_sha256": "aaf43ec66d5e4ae2fb1b4822fe8dd2b3777557e4d7745d076664b3a495734eba",
+      "published_sha256": "869ccd9029396226849e6cfd36984f81c904c09a40921955bc7289263bc2e228",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_cancel_transport.py",
       "source_rel_desktop": "facebook/tests/test_facebook_cancel_transport.py",
       "source_sha256": "8fc4ccd8a4aa4080b402089b52bf619019595aafc4ed282115bbfac6f4f4eca8",
-      "published_sha256": "ff85df6cf724e53d766903edfeb783d9ad8761514ef21f4e628b7037c70fb97f",
+      "published_sha256": "8fc4ccd8a4aa4080b402089b52bf619019595aafc4ed282115bbfac6f4f4eca8",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_capture_api.py",
       "source_rel_desktop": "facebook/tests/test_facebook_capture_api.py",
       "source_sha256": "5f3712163edbf96ff9458ac0a5110dfb3a68418751bcbc1658e5a971a9e2e9e2",
-      "published_sha256": "3a5506d8b62dbea12ea165f7344fbaa58a943298da345777dcfc88ed0d4cb8b1",
+      "published_sha256": "5f3712163edbf96ff9458ac0a5110dfb3a68418751bcbc1658e5a971a9e2e9e2",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_capture_file_sharing.py",
       "source_rel_desktop": "facebook/tests/test_facebook_capture_file_sharing.py",
       "source_sha256": "2a23a49be1d9ce5f2817826a89664dad4f674877c3ea3b4fc98bf67d37ce3185",
-      "published_sha256": "151390cfd51e66936490aca9b2e7f5f088a4b3f2b0d539b077bdf05639e04a04",
+      "published_sha256": "2a23a49be1d9ce5f2817826a89664dad4f674877c3ea3b4fc98bf67d37ce3185",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_capture_orchestrator.py",
       "source_rel_desktop": "facebook/tests/test_facebook_capture_orchestrator.py",
       "source_sha256": "8164333cb4599a100fb73d2bd925fc87dde3cbe73c8771ac1def1afc383fb479",
-      "published_sha256": "27788c460f38eff2edad686a9d35806c3601ba73a28bfb32b32d59c283a194b8",
+      "published_sha256": "8164333cb4599a100fb73d2bd925fc87dde3cbe73c8771ac1def1afc383fb479",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_http_security.py",
       "source_rel_desktop": "facebook/tests/test_facebook_http_security.py",
       "source_sha256": "b062a8887a8a85710f148b8431f3d2d1ae9c7b0fe2091ac23de437762f64ae2e",
-      "published_sha256": "ed034e32eea6508b13a1d3a0590cf3b2bc510b42bceb56435880c06ce79e8296",
+      "published_sha256": "b062a8887a8a85710f148b8431f3d2d1ae9c7b0fe2091ac23de437762f64ae2e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_local.py",
       "source_rel_desktop": "facebook/tests/test_facebook_local.py",
       "source_sha256": "0d971d9032c857c1a5426c3070193d8a6f57a7ad161c40ba30e1bae9ff77776e",
-      "published_sha256": "e6c3b0a05ed81e74295923cfc7cb5a2194ec8377b0d98f771d63bac8d2560899",
+      "published_sha256": "0d971d9032c857c1a5426c3070193d8a6f57a7ad161c40ba30e1bae9ff77776e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_mac_device.py",
       "source_rel_desktop": "facebook/tests/test_facebook_mac_device.py",
       "source_sha256": "c245f4e1043dced27e33c898cca20fe6e23e9d2cfe72aaccaba539d2803ab865",
-      "published_sha256": "7ad77e8cdad905d24280a109b432439fa706ff457ff467595b296534c4ad8e34",
+      "published_sha256": "c245f4e1043dced27e33c898cca20fe6e23e9d2cfe72aaccaba539d2803ab865",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_macos.py",
       "source_rel_desktop": "facebook/tests/test_facebook_macos.py",
       "source_sha256": "28041e8cbb7e0adf323aec3170d85fade4d7cbf4205d8c2ccca3f96b792226ae",
-      "published_sha256": "d91808da89d53088f147b591a76b6c8e1bd605b713d58163a06c801f2d84c59d",
+      "published_sha256": "28041e8cbb7e0adf323aec3170d85fade4d7cbf4205d8c2ccca3f96b792226ae",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_navigation_guards.py",
       "source_rel_desktop": "facebook/tests/test_facebook_navigation_guards.py",
       "source_sha256": "f9044374cfd2ae33d3b86b5d194e149757f01bf5cb6b76017813f7fc8e4c0cca",
-      "published_sha256": "44304c1b0c1fe5b8d8e32806980d4cfbea3398dbea638a809b98242757449f87",
+      "published_sha256": "f9044374cfd2ae33d3b86b5d194e149757f01bf5cb6b76017813f7fc8e4c0cca",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_navigation_latency.py",
       "source_rel_desktop": "facebook/tests/test_facebook_navigation_latency.py",
       "source_sha256": "795d254a590caad31ba387b96ababf6b84c7e5a8e1d0ca63b7abc5b7ea4640da",
-      "published_sha256": "16da8d14ef616251d51328ccaa8e1d0dfe857dda39864dc123624c3c6c3626aa",
+      "published_sha256": "795d254a590caad31ba387b96ababf6b84c7e5a8e1d0ca63b7abc5b7ea4640da",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_network.py",
       "source_rel_desktop": "facebook/tests/test_facebook_network.py",
       "source_sha256": "98d682e64d53dcadf51b28806af07da5bfc6a19d700fa14de406e5d3f551df2d",
-      "published_sha256": "4b2ff818914b9eae546c84c09841458f5305f362d917bd0118c6eb1e993fe6b5",
+      "published_sha256": "98d682e64d53dcadf51b28806af07da5bfc6a19d700fa14de406e5d3f551df2d",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_post_queue.py",
       "source_rel_desktop": "facebook/tests/test_facebook_post_queue.py",
       "source_sha256": "1655198e3ed2b9f86343d6e2faf8ff2524a476933ac38be229b2c254ec3948ba",
-      "published_sha256": "59f5ac82599c56dd22cc3982c62eb4ac784746f1c90ad2f87aaa58598f9b19cd",
+      "published_sha256": "1655198e3ed2b9f86343d6e2faf8ff2524a476933ac38be229b2c254ec3948ba",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_release_gate.py",
       "source_rel_desktop": "facebook/tests/test_facebook_release_gate.py",
       "source_sha256": "171247caecbd9d3a6cefd37ef455ba0244310d83439246e2d80144bbd64bc108",
-      "published_sha256": "cb9b190b298977e792b5853c5316ad79871cbed5719a32e0e401926bf0a1f212",
+      "published_sha256": "171247caecbd9d3a6cefd37ef455ba0244310d83439246e2d80144bbd64bc108",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_release_report.py",
       "source_rel_desktop": "facebook/tests/test_facebook_release_report.py",
       "source_sha256": "e991e9fe7e3626b20ebdfbb3c458f804dbeae94294e2c13402b8a744ed730106",
-      "published_sha256": "6f48e8c1ab0afb370752da3ead38c10627fc207925f2ff846e5ed0cd108333d8",
+      "published_sha256": "e991e9fe7e3626b20ebdfbb3c458f804dbeae94294e2c13402b8a744ed730106",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_setup.py",
       "source_rel_desktop": "facebook/tests/test_facebook_setup.py",
       "source_sha256": "ebd6e4fa88f5839add6f3c807a4aa9490ad51ffb8f9c31ed2fb658e904397080",
-      "published_sha256": "fab7ecc560070f46087d1780d2d8a0b6c8b25ed6701958051f298cdc5cc86ee6",
+      "published_sha256": "cf83a737dc8c87e88b2a317a23e065c2c9bbd420cfdbadb0e1a5802d10b15db1",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_shutdown_safety.py",
       "source_rel_desktop": "facebook/tests/test_facebook_shutdown_safety.py",
       "source_sha256": "393e055fa59bed3d86987e2f1a263d5e501c2831d6243194a1534e06014f7e94",
-      "published_sha256": "bf62a42f1f2d6b4ffae5f249f91c38c10367f46a0809be1c85e6648cff92cd9e",
+      "published_sha256": "393e055fa59bed3d86987e2f1a263d5e501c2831d6243194a1534e06014f7e94",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_target_readiness.py",
       "source_rel_desktop": "facebook/tests/test_facebook_target_readiness.py",
       "source_sha256": "fcad80ed7805da3996b07ccbaff1dfb81f5246723471bd865dfff5d80e2176bb",
-      "published_sha256": "8480b604121c2dcfea4b3034506c623cbe2c73ae5d9cf415e4eb37e76379d6ec",
+      "published_sha256": "fcad80ed7805da3996b07ccbaff1dfb81f5246723471bd865dfff5d80e2176bb",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_transport_health.py",
       "source_rel_desktop": "facebook/tests/test_facebook_transport_health.py",
       "source_sha256": "9a2ac958af9727ff5173ffa2624db46646864a072f3a0cfe463814378b770b86",
-      "published_sha256": "2038477d8bd734995b24ada1c802fd11d3c7e44f7b89c9e0a43dc089d8ff6c84",
+      "published_sha256": "9a2ac958af9727ff5173ffa2624db46646864a072f3a0cfe463814378b770b86",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_unpin_reuse.py",
       "source_rel_desktop": "facebook/tests/test_facebook_unpin_reuse.py",
       "source_sha256": "f504cb2f52f6fafa843e70d887586e9d1601412402a1029fd79a5cf123fc5267",
-      "published_sha256": "9d7fdd3acce7af3364d7d44b28d09f2d35d6155d02f55e5c1611c30d5542ba4d",
+      "published_sha256": "f504cb2f52f6fafa843e70d887586e9d1601412402a1029fd79a5cf123fc5267",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_visible_emulator.py",
       "source_rel_desktop": "facebook/tests/test_facebook_visible_emulator.py",
       "source_sha256": "510866b7ca86194f36934e91d716fa26c43b759af6264528100a51f6bb2b1eb0",
-      "published_sha256": "4790d729ffd5e18228eb6ab5b7376cdd0c86dcda894445994d2c1eb68c289e88",
+      "published_sha256": "510866b7ca86194f36934e91d716fa26c43b759af6264528100a51f6bb2b1eb0",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_warm_start.py",
       "source_rel_desktop": "facebook/tests/test_facebook_warm_start.py",
       "source_sha256": "0280d519cef51dc864cee7938809c73e3fc8a4b144c2ae7b14125fc6b634c216",
-      "published_sha256": "d8a5db5d72b508658af0efa0ac1d7d1a994481c967d312be8e98787ac6a2aa37",
+      "published_sha256": "0280d519cef51dc864cee7938809c73e3fc8a4b144c2ae7b14125fc6b634c216",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_facebook_worker_bootstrap.py",
       "source_rel_desktop": "facebook/tests/test_facebook_worker_bootstrap.py",
       "source_sha256": "b9fd8e7f6360417746a163cf6d7ea15af5602de4aced735e6e60a30c24dc3f8a",
-      "published_sha256": "2dd2cdbd95045b40b572c593b0f22b100ffd7a4aa85b4cacdd6553e46e72b1c7",
+      "published_sha256": "b9fd8e7f6360417746a163cf6d7ea15af5602de4aced735e6e60a30c24dc3f8a",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_frontend_security.py",
       "source_rel_desktop": "facebook/tests/test_frontend_security.py",
       "source_sha256": "1a659dcdbecd0ae5c06f18b55d884df16fc6a8986301e829a447fb263570f4e7",
-      "published_sha256": "1a659dcdbecd0ae5c06f18b55d884df16fc6a8986301e829a447fb263570f4e7",
+      "published_sha256": "7bb784b8aa4b1b9b935c650ee10b81dae78e247882400fdb739b102d31e956c4",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/tests/test_layout.py",
       "source_rel_desktop": "facebook/tests/test_layout.py",
       "source_sha256": "8c67d0a8e8d7549c69458c6668bd5b01daa889759031f55279f0102867695374",
-      "published_sha256": "11a9173a3291f6b912a57a90925916a12aebd35b682699e8db4ebfc49449ce2d",
+      "published_sha256": "23c989f813cbb59f82fdaad6e1767ae663259153dccebda06783a9d41f1d65e7",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_maintenance_gate.py",
       "source_rel_desktop": "facebook/tests/test_maintenance_gate.py",
       "source_sha256": "8bbc619594186260e6ad198d010f469e4b3911522e7b06fc8a497cc73575f95e",
-      "published_sha256": "bf1cbd7dca46e4f6d6fc6cc637e6938f62a735a0d9d045da74001afda074d40e",
+      "published_sha256": "8bbc619594186260e6ad198d010f469e4b3911522e7b06fc8a497cc73575f95e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_reaction_rate_limit_progress.py",
       "source_rel_desktop": "facebook/tests/test_reaction_rate_limit_progress.py",
       "source_sha256": "b7fde37ebd7a4d9554acfbb5c0352d76f225779e0235f13e9ca6ced70e0330fa",
-      "published_sha256": "8e8344891f1d8e4510d0e34f883c913af2356627b3b9d7e4991c5c5251265cb6",
+      "published_sha256": "b7fde37ebd7a4d9554acfbb5c0352d76f225779e0235f13e9ca6ced70e0330fa",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_resolve_facebook_share_url.py",
       "source_rel_desktop": "facebook/tests/test_resolve_facebook_share_url.py",
       "source_sha256": "868d8b9d2d7bcc283e6af2fd5ee6ba4f95e24dab94826f9785c6345b4b7b765f",
-      "published_sha256": "e94c26454e6c2f93d65d62138d7a734dea0f4de3296407cb16ded6068c243262",
+      "published_sha256": "868d8b9d2d7bcc283e6af2fd5ee6ba4f95e24dab94826f9785c6345b4b7b765f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tests/test_ui_v2_and_safety.py",
       "source_rel_desktop": "facebook/tests/test_ui_v2_and_safety.py",
       "source_sha256": "87a37e77c73e6e0813aafd78d93362a337cdbb43fa3aaf9bf487a81328d57ec4",
-      "published_sha256": "5ecd490b831fb70e886d81d337f8431b268ae537ca83f204daf98a941110bab4",
+      "published_sha256": "87a37e77c73e6e0813aafd78d93362a337cdbb43fa3aaf9bf487a81328d57ec4",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tools/export_source.py",
       "source_rel_desktop": "facebook/tools/export_source.py",
       "source_sha256": "69960c9b61f45c40989a1a3096c1ecf93486cb11587f1818f80f86ed79e5e484",
-      "published_sha256": "29a7ce40bbfba7a15989e07241c0f57d7f8cfcac3047ccc22dc575d533bf8504",
+      "published_sha256": "69960c9b61f45c40989a1a3096c1ecf93486cb11587f1818f80f86ed79e5e484",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/tools/maintenance_gate.py",
       "source_rel_desktop": "facebook/tools/maintenance_gate.py",
       "source_sha256": "f3ece1973ec0764a4cee8a2acaec95ae87a2a1d3cf85dad44acbc6f8ec74de8f",
-      "published_sha256": "f3ece1973ec0764a4cee8a2acaec95ae87a2a1d3cf85dad44acbc6f8ec74de8f",
+      "published_sha256": "a477c2f876eb7e3a9683ef6fa59bdba902442dd1542198b01df4c5fa1e3776ce",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/tools/verify_share_result.py",
       "source_rel_desktop": "facebook/tools/verify_share_result.py",
       "source_sha256": "1756971f8802986c499f091a6b484196e1a2572127e54b3283c76a7a9488b278",
-      "published_sha256": "1756971f8802986c499f091a6b484196e1a2572127e54b3283c76a7a9488b278",
+      "published_sha256": "a620cd6da091b918cf7288e0a0b0e0591d7db84617b54f8014613e738089193e",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/validate_facebook_predeploy.py",
       "source_rel_desktop": "facebook/validate_facebook_predeploy.py",
       "source_sha256": "670446913595c690b1d2f47707df17859b1254de1c21f25c21b8767d58b7c310",
-      "published_sha256": "bf23fb7ac7d13e029e9675eba28d6d2d6a4ff06c779d8215fc164a6e1dc1ed06",
+      "published_sha256": "018e075b5bd18afa385877a597061326786233ce5f411bb9c0077ffd1558f8fe",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/web/app.js",
       "source_rel_desktop": "facebook/web/app.js",
       "source_sha256": "8ece900a340d27fd5e075bb29cc7de7bcb400adaed8fb9ffc5adcdeef21d129c",
-      "published_sha256": "15398a6bef1fcd0a4673cd700c48dd9f74a9e95b970ee115fef5bf2c8402844a",
+      "published_sha256": "8ece900a340d27fd5e075bb29cc7de7bcb400adaed8fb9ffc5adcdeef21d129c",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/web/index.html",
       "source_rel_desktop": "facebook/web/index.html",
       "source_sha256": "74a0a765a0221fc7fe712396d3de2095dd0371e9a47a34e425315f5b78baf190",
-      "published_sha256": "80933b70fd4d0fa7d9d74fb7a3ee455b76715baafca6e79531dfc5017b42df08",
+      "published_sha256": "74a0a765a0221fc7fe712396d3de2095dd0371e9a47a34e425315f5b78baf190",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/web/styles.css",
       "source_rel_desktop": "facebook/web/styles.css",
       "source_sha256": "20c587ed11a49e77efa6eea8026d24f074f2869c14bbcc9ddfbc4674826812cd",
-      "published_sha256": "2fcdd6ec3a07ff227aefe77ed6a736d21e7ba01a19390b67f4af30a1e25290d5",
+      "published_sha256": "20c587ed11a49e77efa6eea8026d24f074f2869c14bbcc9ddfbc4674826812cd",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/web_v2/app.js",
       "source_rel_desktop": "facebook/web_v2/app.js",
       "source_sha256": "9757350dfc0c51c49343dacd5245bf132caecf4d3a59516e31a47bfef04ec20a",
-      "published_sha256": "9757350dfc0c51c49343dacd5245bf132caecf4d3a59516e31a47bfef04ec20a",
+      "published_sha256": "f923e7faa9ba76df423ff6d4b8f496c1ee7f87a9f79983ec3a42a6b4943a7919",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/web_v2/index.html",
       "source_rel_desktop": "facebook/web_v2/index.html",
       "source_sha256": "a49a7907dd931ade2a20a5d93a085ee44bc84260c7b90967e38374ac2a759467",
-      "published_sha256": "a49a7907dd931ade2a20a5d93a085ee44bc84260c7b90967e38374ac2a759467",
+      "published_sha256": "9871fc9f9b6151c29515c4160def2253ec560fa6f312c02a30c67157d8b508b2",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/facebook/source/web_v2/styles.css",
       "source_rel_desktop": "facebook/web_v2/styles.css",
       "source_sha256": "a30396b0b2ae5c68ac87f201a82e8ca3e9b6e13ef13feb9dccaeecff7830f8e8",
-      "published_sha256": "15dd323c608c240b133c9010308a4870795412fe064f95b71d6ef398c18b590c",
+      "published_sha256": "a30396b0b2ae5c68ac87f201a82e8ca3e9b6e13ef13feb9dccaeecff7830f8e8",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/keep/source/context.txt",
       "source_rel_desktop": "个人知识库/项目/爬虫/keep爬虫/参加比赛.txt",
       "source_sha256": "0247bf21519774900bc3573e49d278ab1bfe1a12cae096e901c12a386e7c580f",
-      "published_sha256": "689ab6eaded5f50ca28b3c6cfa71c475b1aa5e665c280d465da2886d3963e1ad",
+      "published_sha256": "9a745da94361486615f38b9d89fc755cb66dff164dd48b7fce246ca0b01d8c52",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/keep/source/phase2/import json.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/keep爬虫/动态爬取/import json.py",
       "source_sha256": "27c19bed2d31627a07a3cbf8c02eb017f6ec67547783d42b2f42c8ededb6568d",
-      "published_sha256": "27c19bed2d31627a07a3cbf8c02eb017f6ec67547783d42b2f42c8ededb6568d",
+      "published_sha256": "ec004940647e72141ad23a44f40da178b815e31c711041281426b81c01dd4c8a",
       "changed_for_publication": false
     },
     {
       "path": "projects/social/keep/source/phase2/动态爬取(4).py",
       "source_rel_desktop": "个人知识库/项目/爬虫/keep爬虫/动态爬取/动态爬取(4).py",
       "source_sha256": "ae1cca31e24611f0b53ad4c711cf0dd441a0a4914644e6e5ea20488982b82b0a",
-      "published_sha256": "a4fcc9881e45c25fb8ed897e4a2cbde0c2c4c973c7bf3254e3c9ba940f1e33c9",
+      "published_sha256": "42575aac6b9df2ff386af20f80ab2f44a06e68855a08c7186ac21865779b1685",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/keep/source/phase2/测试.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/keep爬虫/动态爬取/测试.py",
       "source_sha256": "1d3fe9fb5fbe9454f9bac6cdff9ca504f2e548004d21a00248b3ae0778308e0e",
-      "published_sha256": "5139931562157fd17c70c5263b819996a66c7a79250858a3b11eacf710b5e6c6",
+      "published_sha256": "0fd4253281a33709417fc8e360c08075e6236446ea25e8de852bcf076eff4119",
       "changed_for_publication": true
     }
-  ]
+  ],
+  "published_sha256_basis": "canonical Git blob bytes; Windows CRLF checkout may be normalized to LF in verifier"
 }
