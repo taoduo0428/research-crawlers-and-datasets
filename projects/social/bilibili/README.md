@@ -15,7 +15,7 @@ python -m pip install requests
 python projects/social/bilibili/tools/collect_combined.py --limit 5 --output bili_result.csv
 
 # 指定真实BV号（可以重复传入 --bvid）
-python projects/social/bilibili/tools/collect_combined.py --bvid BV1YV4y1p76c --bvid BV1th411s7Tf --output bili_two.csv
+python projects/social/bilibili/tools/collect_combined.py --bvid BV1TgjwzGEuG --bvid BV15qQwB4EZ9 --output ../bili_current.csv
 
 # 不联网，只整理历史视频信息和已有字幕
 python projects/social/bilibili/tools/collect_combined.py --offline --limit 5 --output bili_offline.csv
@@ -33,16 +33,18 @@ python projects/social/bilibili/tools/collect_combined.py --offline --limit 5 --
 
 ## 真视频测试到哪一步了
 
-2026-10-17 的测试中，用 5 条以前抓到过字幕的真实视频跑了完整脚本：
+2026-10-17 从 B站找了 10 条真实视频来测，**10 条视频信息都成功获取，5 条至少一次返回字幕轨道**。随后选其中 5 条跑完整 CSV 流程：
 
-- 生成了 `data/combined_verified_samples.csv`，**5 条都有字幕正文**；
-- 其中 **4 条成功刷新了 B站当前公开的视频信息**，另外 1 条沿用历史视频信息；
-- 5 条字幕全部来自历史 CSV，**不是当日重新下载的字幕**；
-- B站目前的匿名字幕接口仍返回空轨道；带之前提供的设备 Cookie 也没有变成登录状态。
+- **5/5 条成功获取当前视频信息**（标题、UP 主、播放、点赞等）。
+- **3/5 条成功从当前 B站接口下载字幕正文**，分别有 2,703、231、1,790 段。
+- 另外 2 条本轮没有取到字幕轨道；有一条在单独测试中曾经成功，说明有时请求结果会变，不能承诺每次都有字幕。
+- 实时数据输出了 27 列 CSV，测试时在临时目录保存，**没有把新抓的第三方字幕原文上传到公开仓库**。
 
-因此「旧字幕和新视频信息合表」已经通过真实测试；「今天新抓到字幕」**还没通过真实验证**。要核实后者，需在自己的机器上使用已登录的 B站会话。脚本可以通过本机环境变量 `BILI_AUTH` 使用会话值，**不要发到聊天里，也不要写进源码或提交 Git**。没有会话时程序仍能工作，但可能只能从历史数据补字幕。
+详细视频链接、数据量和修复原因见 [真实视频测试记录](docs/REAL_VIDEO_TEST_2026-10-17.md)。
 
-新版代码同时检查有签名的播放器接口及新的 Protobuf 字幕元数据接口，不再只根据旧接口的空数组判定「无字幕」。接口变化时也不会下载视频或音频。
+这次主要修了两个真实错误：新版 Protobuf 字幕信息外层还有一层 `data` 包装；此外字幕地址需要按播放器的编码格式转换成实际 CDN 地址，不能直接请求 `subtitle.bilibili.com`。**两个问题修好后，不带 Cookie 也能抓到部分公开视频的字幕。**
+
+没有字幕时仍可尝试从旧 CSV 合并，但会明确标注 `历史CSV`，不会冒充本次实时采集。部分视频可能要求有效登录状态；确需配置时，只能在自己的电脑设置 `BILI_AUTH` 环境变量，**不要把 Cookie 发到聊天或提交 Git**。
 
 测试命令：
 
@@ -58,7 +60,7 @@ python projects/social/bilibili/tools/check_bilibili.py
 | `data/第一次字幕/结果.csv` | 第一批 3,259 行，2,507 行有字幕 |
 | `data/结果.csv` | 第二批 3,132 行，其中 1,836 行有字幕，存在重复 CID |
 | `data/空.csv` | 第二批中 1,296 行字幕为空的记录，已修正早期编码问题 |
-| `data/combined_verified_samples.csv` | 新程序跑出来的 5 条真实视频合并示例 |
+| `data/combined_verified_samples.csv` | 前一轮 5 条历史字幕合并示例，**不是这次的新字幕下载结果** |
 | `data/第一次字幕/merged_unique.csv` | 第一批视频信息与字幕对照表 |
 | `data/supplement/`、其他 `data/*.csv` | 键盘、手环等主题及补充数据 |
 | `source/main/`、`source/supplement/` | 历史采集脚本，主要用来查以前的写法 |

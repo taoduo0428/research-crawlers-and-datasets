@@ -12,7 +12,7 @@ from pathlib import Path
 import re
 import tempfile
 import time
-from urllib.parse import urlencode, urlsplit
+from urllib.parse import unquote, urlencode, urlsplit, urlunsplit
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -91,16 +91,20 @@ def wire_fields(raw: bytes) -> list:
     return fields
 
 def decode_subtitle_tracks(raw: bytes) -> list:
+    """The response is field 1 (data), containing repeated field 3 tracks."""
     tracks = []
-    for no, wire, part in wire_fields(raw):
-        if (no, wire) != (3, 2):
+    for outer, outer_wire, data in wire_fields(raw):
+        if (outer, outer_wire) != (1, 2):
             continue
-        values = {i: val.decode("utf-8", errors="replace")
-                  for i, w, val in wire_fields(part)
-                  if i in (3, 4, 5) and w == 2}
-        if values.get(3) and values.get(5):
-            tracks.append({"lan": values[3], "lan_doc": values.get(4, ""),
-                           "subtitle_url": values[5]})
+        for no, wire, part in wire_fields(data):
+            if (no, wire) != (3, 2):
+                continue
+            values = {i: val.decode("utf-8", errors="replace")
+                      for i, w, val in wire_fields(part)
+                      if i in (3, 4, 5) and w == 2}
+            if values.get(3) and values.get(5):
+                tracks.append({"lan": values[3], "lan_doc": values.get(4, ""),
+                               "subtitle_url": values[5]})
     return tracks
 
 def parse_subtitle_json(data: object) -> tuple[str, int]:
@@ -114,16 +118,57 @@ def parse_subtitle_json(data: object) -> tuple[str, int]:
              and p["content"].strip()]
     return "\n".join(lines), len(lines)
 
+# Bilibili's player obfuscates its subtitle CDN URLs before putting them
+# in the subtitle/web/view protobuf response. These are fixed player codec
+# parameters, not account secrets. Decode only URLs from the exact platform
+# subtitle host, and revalidate the path before requesting any content.
+_SUBTITLE_CODEC = (
+    (
+        'nP](wOFRvU.+<fjS{jn-!$D|Dz&",zT' + chr(96),
+        '=CFxYRn{.y|uVyO$uh&sikph?N.ilF/' + chr(96),
+    ),
+    (
+        'Bn"q~|albg@]Go~ACgyDvKnd+)_D}^&J?',
+        "Cu~L!xs~f^&r@'vh=q]q{eeng*sEg^kp#J",
+    ),
+)
+
+
 def safe_subtitle_url(value: str) -> str:
+    """Return the verified caption CDN URL, decoding the current player format."""
     if value.startswith("//"):
         value = "https:" + value
     parsed = urlsplit(value)
     host = (parsed.hostname or "").lower()
     if (parsed.scheme != "https" or parsed.username or parsed.password or
-            parsed.port not in (None, 443) or
-            not (host == "api.bilibili.com" or host.endswith(".hdslb.com"))):
+            parsed.port not in (None, 443) or parsed.fragment or
+            not (host in ("api.bilibili.com", "subtitle.bilibili.com")
+                 or host.endswith(".hdslb.com"))):
         raise ValueError("Untrusted subtitle URL")
-    return value
+    if host != "subtitle.bilibili.com":
+        return value
+
+    encoded_path = unquote(parsed.path.lstrip("/"))
+    if not encoded_path or len(encoded_path) > 1024:
+        raise ValueError("Invalid encoded subtitle path")
+    for marker, seed in _SUBTITLE_CODEC:
+        secret = seed + "bilibili"
+        decoded = "".join(
+            chr(ord(character) ^ ord(secret[i % len(secret)]))
+            for i, character in enumerate(encoded_path)
+        )
+        if not decoded.startswith(marker):
+            continue
+        path = decoded[len(marker):]
+        if (not path.startswith("/bfs/")
+                or path.startswith("//")
+                or ".." in path
+                or any(char in path for char in ("\\", "?", "#", "\r", "\n"))
+                or len(path) > 512):
+            raise ValueError("Decoded subtitle path is not safe")
+        return urlunsplit(("https", "aisubtitle.hdslb.com", path,
+                           parsed.query, ""))
+    raise ValueError("Unknown Bilibili subtitle URL encoding")
 
 
 MIXIN_ORDER = (
@@ -229,7 +274,9 @@ class BilibiliClient:
             if address and address not in seen:
                 seen.add(address)
                 unique.append(x)
-        if not unique and not self.logged_in_value_present:
+        if unique:
+            return unique, "tracks_found"
+        if not self.logged_in_value_present:
             status = "anonymous_no_tracks_or_login_required"
         return unique, status
 
