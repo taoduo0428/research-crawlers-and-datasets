@@ -1,5 +1,6 @@
 # 已有 Codex 的项目接手配置
 
+这是旧开发环境里 Codex、Serena、RTK 等工具的配置笔记。它不是运行 Facebook 爬虫的前置条件；普通使用者直接看 [项目 README](README.md) 和 [Windows 安装说明](WINDOWS_DEPLOYMENT.md) 就行。下面记录的版本号、路径以写作当时为准。
 无需重新安装 Codex。本机核对时 CLI 为 `0.147.0`，`codex login status` 显示 ChatGPT 登录，RTK 为 `0.49.0`；Serena 已成功激活本项目并执行符号查询。这里只记录可迁移用法，不复制本机账户或完整配置。
 
 ## 路径和优先级

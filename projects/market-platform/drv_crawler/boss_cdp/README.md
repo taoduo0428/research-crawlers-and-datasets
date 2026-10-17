@@ -1,70 +1,12 @@
-# BOSS直聘爬虫 · 职位抓取工具 v2.2（Chrome CDP / 明文薪资）
+# BOSS Chrome/CDP 子工程
 
-> 🌐 English documentation: [README.en.md](./README.en.md)
+这是单独引入的一份 BOSS 抓取工具，原工程来自 [eatmoreduck/boss-zhipin-scraper](https://github.com/eatmoreduck/boss-zhipin-scraper)。它通过 Chrome DevTools Protocol (CDP) 连接隔离的 Chrome 采集岗位，与总仓库 `projects/market-platform/run.py` 的流程并不完全一样。
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey.svg)
-![Version](https://img.shields.io/badge/version-2.2.1-orange.svg)
+**谁需要看这份说明？** 想检查 BOSS 的 CDP 采集方式、岗位薪资解析或者历史 Chrome 配置时看这里。只是想用已经整理好的岗位数据，直接去 [BOSS 数据说明](../../../recruitment/boss/README.md)，不用先配置浏览器。
 
-一个轻量的 **BOSS直聘爬虫（spider / crawler / scraper）**：通过 Chrome DevTools Protocol 连接本地已登录的 Chrome，复用真实登录态调用 zhipin.com 搜索 API，绕过前端字体反爬，输出含**明文薪资**的职位数据（JSON / CSV），并生成薪资分布、技能词频和求职材料优化提示词。同时作为 Hermes Agent Skill 提供。
+`scripts/boss_cdp_raw.py` 是原子工程的主入口，`scripts/job_summary.py` 做简单统计和摘要。首次使用先装本目录 `requirements.txt`，在专用 Chrome 中**人工登录**，再用少量岗位试跑。不要连接自己平时上网的主浏览器 Profile，也不要把登录目录上传仓库。
 
-> 📌 **一句话介绍**：不用 Selenium/Playwright，直接通过 Chrome DevTools Protocol 连接本地已登录的 Chrome，复用真实登录态调搜索 API，输出含明文薪资的 JSON/CSV，并生成薪资分布、技能词频和求职材料优化提示词。
-
-*原上游封面图未包含在研究发布副本中。*
-
----
-
-## ⚠️ 免责声明
-
-本项目仅供学习和技术研究参考，旨在探讨 Chrome DevTools Protocol、前端反爬机制与数据采集技术。请勿用于任何违反 [BOSS直聘用户协议](https://www.zhipin.com/about/protocol.html) 或相关法律法规的用途，不得用于商业转售、恶意爬取或对目标网站造成负担的行为。使用本项目所产生的一切后果由使用者自行承担，作者不对任何滥用行为负责。
-
----
-
-## 🚀 30 秒快速开始
-
-```bash
-# 1. 克隆 + 装依赖
-git clone https://github.com/eatmoreduck/boss-zhipin-scraper.git
-cd boss-zhipin-scraper
-pip install -r requirements.txt          # 或 uv sync
-
-# 2. 启动隔离 Chrome 并登录（只需一次，登录态持久保存）
-python3 scripts/boss_cdp_raw.py --setup-chrome
-
-# 3. 抓取 + 分析
-python3 scripts/boss_cdp_raw.py --keyword "AI Agent" --city 上海 --pages 3 --analysis
-
-# 支持全国城市（含三四五线），例如：
-python3 scripts/boss_cdp_raw.py --keyword "前端" --city 赣州 --pages 3
-# 查看支持的城市：--list-cities [关键词]
-python3 scripts/boss_cdp_raw.py --list-cities 江
-
-# 4. 抓取后生成聚合摘要 + 提示词（默认读取最新结果）
-python3 scripts/job_summary.py
-```
-
-抓完直接拿到：薪资分布、经验要求、高频技能词、求职材料优化提示词。提示词只基于岗位数据，不读取本地简历文件，也不给岗位算个人匹配分。
-
-## ✨ 特性
-
-- 明文薪资（API 模式，绕过字体反爬）
-- JSON / CSV 双格式输出
-- 详情页 JD 抓取 + 技能分析
-- 抓取后聚合摘要 + 可复制提示词
-- 增量写入（异常退出不丢数据）
-- 一键环境检查 + 持久隔离 Chrome CDP profile
-- 多维筛选（规模、融资、薪资、经验、学历、行业）
-- macOS + Linux 支持（Windows 代码分支已预留，未经实测，不保证可用）
-
-<details>
-<summary>🔍 为什么不选 Selenium / Playwright 类爬虫？</summary>
-
-- Selenium/Playwright 会启动完整的受控浏览器，体积大、指纹明显，容易触发 BOSS 的风控和验证码。
-- 本工具直接连接你已经登录的真实 Chrome（CDP），复用真实指纹和登录态，调用的也是页面内合法的搜索 API，返回的 `salaryDesc` 本就是明文——不需要解析被字体反爬加密的 DOM 薪资。
-- 因此比传统 DOM 抓取类爬虫更稳定，也更难被识别为自动化流量。
-
-</details>
+下面「安装」部分是原上游项目的说明，其中部分命令会重新克隆原项目或安装 Hermes Skill，**不是课题组总仓库必做的步骤**。网站接口、登录和平台限制可能已经变化，请自行核实后再用。
 
 ## 安装
 

@@ -1,5 +1,6 @@
 # BOSS Zhipin Scraper · Job Crawler v2.2 (Chrome CDP / Plaintext Salary)
 
+Archived upstream English instructions for the separate BOSS CDP tool. The commands below refer to the original project and its Hermes integration, not necessarily to the structure of this research monorepo. Read the [Chinese project note](README.md) first if you are working in the lab repository.
 > 🌐 中文文档：[README.md](./README.md)
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)

@@ -1,5 +1,6 @@
 # 已验证环境与迁移基线（2026-09-17）
 
+**这是当时那台 Windows 机器的环境记录，不是安装清单。** 版本号、模拟器和证书路径可以拿来对照，但别为了追求同一个版本就把自己已经能用的环境删掉。真正安装按 [Windows 说明](WINDOWS_DEPLOYMENT.md) 或 [Mac 说明](macos/QUICKSTART.md) 走。
 本文记录当前 Windows 工作环境的实测值，供换机时对照。它不是强制升级清单。部署命令继续使用 [Windows 部署](WINDOWS_DEPLOYMENT.md)、[Mac 快速开始](macos/QUICKSTART.md) 和 [Mac Codex Runbook](macos/CODEX_DEPLOYMENT_RUNBOOK.md)。
 
 ## 自动核对到的本地基线

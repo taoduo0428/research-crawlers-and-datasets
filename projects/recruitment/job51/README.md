@@ -1,5 +1,9 @@
+# 前程无忧（51job）
 
-# 前程无忧 / 51job
-项目代码 `../../market-platform/drv_crawler/job51/` 包括分类枚举、分页、断点 SQLite、导出与测试。
-`data/final.csv`：27,552 条清洗结果，106 行薪资为空。
-现存 `job51/output/jobs.jsonl` 只有少量历史试跑记录；本机 `.state` SQLite 也仅有少量测试/烟测记录，不是 27,552 条完整原始层，故不作为正式原始数据上传。保留六字段表，并在未来采集时先写入包含 record_id、URL、公司、JD 的原始层。
+已整理好的数据是 `data/final.csv`，共有 **27,552 条岗位**，其中 **106 条薪资为空**。
+
+项目代码在 [`../../market-platform/drv_crawler/job51/`](../../market-platform/drv_crawler/job51/README.md)。这里有职业分类、分页抓取、断点 SQLite、导出和测试，想重新运行先读那边的说明。
+
+有一点需要交代：这 27,552 条对应的完整原始采集库，当前还没有在这份仓库里找回来。现存的一些 `jobs.jsonl` 和断点文件只是小规模试跑结果，不能假装成全量原始数据。
+
+目前建议先使用 `final.csv` 做基础统计；如果后续重新采集，尽量保留原始岗位 ID、公司、URL、JD 和采集时间，这样以后才能追溯。

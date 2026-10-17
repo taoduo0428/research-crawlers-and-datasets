@@ -1,5 +1,6 @@
 # Facebook 模拟器 Worker 一键新增说明
 
+这份是以前扩充 Android Worker 时写的操作记录。准备改配置之前，先在 [Facebook 总说明](README.md) 里核对当前串行调度方式和安装入口。不要直接复制别的机器的端口、模拟器磁盘或登录状态。
 当前项目总状态见 [CURRENT_STATUS_2026-09-09.md](CURRENT_STATUS_2026-09-09.md)。下面的 worker-03 信息是 2026-09-05 历史实例记录；截至 2026-09-09 仍不能把 `awaiting-login` 当成已完成实机验收。
 
 ## 一键新增

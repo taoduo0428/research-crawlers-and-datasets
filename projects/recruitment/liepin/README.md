@@ -1,5 +1,12 @@
-
 # 猎聘
-源码 `../../market-platform/drv_crawler/liepin/`，包括请求、解析、断点和协调支持。
-`data/full-source.csv`：49,056 条完整层（31 列、record_id 唯一）；其中 2,449 条 JD 空白。
-`data/final.csv`：46,607 条六字段清洗版，JD 均非空。数量上两者相差 2,449，但单条原文完全一致验证未完成，不据此断言每条都逐一映射成功。
+
+这里有一份比较完整的源数据，也有整理好的最终表：
+
+- `data/full-source.csv`：**49,056 条**，31 列，`record_id` 不重复。
+- `data/final.csv`：**46,607 条**，只留职位、JD、薪资和三级分类。
+
+源表里有 **2,449 条 JD 为空**。两个表的数量刚好相差 2,449，但这只能说明数量对得上，**不能据此断言 46,607 条都已经逐条配对确认**。
+
+爬虫代码在 [`../../market-platform/drv_crawler/liepin/`](../../market-platform/drv_crawler/liepin/README.md)，包括分类、翻页、请求解析、断点和浏览器登录相关逻辑。
+
+要做清洗或去重，尽量从 `full-source.csv` 出发，先保留 `record_id` 与原始链接；不要只拿最终六字段的文案判断两条记录是不是同一个岗位。

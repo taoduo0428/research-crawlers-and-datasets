@@ -1,10 +1,10 @@
-# Windows 部署与运行
+# Facebook：Windows 安装说明
 
-换机前先对照 [本地稳定基线](STABLE_BASELINE.md)，其中记录已验证的 Facebook 版本、APK 哈希/来源未知项、证书和首次/日常步骤；已有 Codex 使用 [项目接手指南](CODEX_PROJECT_GUIDE.md)。
+第一次在 Windows 上使用，按下面顺序来：**安装 Python → 配好 Android → 人工登录 Facebook → 启动本地 API**。别跳过模拟器和登录步骤，只把网页打开并不代表采集功能已经准备好。
 
-本文是 Windows 10/11 x64 的可执行部署路径。它使用仓库现有的 PowerShell 启动器和 Android x86_64 Google APIs AVD；不包含 Facebook APK、账号、Cookie、CA 私钥或模拟器磁盘。首次登录、验证码和目标可见性必须由使用者在自己的模拟器内完成。
+仓库没有提供 Facebook APK、账号、Cookie、证书私钥或模拟器磁盘，这些必须在自己的电脑上准备。以前测试过的环境记在 [稳定基线](STABLE_BASELINE.md)，供对照，不要求你先删掉现有环境。
 
-本轮代码/验收记录见 [VALIDATION_2026-09-16.md](VALIDATION_2026-09-16.md)；历史记录只按日期和原始产物解释，不能替代当前设备或真实终点证据。
+[2026-09-16 测试记录](VALIDATION_2026-09-16.md)是历史记录，不能代替你自己的设备验收。
 
 ## 1. 获取代码与 Python
 

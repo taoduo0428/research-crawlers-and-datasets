@@ -1,16 +1,29 @@
+# 一品威客
 
-# 一品威客（epwk）
+这里保存了两轮数据。旧版主要用来查任务 ID；2026 年 8 月补充过一批，后来对描述、价格和重复记录做了人工审核。如果做任务文本或价格研究，建议先看补充版。
 
-## 源码
-`../../market-platform/drv_crawler/sites.py` 中 `EpwkAdapter`；入口 `../../market-platform/run.py`。依赖原始项目配置、合法网络环境和可验证的任务详情。
+## 文件怎么选
 
-## 数据
-- `data/legacy-2691.csv`：旧版 2,691 条，任务描述为空，适合核对 ID，不适合正文分析。
-- `data/reviewed-1997.csv`：新版本 1,997 条人工审核；A 677 / B 523 / C 424 / D 373。
-- `data/high-quality-ab-1200.csv`：A/B 子集 1,200 条。
-- `data/price-high-confidence-956.csv`：价格建模优先子集 956 条。
-- 其他 `data/` 子集：去重候选、核心样本、强价格样本等，均来自同一审核主集，**不能与主表相加**。
+| 文件 | 用处 |
+| --- | --- |
+| `data/legacy-2691.csv` | 旧版 2,691 条，没有可用的任务详情描述 |
+| `data/reviewed-1997.csv` | 补充版审核主表，1,997 条 |
+| `data/high-quality-ab-1200.csv` | 质量等级 A、B 的 1,200 条，适合先试分析 |
+| `data/price-high-confidence-956.csv` | 价格信息比较明确的 956 条 |
+| `data/price-core-920.csv` | 在高置信度样本上暂时排除重复候选后的核心集合 |
+| `data/strong-pricing-408.csv` | 价格证据更强的小样本 |
+| `data/duplicate-candidates-51.csv` | 可能重复的任务，需人工核对 |
+| `data/missing-description-6.csv` | 描述缺失的记录 |
+| 其余 CSV | 低置信度和精简字段等不同视图 |
 
-## 数据局限与复现
-新版有 376 条详情发布日期为空、使用 sitemap_lastmod 候选日期，A/B 子集 229 条、价格优先子集 195 条。未取得发布日期时不得宣称“已确认近三个月发布”。旧版原始 `run-report` 标记 `partial` / `window_complete=false`，不能按全站完全覆盖理解。
-数据主键 `record_id`；预算文本可包含区间、标价、估价、协商价，须区分来源与单位。目录下的 CSV 对联系信息和邮箱/手机号做了脱敏，字段与本机原始记录可对齐。
+**不要把这些表的行数加在一起。** 它们有大量重合记录。主键先用 `record_id`，再看价格来源、单位和可信程度。
+
+## 哪里有爬虫代码
+
+在 `../../market-platform/drv_crawler/sites.py` 中找 `EpwkAdapter`。统一命令入口是 `../../market-platform/run.py`。补充版处理脚本在那个工程的 `tools/` 中，项目早期的[交接记录](../../market-platform/docs/一品威客补充版交接说明.md)也保留了。
+
+## 还要注意什么
+
+新版 1,997 条中有 376 条拿不到详情页的真实发布日期，只留下网站地图更新时间作为参考。不能只凭这个时间就说任务一定发布于近三个月。
+
+预算也未必都是确定成交价：有的是区间、标价或协商价。数据已对联系方式等信息做处理，但进一步分享仍要考虑原网站内容的使用权限。

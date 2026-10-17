@@ -1,5 +1,6 @@
 # Validation record — 2026-09-16
 
+这份文档记录了当时哪些测试通过、哪些问题还没解决。保留原始日期和技术细节，方便以后追查；**不要把 2026 年 9 月的通过记录当成今天的实机验收报告**。
 ## Delivery checks — 2026-09-17
 
 - Preserved the working Facebook/Frida/dependency versions and default navigation wait. Adaptive readiness remains Windows-only, explicit opt-in, with no claimed speedup. Current baseline and APK provenance limitations are in `STABLE_BASELINE.md`.

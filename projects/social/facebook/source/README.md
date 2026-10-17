@@ -1,31 +1,22 @@
-# Facebook Reaction 本地采集工具
+# Facebook 本地采集工具
 
-接手/换机先看 [已验证环境与 APK/证书基线](STABLE_BASELINE.md)；已有 Codex 的账号、配置、Skills、Serena/RTK 用法见 [Codex 接手指南](CODEX_PROJECT_GUIDE.md)。不需要为使用本项目升级现有 Facebook 或重新安装 Codex。
+这套工具通过 Android 模拟器打开指定帖子，在本机管理任务，读取**当前登录账号可见**的 Reaction 和分享信息。它不会替你注册或登录账号，也不能保证每个帖子都能看到完整名单。
 
-API 已启动后，最短完整示例（提交一次、查询状态/进度、取结果和 CSV）：
+第一次使用先按电脑系统准备环境：
 
-```powershell
-.venv\Scripts\python.exe examples\capture_requests.py --url "https://www.facebook.com/share/r/1Dg59X6ysJ/" --output reel.csv
-```
+- Windows：先读 [Windows 安装说明](WINDOWS_DEPLOYMENT.md)，仓库提供 `START.cmd`。
+- Mac（Apple Silicon）：读 [Mac 安装说明](macos/QUICKSTART.md)。这份仓库有 `setup.sh`，但**没有**旧文档提到的 `CONFIGURE.command`、`CHECK.command`、`START.command`。Mac 的模拟器、证书和真实抓取需要自行验证。
 
-macOS 把 Python 路径改为 `.venv/bin/python`，脚本路径为 `examples/capture_requests.py`。四种语言、五类 URL、批量提交、恢复已有任务及 empty lists 解释见 [可运行 API 示例](examples/README.md)。示例 URL 的访问权限会变化；`completed` 仍须结合结果范围和可见性判断。
+想写程序提交任务，看 [API 说明](API_USAGE.md) 或 [调用例子](examples/README.md)。主要文件是 `facebook_capture_api.py`（本地接口）、`facebook_android_capture.py`（设备采集）和 `analyze_facebook_capture.py`（分析结果）。
 
-本轮代码与真实验收记录见 [2026-09-16 验证记录](VALIDATION_2026-09-16.md)；[2026-09-09 当前状态](CURRENT_STATUS_2026-09-09.md) 是历史快照，不代表今天的在线状态。历史记录中的终点任务仍按其日期和原始产物保留，不能用来替代当前设备验收。
-
-**Mac M4 / 新加坡直连部署：**人工安装先看 [M4 安装与验收](macos/QUICKSTART.md)；交给另一位 Codex 配置时，直接让它逐项执行 [macOS Codex 部署 Runbook](macos/CODEX_DEPLOYMENT_RUNBOOK.md)。新版本加入 START.command、独立 Python Android 执行器和可选上游代理；Mac 真实 Facebook 链路仍需实机验收。新配置默认直连，已有 Windows 无 network 字段的配置保留原 7897 上游模式。端口在首次初始化时避让冲突，已有账号配置不覆盖。
-
-可查看用户名单与仅显示数字的区别，见 [真实浏览器样本](FACEBOOK_BROWSER_SAMPLES.md)。下方 Windows 7897 配置仅适用于选择 upstream 模式的用户，直连模式不需要 Clash。
-
-输入 Facebook 帖子 URL，在本机 Android 模拟器中打开帖子，采集当前登录账号可见的 Reaction 列表，导出 CSV，并显示分页进度、限流状态和文件位置。配置文件可以保留多个独立 Worker，但当前调度器一次只运行一个 active worker；其余启用 Worker 仅在确认设备故障后按顺序接管，不是并行租户。
-
-**系统对接：**见 [API 调用与 Python 客户端](API_USAGE.md)。已有 `/v1/jobs` 接口支持提交、查询状态、读取结果和下载文件；`facebook_api_client.py` 提供完整命令行流程，无需操作网页。当前执行器串行运行，Worker 为主备关系。
+[环境参考](STABLE_BASELINE.md)和[旧测试记录](VALIDATION_2026-09-16.md)是当时的情况，不等于你现在这台机器已经验收通过。`runs/`、`api-jobs/`、`api-batches/` 属于本地运行记录，不要把它们当作发布源码上传。
 
 ## 平台入口
 
 | 平台 | 推荐入口 | 运行边界 |
 | --- | --- | --- |
 | Windows 10/11 x64 | [Windows 部署与运行](WINDOWS_DEPLOYMENT.md)，然后 `START.cmd` | Android 35 Google APIs x86_64；主备串行，不是并行租户 |
-| Apple Silicon Mac | [M4 一键配置](macos/QUICKSTART.md)，然后 `START.command` | Android 35 Google APIs ARM64；真实 M4/Facebook 深抓仍需实机验收 |
+| Apple Silicon Mac | [Mac 安装说明](macos/QUICKSTART.md)，先用 `bash setup.sh --install-only` 准备本地环境 | Android ARM64、证书和登录仍需手动验收；旧 .command 文件未收录 |
 
 Windows 的逐项命令、Frida/CA/Helper 准备、停止和故障处理见 [WINDOWS_DEPLOYMENT.md](WINDOWS_DEPLOYMENT.md)。macOS 的 Codex 执行清单见 [macos/CODEX_DEPLOYMENT_RUNBOOK.md](macos/CODEX_DEPLOYMENT_RUNBOOK.md)；`macos/README.md` 中的旧适配器仅用于兼容性诊断。
 
@@ -39,14 +30,14 @@ Windows 的逐项命令、Frida/CA/Helper 准备、停止和故障处理见 [WIN
 
 ## 下载后如何开始
 
-Windows 10/11 x64 使用现有 PowerShell 采集链路；Apple Silicon Mac 使用独立 Python Android 执行器，仍待 M4 实机验收。建议 Python 3.12 或 3.13、16 GB 内存（双模拟器建议 24 GB）。**Mac 接收者直接按 [一键配置说明](macos/QUICKSTART.md) 操作，下面的 START.cmd 和 x86_64 步骤仅供 Windows 使用。**
+Windows 10/11 x64 使用现有 PowerShell 采集链路；Apple Silicon Mac 使用独立 Python Android 执行器，仍待 M4 实机验收。建议 Python 3.12 或 3.13、16 GB 内存（双模拟器建议 24 GB）。**Mac 先读 [安装说明](macos/QUICKSTART.md)；下面的 START.cmd 和 x86_64 操作只适用于 Windows。**
 
 1. 安装 [Python 3.12 或 3.13](https://www.python.org/downloads/)，勾选 Add python.exe to PATH；安装 [Android Studio / SDK](https://developer.android.com/studio)。代码下限是 Python 3.12，3.12/3.13 是当前验收版本。
 2. 解压仓库到自己的可写目录，双击 **START.cmd**（或直接双击 **START_API_AND_EMULATOR.cmd**）。首次自动创建 `.venv`、安装 `requirements.txt`、生成本机配置，成功后在窗口打印 `http://127.0.0.1:8766/`，请手动打开该地址；API/UI 后台窗口隐藏，Android 模拟器窗口保持可见。安装失败会保留提示，修复网络后重试即可。
 3. 按下节准备 Android 环境并手动登录 Facebook。页面能打开不代表模拟器已准备好。双击 **CHECK.cmd** 查看 Python、SDK、AVD、代理和端口检查结果。
 4. 在页面中每行输入一个 URL，点击“开始抓取”。任务会进入单执行器串行队列；其它启用 Worker 只是主备候选。选择帖子行查看流程、分页、人数和产物；“停止批次”可取消任务。
 
-Mac M1–M4 首次配置可直接双击 **CONFIGURE.command**。它会创建本机配置、检查或安装 Android 35 ARM64 组件、只创建缺失的专用 AVD，并按官方 SHA-256 校验 Frida；合法取得的 Facebook APK 放进 `setup-input/` 后再次运行即可。已有 AVD、账号和登录状态不会覆盖。安装完成后在模拟器内手动登录 Facebook，再双击 START.command。若已有环境只想启动页面，直接双击 START.command；不要把 `facebook.setup.local.json`、APK、Frida 文件或 `.setup-cache/` 上传到 GitHub。
+原 Mac 项目曾使用 CONFIGURE.command / START.command，但这几个脚本**没有包含在当前总仓库里**。目前可用 `bash setup.sh --install-only` 初始化依赖，`bash setup.sh --check` 做基础自检；Android ARM64、Frida、证书和账号登录仍按 [Mac 说明](macos/QUICKSTART.md) 手动准备。确认环境就绪后执行 `bash setup.sh` 启动本地服务。
 
 连续提交多个 URL 时，同一 Worker 会复用已经启动的模拟器，Windows 优先附加已有 Facebook 主进程；进程不存在时才启动，故障恢复仍可能重启应用。每条任务独立建立采集代理、输出文件和目标校验，避免上一帖数据混入。项目导航指定 Facebook 包名，直接进入 Facebook；Mac 配置入口还设置 Android 的 Facebook 链接打开偏好。分页节流、限流冷却和完整性检查仍然保留。
 
@@ -54,7 +45,7 @@ v2 页面和 `/v1/jobs`、`/v1/batches` API 默认执行全量 Reaction 分页�
 
 Windows 手动排错时可给 `run_facebook_capture.ps1` 加 `-ColdStartFacebook`（别名 `-ColdStart`）恢复原先冷启动行为。日常页面批量抓取使用默认热启动，无需设置此参数。
 
-Windows `START.cmd` 完成后，API/UI 后台进程会继续运行，Android 模拟器窗口保持可见。正常停止请先在页面取消正在运行的批次，等待其收尾，再双击 **STOP.cmd**；它只停止本项目识别到的 API/UI、采集辅助进程、watchdog 和已配置 AVD，不停止 ADB server 或其他模拟器。macOS `START.command` 运行 API 的终端会保持前台，此时先取消任务并确认清理，再用 Ctrl+C 收尾。下次直接双击对应入口，不会重复安装未变更的依赖，也不会覆盖已有配置。Windows 仅安装依赖可运行 `powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallOnly`，Mac 对应为 `bash setup.sh --install-only`。
+Windows 用 `START.cmd` 启动、`STOP.cmd` 停止。停止前先取消正在运行的任务，等清理结束。Mac 用 `bash setup.sh` 启动本地服务，停止时在该终端按 Ctrl+C。只安装依赖时，Windows 用 `powershell -ExecutionPolicy Bypass -File .\setup.ps1 -InstallOnly`，Mac 用 `bash setup.sh --install-only`。
 
 ## 本机配置
 

@@ -1,18 +1,10 @@
-# Facebook 双模拟器 macOS 适配层
+# Facebook：Mac 旧适配器说明
 
-本轮代码/验收记录见 [../VALIDATION_2026-09-16.md](../VALIDATION_2026-09-16.md)；[../CURRENT_STATUS_2026-09-09.md](../CURRENT_STATUS_2026-09-09.md) 是历史快照，不能替代当前 M4 实机证据。
+`facebook_macos.py` 和 `start_facebook_workers.sh` 是早期的 Mac 设备/传输适配层，不是现在推荐的完整本地 API 入口。新同学请先看 [Mac 安装说明](QUICKSTART.md)。
 
-新 M4 部署请先看 [QUICKSTART.md](QUICKSTART.md)，使用根目录 START.command 和统一页面。统一 API 在 macOS 上调用根目录 `facebook_android_capture.py`，负责 mitmproxy 生命周期、显式打开 Facebook、ADB XML 分页、分析与结果校验。以下描述的是旧的独立启动适配器，仅作为兼容性说明，不是新执行器的入口。
+当前总仓库有 `setup.sh`，但没有原工程提到的 `CONFIGURE.command`、`CHECK.command`、`START.command`。旧“一键部署”的命令不能照搬。需要自己准备 Android ARM64、证书、Frida 和账号，具体看快速入门页。
 
-给 Codex 直接执行的完整部署、验收、分页语义和故障 runbook 见 [CODEX_DEPLOYMENT_RUNBOOK.md](CODEX_DEPLOYMENT_RUNBOOK.md)。
-
-新入口的调度器是单执行器、串行队列：同一时刻只使用一个 active worker；primary/standby
-表示确认设备故障后的接管顺序，不表示两个账号并行处理或租户隔离。Windows PowerShell
-链路与本目录的旧适配器彼此隔离，不能用其中一条链路的模拟结果代替另一条链路的真实设备验收。
-
-此目录是独立的 macOS 启动与 ADB transport 层。它不读取或覆盖根目录的
-`facebook_workers.json`，不调用现有 Windows PowerShell，也不复制任何模拟器、
-Facebook 账号、Cookie 或登录状态。
+下面内容保留了旧适配器的行为和配置，主要用来查历史问题。不要把它的配置和新的本地 API 配置混用。
 
 ## 统一入口 Shares / PCAP（2026-10-04 增量）
 
@@ -30,7 +22,7 @@ Facebook 账号、Cookie 或登录状态。
 - 为 Apple Silicon (`arm64-v8a`) 和 Intel (`x86_64`) 提供环境诊断；
 - 启动指定 AVD，等待 Android boot 完成；
 - 旧适配器恢复 `7897` 和各自 capture port 的 `adb reverse`；
-- 旧适配器固定设置 Android 全局代理 `127.0.0.1:7897`；新加坡直连请使用根目录 CONFIGURE.command，不运行本页旧 transport 命令；
+- 旧适配器固定设置 Android 全局代理 `127.0.0.1:7897`；新加坡直连请按 QUICKSTART.md 设置 `network.mode: direct`，不要直接运行本页旧 transport 命令；
 - 检查 `com.facebook.katana` 是否安装；
 - 在 Windows 上只生成结构化命令，不执行 Mac 或 Android 命令。
 
@@ -58,7 +50,7 @@ python -m unittest tests.test_facebook_macos
 ```sh
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH"
-chmod +x CONFIGURE.command CHECK.command START.command setup.sh macos/start_facebook_workers.sh
+chmod +x setup.sh macos/start_facebook_workers.sh
 python3 macos/facebook_macos.py doctor
 ```
 
@@ -104,7 +96,7 @@ Facebook 并手工登录；不要复制 Windows AVD 或另一台 AVD 的数据�
 ./macos/start_facebook_workers.sh transport --worker all
 ```
 
-这一旧 transport 适配器固定使用 `7897`，不读取根目录的 `network.mode`。新部署使用 [QUICKSTART.md](QUICKSTART.md) 中的 CONFIGURE.command 和 START.command，它们默认直连。旧适配器的 capture port 是每个 worker
+这一旧 transport 适配器固定使用 `7897`，不读取根目录的 `network.mode`。新部署请按 [QUICKSTART.md](QUICKSTART.md) 手动准备设备，并从根目录运行 `bash setup.sh`；旧自动配置脚本未收录。旧适配器的 capture port 是每个 worker
 独占的预留端口，供后续 Mac 深抓 runner 使用。`native_port` 当前只做全局隔离校验，
 本适配层不会监听该端口。
 

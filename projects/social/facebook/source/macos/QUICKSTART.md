@@ -1,56 +1,23 @@
-# M4 Mac 首次安装与验收
+# Facebook：Mac 安装和检查
 
-本指南的本轮代码/验收记录见 [../VALIDATION_2026-09-16.md](../VALIDATION_2026-09-16.md)；[../CURRENT_STATUS_2026-09-09.md](../CURRENT_STATUS_2026-09-09.md) 是历史快照。本指南描述可执行安装流程，不代表已经在接收者 M4 上完成真实 Facebook 深度抓取验收。
+这份说明适用于 Apple Silicon（M1～M4）。先说一个版本差异：**旧项目有 CONFIGURE.command、CHECK.command、START.command 三个启动脚本，但当前总仓库没有收录。** 所以旧版“一键安装”不能直接照做。下面先写当前仓库里确实存在的入口，再保留后面 Android、网络和 Frida 的手动配置资料。
 
-本指南面向 Apple Silicon（M1–M4），在自己的账号下运行。当前 Python 采集执行器正在跨平台验收；Windows 模拟与 GitHub macOS 主机测试不能替代 M4 上的 Android、Facebook 与证书验收。不要把 Windows AVD 复制到 Mac。
+## 1. 先准备本机环境
 
-若由另一位 Codex 代为配置，请让它从仓库根目录逐项执行 [Codex 部署与验收 Runbook](CODEX_DEPLOYMENT_RUNBOOK.md)，不要只把本页概览当成完成证据。
+1. 安装 Python 3.12/3.13 和 [Android Studio](https://developer.android.com/studio)。Android SDK 需要 platform-tools、emulator、command-line tools、Android 35 和 **Google APIs ARM64** 镜像。M 系列 Mac 不要选 x86_64。
+2. 进入 `projects/social/facebook/source/`。先安装 Python 依赖，检查基础配置：
 
-## 接收方先取这个分支（2026-10-04 交接）
+   ```bash
+   bash setup.sh --install-only
+   bash setup.sh --check
+   ```
 
-本次可部署源码在 **`codex/facebook-maintenance-validation`** 测试分支；不要直接下载默认分支后误以为包含这些修复。[打开交付分支](https://github.com/taoduo0428/facebook-reaction-capture/tree/codex/facebook-maintenance-validation)。当前交付属于代码/本地测试/Windows与macOS CI已验证，接收方真实Mac/Android/Facebook业务待验收。
+3. 按下面的「ARM64 Android」「采集证书与 Frida」章节配置自己的 AVD，安装合法获得的 Facebook APK，并在模拟器内**人工登录**。
+4. 确认设备、证书和 Frida 都正常后，运行 `bash setup.sh` 启动本地服务，再做一条简单帖子的小样本测试。
 
-首次取得代码时，在准备放项目的目录执行（目标文件夹必须尚不存在）：
+**`setup.sh` 不负责一键安装和配置所有 Android 组件。** 旧工程里自动创建 AVD、安装证书和启动 Frida 的步骤，不能直接套用到这份发布副本。真机全链路尚未重新验收。
 
-```sh
-git clone --single-branch --branch codex/facebook-maintenance-validation \
-  https://github.com/taoduo0428/facebook-reaction-capture.git facebook-mac-deploy
-cd facebook-mac-deploy
-git rev-parse HEAD
-bash CHECK.command
-```
-
-记录提交号。私有仓库需要接收方已有读取权限；不要把密码或Token贴进日志。也可在上述分支页面选择 Code → Download ZIP，再解压到新的可写目录；不要覆盖旧项目。
-
-如果这台Mac已配好基础环境，先按[部署Runbook](CODEX_DEPLOYMENT_RUNBOOK.md)检查现有SDK路径、Python、AVD架构、Facebook登录、CA和Frida，复用它自己的配置和账号。不要复制Windows的`.venv`、AVD、APK、CA私钥或账户文件；也不要先卸载Facebook或重建模拟器。缺少首次配置时再执行下文的 `bash CONFIGURE.command`；已经就绪且同一模拟器会话中用 `bash START.command`。主机/模拟器重启后的证书挂载与Frida恢复按Runbook处理。
-
-接收方请在本机完成并记录：Reaction小帖、Shares单独采集、Reaction+Shares组合、需要时的PCAP，以及正常取消后的进程/代理/lease状态。成功必须核对目标来源、查询触发、分页终点、可见范围及产物；单次成功不代表所有URL/账户都可用。PCAP依赖设备已有`su 0`和`/system/bin/tcpdump`；capability=true只表示代码支持，不代表设备前置已通过。
-
-回传时只需提交号、系统/架构/工具版本、job_id、退出码及脱敏的状态和诊断摘要。账号、Cookie、Token、CA私钥、原始抓包、用户CSV和模拟器数据留在接收方本机。
-
-## 1. 推荐：一键配置
-
-第一次先安装 [Python 3.12 或 3.13](https://www.python.org/downloads/macos/)（官方 universal2 安装包）与 [Android Studio](https://developer.android.com/studio)。代码下限是 Python 3.12，3.12/3.13 是当前验收版本。打开 Android Studio → SDK Manager → SDK Tools，勾选 **Android SDK Command-line Tools (latest)**；JDK 可使用 Android Studio 自带的运行时。随后：
-
-1. 下载仓库 ZIP，解压到自己的可写目录。
-2. 把合法取得的 Facebook **Android ARM64 APK** 放入仓库的 `setup-input` 文件夹（没有就创建；拆分包的全部 APK 一起放入）。已有 Facebook 安装会保留。
-3. 若 ZIP/文件系统没有保留执行权限，先在仓库根目录运行 `chmod +x CONFIGURE.command CHECK.command START.command setup.sh macos/start_facebook_workers.sh`；也可以始终用 `bash CONFIGURE.command`。
-4. 双击 **CONFIGURE.command**。第一次按官方提示阅读并接受 Android SDK 许可；等待镜像下载与模拟器启动。
-5. 在模拟器中手动登录 Facebook、处理验证码。配置入口完成后自动打开本地页面，在页面中每行粘贴一个帖子 URL。
-
-默认配置适合新加坡直连，无需填写代理、端口、Frida 版本或模拟器名称。工具会初始化 `facebook.local.json`、`facebook_workers.json` 和 `facebook.setup.local.json`；已有文件不覆盖。虚拟环境固定安装 `mitmproxy==12.2.3`、`frida==17.17.0`、`frida-tools==14.10.4` 和 `requests==2.32.5`，依赖或 SDK 缺失时配置会停止并保留现有设备。
-
-下载的 `.command` 如果无法双击，在终端进入仓库目录执行一次：
-
-```sh
-bash CONFIGURE.command
-```
-
-CONFIGURE 会校验/安装缺失的核心 SDK 组件、只创建缺失的 ARM64 AVD、校验官方 Frida 下载、安装公开采集证书、以 daemon 方式启动匹配的 Frida 服务，并设置“Facebook 链接用 Facebook 打开”。它不会自动安装或构建可选 UI Helper；需要 Helper 时另行安装 Build-Tools 35.0.0 并执行构建脚本。失败时按提示修复后再次运行，已有设备和账号不重建。它不自动登录，不保证当前账号能看到每个帖子的用户名单。
-
-同一次模拟器运行期间，后续双击 **START.command** 即可。**Mac 或模拟器重启后重新双击 CONFIGURE.command**，恢复运行时证书挂载与 Frida 服务。终端需保持打开。下面第 3、4 节是高级手动配置参考；一键配置完成后无需重复执行。
-
-特殊情况才需编辑 `facebook.setup.local.json`：`facebook_apks` 可填写 APK 的完整路径数组；无法访问 GitHub 时，将自己校验过的 Android ARM64 Frida server 完整路径填入 `frida_server`，并设置 `download_frida: false`。不要把本机配置、APK、下载缓存或证书私钥交给其他人；分享 GitHub 仓库即可。
+如果要追查原工程当年的配置过程，可以看 [历史 Mac 部署记录](CODEX_DEPLOYMENT_RUNBOOK.md)；其中的 .command 脚本命令在当前仓库里不可执行。
 
 ## 2. 网络和端口
 
@@ -91,7 +58,7 @@ adb -s emulator-5554 root
 
 `prepare_device.py --frida-server` 只安装并校验 server，不负责启动它；`--install-ca` 只推送公开 CA，不推私钥。流程会校验 Android 15 Conscrypt 和应用 mount namespace。初次初始化 mitmproxy CA 会留在本机 `~/.mitmproxy`。挂载随模拟器重启失效，需要重新执行证书安装并验证。
 
-正常使用 CONFIGURE 时，`facebook_setup.py` 已用 root ADB 按 daemon 模式启动兼容的 server。若是手动执行上述安装步骤，使用 `-D` 后台启动并读取 PID；不要运行无参数的前台命令占住终端：
+原工程的自动配置方案曾由 `facebook_setup.py` 使用 root ADB 启动兼容的 server；当前仓库没有收录对应的 .command 一键脚本。若是手动执行上述安装步骤，使用 `-D` 后台启动并读取 PID；不要运行无参数的前台命令占住终端：
 
 ```sh
 adb -s emulator-5554 root
@@ -108,7 +75,7 @@ adb -s emulator-5554 shell pidof frida-server
 
 在本地页面每行粘贴一个 URL，先单条低频验证。Mac 已接入 Reaction、Shares（独立或顺序组合）、CSV、解析报告、MITM、进度及可选 Android 内 PCAP。PCAP 要求该设备已有 su 0 和 /system/bin/tcpdump；不会安装工具、重启 ADB 或使用 Mac 宿主机 sudo。代码/契约通过与原生 Mac 实机验收分开记录。成功必须同时有严格目标匹配、同一来源帖子、ALL 列表分页终止与完整性校验；没有增长或只显示好友姓名会保留为部分/受限结果。不要在限流后重复提交。
 
-启动 `START.command` 后，在另一个终端按配置端口检查 loopback API：
+运行 `bash setup.sh` 并确认服务启动后，在另一个终端按配置端口检查本地 API：
 
 ```sh
 API_PORT="$(.venv/bin/python -c 'import facebook_local; print(facebook_local.configuration()["port"])')"
@@ -116,10 +83,10 @@ curl -fsS "http://127.0.0.1:$API_PORT/health"
 curl -fsS "http://127.0.0.1:$API_PORT/v1/capabilities"
 ```
 
-预期 `service=ready`、`mode=primary-standby-serial`；`capture_pcap_supported=true` 表示 Mac 已接入 PCAP 实现，设备 root/tcpdump 前置仍需验证。通过 CHECK.command、真实小帖任务和模拟器重启后再验收，才可判断 M4 部署成功。请选已确认名单非空的公开小帖作为成功样本，要求 `completion_scope=terminal`、`has_next_page=false`、严格目标/来源匹配、完整性允许完成，且 CSV 至少有一条带 `user_id` 的数据行；仅首屏用户或 HTTP 200 不算终点。真实零反应或身份受限的空名单是另一类边界，应按 [API 示例](../examples/README.md) 核对 empty lists 证据，不能冒充非空样本的验收。请保留退出码和脱敏诊断；不分享 Cookie、CA 私钥或模拟器磁盘。
+预期 `service=ready`、`mode=primary-standby-serial`；`capture_pcap_supported=true` 表示 Mac 已接入 PCAP 实现，设备 root/tcpdump 前置仍需验证。还需要跑 `bash setup.sh --check`、真实小帖任务，并在模拟器重启后再次验证，才能说这台 Mac 的环境已经准备好。请选已确认名单非空的公开小帖作为成功样本，要求 `completion_scope=terminal`、`has_next_page=false`、严格目标/来源匹配、完整性允许完成，且 CSV 至少有一条带 `user_id` 的数据行；仅首屏用户或 HTTP 200 不算终点。真实零反应或身份受限的空名单是另一类边界，应按 [API 示例](../examples/README.md) 核对 empty lists 证据，不能冒充非空样本的验收。请保留退出码和脱敏诊断；不分享 Cookie、CA 私钥或模拟器磁盘。
 
 Windows 已验证的 Facebook 版本、APK 来源边界和证书经验见 [稳定基线](../STABLE_BASELINE.md)；x86_64 APK 不能直接作为 Mac ARM64 基线。已有 Codex 的配置、账号与工具接手见 [Codex 指南](../CODEX_PROJECT_GUIDE.md)。
 
-正常停止先取消任务并等待 job/batch 到达终态和 transport cleanup，再在 `START.command` 终端按 Ctrl+C。升级前备份三个本机 JSON 配置到仓库外私有目录，确认没有未完成任务后再 fast-forward 更新代码；不要删除 AVD、`.setup-cache` 或运行证据。更新后重新运行 `bash setup.sh --install-only`、`CHECK.command`、`CONFIGURE.command`，再做 bounded sample。
+正常停止先取消任务，等 job/batch 完成并清理传输进程，再在运行 `bash setup.sh` 的终端按 Ctrl+C。升级前备份三个本机 JSON 配置到仓库外私有目录，确认没有未完成任务后再 fast-forward 更新代码；不要删除 AVD、`.setup-cache` 或运行证据。更新后运行 `bash setup.sh --install-only` 和 `bash setup.sh --check`，重新检查 Android、证书及 Frida，再做小样本验证。
 
-旧 `facebook_macos.py` 是独立历史启动/模拟工具，使用它的配置不会自动改变新控制台的根目录配置。新部署使用本指南和 START.command。
+旧 `facebook_macos.py` 是独立历史启动/模拟工具，使用它的配置不会自动改变新控制台的根目录配置。新部署请按本指南准备设备并通过 `bash setup.sh` 启动本地服务；旧 START.command 未提供。

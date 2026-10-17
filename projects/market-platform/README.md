@@ -1,19 +1,32 @@
+# 外包、招聘共用的爬虫代码
 
-# 外包 / 招聘公共采集引擎
+外包四站和招聘三站的主要代码都在这里。这样放是因为它们共用不少功能：发请求、浏览器操作、分类、分页、断点保存和导出。网站自己的数据另放在 `../outsourcing/` 和 `../recruitment/`，不要在这里找最终 CSV。
 
-这是原桌面 `外包+岗位爬虫` 的**代码工作区**。四个外包适配器与 BOSS、前程无忧和猎聘共用 `drv_crawler`，因此仅保留一份代码，不重复复制多个可能分叉的版本。
+## 先从哪里看
 
-## 安装
-- Python 版本按原 `pyproject.toml` / `requirements.txt`。
-- Windows：`py -m venv .venv`，激活后 `pip install -r requirements.txt`。
-- 查看命令：`python run.py --help` 或 `python crawler.py --help`。
-- 测试（不发起抓取）：`python -m pytest -q tests`。
-- 站点选择、采集窗口和停止条件以 `crawler.config.yaml` 与当前 CLI 帮助为准，不能仅按示例参数直接对网站执行批量抓取。
-- 自己准备网络、浏览器和合法账号；本仓库不提供登录态、IP 池密钥或本机 Cookie。相关配置仅在本机填写，禁止提交到 Git。
+- `run.py`：统一入口。拿不准命令时，先运行 `python run.py --help`。
+- `drv_crawler/sites.py`：一品威客、猪八戒、实现网、程序员客栈的适配器。
+- `drv_crawler/recruitment.py`：招聘的通用代码。
+- `drv_crawler/boss_cdp/`、`job51/`、`liepin/`：三个招聘网站各自的子工程。
+- `drv_crawler/models.py`、`exporters.py`：记录格式与输出。
+- `tools/`：合并、补详情、清洗、检查和打包；有些脚本是针对旧采集结果的。
+- `tests/`：单元测试和固定页面样例。
+- `docs/`：旧的交接说明、失败原因和采集记录。里面的旧路径不一定在这份发布仓库中还存在。
 
-## 数据与使用边界
-- 外包任务：`../outsourcing/`；招聘岗位：`../recruitment/`。
-- 采集器含网页解析、分页、详情抓取、时间窗口判断、错误记录、断点/恢复、归档和数据后处理，部分历史入口需要具体平台状态。
-- `tools/` 是数据清洗、恢复与最终交付工具；要复用请从 `projects/market-platform` 作为当前工作目录执行。
-- 不包含本地历史浏览器用户目录（约数 GB）、.env、真实登录状态、完整包捕获和本机运行缓存。
-- 第三方子组件保留其原始版权说明，研究使用前仍应阅读对应许可和平台规则。
+## 在 Windows 上怎么开始
+
+进入本文件夹后：
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe run.py --help
+```
+
+如果 `requirements.txt` 与某个招聘子工程的依赖不同，以相应子工程 README 为准。需要浏览器、登录或代理的步骤请在自己的机器上配置，不要复制别人浏览器的登录目录。
+
+真正开始采集前，先看所选网站的参数说明并做一次小样本试跑。`tests/` 中包含很多可以离线检查的逻辑，但也可能有依赖真实环境的测试，不建议不加筛选就跑完整套件。
+
+历史的 `crawler.py` 与 `run.py` 不完全是一回事。接手项目优先看当前统一入口，只有要查旧脚本才回看其他文件。
+
+[回到总目录](../../README.md) · [外包数据](../outsourcing/README.md) · [招聘数据](../recruitment/README.md)

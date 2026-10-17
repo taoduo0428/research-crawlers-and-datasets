@@ -1,12 +1,10 @@
-# Facebook Capture API 使用说明
+# Facebook 本地 API 怎么用
 
-完整可运行的 [curl、PowerShell、Python requests、Node fetch 示例](examples/README.md) 覆盖提交、进度、结果、下载和批次；新版本的可选 `result_outcome` 区分有证据的零反应与好友姓名可见性限制，详见示例的结果边界表。已有字段保持兼容，空数组本身不是 empty lists 的判据。
+不想点网页，也可以直接向本机接口提交帖子 URL，查任务状态，最后下载 CSV。这份文档保留了参数和返回字段，给需要写脚本的人用。
 
-批次帖子汇总 CSV 在既有列之后追加 `result_code`、`result_reason`、`result_label`；原有列名及顺序保留。下游读取建议按列名而非固定总列数处理。
+先记住两点：**POST 只提交一次**，超时以后先查原来的 `job_id`，不要反复新建；`completed` 不代表能看到所有用户，仍需看可见范围和分页终点。
 
-本文描述当前 `facebook_capture_api.py` 已实现的本地 HTTP 合约，以及
-`facebook_api_client.py` 的最小用法。它不代表任何一次真实 Facebook 抓取已经成功；
-真实结果仍须看 job 的终态、`error`、`completion_scope`、完整性报告和 artifact 内容。
+第一次调用建议先看 [示例代码](examples/README.md)。这不是实机成功证明。旧文档的 `START.command` 没收入当前发布副本，Mac 可用 `bash setup.sh` 启动本机部分，Android 环境仍要按 [Mac 安装说明](macos/QUICKSTART.md) 配置。
 
 ## 启动准备
 
@@ -42,7 +40,7 @@ macOS：
 .venv/bin/python facebook_local.py start --no-browser
 ```
 
-`facebook_local.py start` 只启动 loopback API 并保持当前终端，不负责启动 AVD 或 v2 UI；Windows 完整链路使用 `START.cmd`，macOS 使用 `START.command`。macOS `START.command` 的 API 终端需要保持打开，Windows 一键入口会把 API/UI 放到后台。
+`facebook_local.py start` 只启动 loopback API 并保持当前终端，不负责启动 AVD 或 v2 UI；Windows 完整链路使用 `START.cmd`，macOS 使用 `bash setup.sh`（当前仓库未收录旧 `START.command`）。macOS `bash setup.sh` 的 API 终端需要保持打开，Windows 一键入口会把 API/UI 放到后台。
 
 如果必须直接运行 `facebook_capture_api.py`，先从同一份配置读取端口：
 
@@ -64,8 +62,8 @@ API_PORT="$(.venv/bin/python -c 'import facebook_local; print(facebook_local.con
 `http://127.0.0.1:8765`，如果 `facebook.local.json` 使用了其他端口，请在示例的 `base`
 或 CLI 的 `--base-url` 中替换它。`requests` 已列入项目依赖；独立客户端环境可只安装
 `python -m pip install requests==2.32.5`。Windows 完整一键启动也可运行 `START.cmd`，
-macOS 可运行 `START.command`；两者都会以本机配置端口为准。
-首次下载仍须按 [README](README.md#下载后如何开始) 准备 SDK、专用模拟器、证书、匹配架构的 Frida 和人工登录；UI Helper 是可选项，默认 ADB/XML 路径不依赖它。API 不会替用户完成账号验证。Windows 完整启动也可运行 `START.cmd`，macOS 使用 `START.command`；端口在 `facebook.local.json` 中配置。不要选择模拟器已占用的 `5555` 作为 API 端口。
+macOS 可运行 `bash setup.sh`；两者都会以本机配置端口为准。
+首次下载仍须按 [README](README.md#下载后如何开始) 准备 SDK、专用模拟器、证书、匹配架构的 Frida 和人工登录；UI Helper 是可选项，默认 ADB/XML 路径不依赖它。API 不会替用户完成账号验证。Windows 完整启动也可运行 `START.cmd`，macOS 使用 `bash setup.sh`（当前仓库未收录旧 `START.command`）；端口在 `facebook.local.json` 中配置。不要选择模拟器已占用的 `5555` 作为 API 端口。
 
 这个服务是单执行器、串行队列（`health.mode` 为 `primary-standby-serial`），不是多租户
 服务。primary/standby 是 worker 故障转移，不是并行租户隔离；不要把它直接暴露给不受信任

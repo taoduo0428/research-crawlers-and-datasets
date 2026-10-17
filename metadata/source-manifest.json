@@ -153,7 +153,7 @@
       "path": "projects/market-platform/JD补采说明.md",
       "source_rel_desktop": "外包+岗位爬虫/JD补采说明.md",
       "source_sha256": "b526a2892bb3acea154376d41578f2aa5fa195a24ba85dc72e49150f37555691",
-      "published_sha256": "ea6d83c7b15d781c42cce04952c8e95bbfc8bdc0a1fa4eff31a2a167b9b99a16",
+      "published_sha256": "800c0a8cf980834172711eda565b8e0592f37320190ffb94869099c1eb1585b6",
       "changed_for_publication": true
     },
     {
@@ -188,21 +188,21 @@
       "path": "projects/market-platform/docs/一品威客补充版交接说明.md",
       "source_rel_desktop": "外包+岗位爬虫/docs/一品威客补充版交接说明.md",
       "source_sha256": "3ad30c1cfa1ca8a95823ff9d922c955cc7c24a8637db776d39dea96295275db7",
-      "published_sha256": "3b96829332b82b3be99d93e0e2b38146f4e1d93103d3db9288cf0a6b09891b35",
+      "published_sha256": "ed8c590f3086be2252eec82f8b76d924b9cbcfd304fe69943216ab4c6f9e62aa",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/docs/招聘数据说明.md",
       "source_rel_desktop": "外包+岗位爬虫/docs/招聘数据说明.md",
       "source_sha256": "10c3e06b6f86ef5ca51d211ead232cabffb2fb3009d4d42c17166840c4abfef3",
-      "published_sha256": "75c6e8223887dd2c2632cdd1ba38ff3fe9fc3799fd29640eb8c839d158b0b650",
+      "published_sha256": "523015fe87d53ceefdc6cb3d79c9ee2a859ae805ed4c23d6e928efbfed2cc937",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/docs/招聘爬取失败原因复盘.md",
       "source_rel_desktop": "外包+岗位爬虫/docs/招聘爬取失败原因复盘.md",
       "source_sha256": "1643b8608a421fad2bb34f235c9d8dff0787dd9383d9935c50d415615db87a82",
-      "published_sha256": "6506a16ad597ca74a8d4f3deae1e3926fe6e5316c44fb16b1a736c5e029e1852",
+      "published_sha256": "b0a781f08734ebfea42910da4c2c18433a6a1f93b462bef885626404d6610f63",
       "changed_for_publication": true
     },
     {
@@ -237,21 +237,21 @@
       "path": "projects/market-platform/drv_crawler/boss_cdp/CONTRIBUTING.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/CONTRIBUTING.md",
       "source_sha256": "d13a6b71ead6cbe7494b12bdedc9be566dd8e3bba08f34c8b6d49783dea7f5bf",
-      "published_sha256": "a5cf8387cac643c22ae72f77c68d5d28aa16b02af5b3b84bb807a4524e626979",
-      "changed_for_publication": false
+      "published_sha256": "02e87aea7907b1e6c75d72277423651e3cfba88489f9ff0528c6b63d36ec8662",
+      "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/README.en.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/README.en.md",
       "source_sha256": "c28f20e9bed2f82b60a578779ee59ea3ac7becb2c87b15f9c72320589e6667a4",
-      "published_sha256": "476a32cd62bbbb9ab54448ebfaa3835937274980fadd4731892f5e45bc2e3ef1",
+      "published_sha256": "527de148c336029b6d6405c639183191f4b1a0e107b0941dcd9003cab57ccc18",
       "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/drv_crawler/boss_cdp/README.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/boss_cdp/README.md",
       "source_sha256": "d6c4f3f50dd5074abd8b8f22e02e31df870a7d9ec8ca4cd2e0ccce83278b2e04",
-      "published_sha256": "7c49df9d98197f82fbd4f368036c9115956b27e388579b6472dfb38b1e41fd7f",
+      "published_sha256": "45ea1c04f1ee5961f68e13e2c00ebe5789d1a957aea3f6a107d7c57e6f0a5560",
       "changed_for_publication": true
     },
     {
@@ -370,7 +370,7 @@
       "path": "projects/market-platform/drv_crawler/job51/README.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/job51/README.md",
       "source_sha256": "c2b58f4598fa68e95d1e17f0d7dc7b71d7f21587803daee9f9e6c698f5ac8fa9",
-      "published_sha256": "bec689561658d51860f8063e504f140180c4ef0423f976f36d3dfbd3b656d334",
+      "published_sha256": "b0ef290e54b714143c28fe91689861b14b3c02089c010cc54d846ef8c88a9184",
       "changed_for_publication": true
     },
     {
@@ -461,7 +461,7 @@
       "path": "projects/market-platform/drv_crawler/liepin/README.md",
       "source_rel_desktop": "外包+岗位爬虫/drv_crawler/liepin/README.md",
       "source_sha256": "a7487fac70f1da357732a998ac0aa89915825a547e3f0c297d935d9cea8e992d",
-      "published_sha256": "a7d55a50a3c4528493d48cace85f72b6ade129202bdff469e45e1c9bae9b9ffe",
+      "published_sha256": "5edff0608346f562b07e6de25a86159392cd3f35470724b3fa2dd9469c00fb78",
       "changed_for_publication": true
     },
     {
@@ -1126,7 +1126,7 @@
       "path": "projects/market-platform/tools/liepin_edge_extension/README.md",
       "source_rel_desktop": "外包+岗位爬虫/tools/liepin_edge_extension/README.md",
       "source_sha256": "0eaa285e49392f03eec694c146681fab71de0bf0899354986a17d1307cbbc72c",
-      "published_sha256": "c75abdbaa34acb7ed5c5588f1b47690a9cad0464250b4943fe4fe477733c8503",
+      "published_sha256": "19c4f77a982ff12779956beb919825d7b13f067f8e2898f8824e4ffdbd07cfc0",
       "changed_for_publication": true
     },
     {
@@ -1777,7 +1777,7 @@
       "path": "projects/social/facebook/source/API_USAGE.md",
       "source_rel_desktop": "facebook/API_USAGE.md",
       "source_sha256": "688719967deb0c13821a96924ecb5a039d89f3cd84d4cdb7e1dc47185f4ce26f",
-      "published_sha256": "649ddb3149243461176427831b5c78c2bada0cf2ae7622064766ecac4d3db2bf",
+      "published_sha256": "018f93f14bdcd401f63ccfa034fa1f4addd8613bde9a339b8f31c8313f4ed6b4",
       "changed_for_publication": true
     },
     {
@@ -1798,56 +1798,56 @@
       "path": "projects/social/facebook/source/CODEX_PROJECT_GUIDE.md",
       "source_rel_desktop": "facebook/CODEX_PROJECT_GUIDE.md",
       "source_sha256": "0198c0fa1cf6985ba6a6a7763719126513b29e1f6bffa5c571430c5572e5f5a4",
-      "published_sha256": "b16893e7a37b63340cee5861d50462f3505dc95d587fefe56fe1f8ae1288d626",
+      "published_sha256": "566dc14af49d49be597033001407086818b236cf8ec36011835f866d188a8d09",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/CURRENT_STATUS_2026-09-09.md",
       "source_rel_desktop": "facebook/CURRENT_STATUS_2026-09-09.md",
       "source_sha256": "4dc18a066916dbbaae2542f14cf27e21467472fb74fa78367f2d24d0a29cb16c",
-      "published_sha256": "ba9fbd29ec976911a4d069a88b203197afd3440cf41d8b725bba0083474dcc5a",
+      "published_sha256": "903f9d9f4c745cb14fbdaab3932d3d4a69d73783e643bba3ad577092e1b87875",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/ENGINEERING_WORKFLOW.md",
       "source_rel_desktop": "facebook/ENGINEERING_WORKFLOW.md",
       "source_sha256": "7222e2d8689bc4900fcc9b83a3782d29b57aec533b1c9fb142f5612c64f5a6ed",
-      "published_sha256": "7222e2d8689bc4900fcc9b83a3782d29b57aec533b1c9fb142f5612c64f5a6ed",
-      "changed_for_publication": false
+      "published_sha256": "213de64623cc76dfa7a74178d577de1584dd9b89cb2bccc1914fde75ff0b5ce5",
+      "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/FACEBOOK_BROWSER_SAMPLES.md",
       "source_rel_desktop": "facebook/FACEBOOK_BROWSER_SAMPLES.md",
       "source_sha256": "6f53f09a76fa2179f6bc3531b510dd060adc6c8ce92b2c8ab6e4a4402eae929d",
-      "published_sha256": "d1c5d1a87cdf6c43b0283a72ff115c5c45ec764c61bd5426792d6c38a1efaca4",
+      "published_sha256": "d45fe08a94e76790ab30a141ffcf0aaf55db17ae2390f22dd970d16750750315",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/FACEBOOK_LINK_SUPPORT.md",
       "source_rel_desktop": "facebook/FACEBOOK_LINK_SUPPORT.md",
       "source_sha256": "cee346b891e97414df9623fcbb4257680c4d303302f3efd2323263c8a8e7ffe2",
-      "published_sha256": "01f737ba56acb55cfa56007c9cca6c59d6ea1fc53d4ff698732feaaa8e7dc617",
+      "published_sha256": "e6a0e341138bdbeaa4fbb88c639faa040884da2c9f85317b4012a99ffe8a7d2f",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/FACEBOOK_WORKER_BOOTSTRAP.md",
       "source_rel_desktop": "facebook/FACEBOOK_WORKER_BOOTSTRAP.md",
       "source_sha256": "6a81b09b74bef19556ddb9b73f78f68ad13c676c32b28de8ada78aaaaf7a7a18",
-      "published_sha256": "ebfe772ca1ca691f0c680fc51dd26c74fa18c1b59cb9acb982882a10840245c9",
+      "published_sha256": "d11886d66556b7616cd71580b41517b9b7e9e05f4ccb6962e4507cbd7c4fe98e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/README.md",
       "source_rel_desktop": "facebook/README.md",
       "source_sha256": "dc21a1cff5892bafc8d8cf9ee7f82d8f429473b5bf0020233ba3806437190d13",
-      "published_sha256": "bfb419010d7854fe38931656f24c26aa2eab6de9d188f23c2b4a7d0d95e62711",
+      "published_sha256": "e23f8c013aa64a30fcafe33a968afdf7435b1c295b577291e93d5969d5e74c63",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/STABLE_BASELINE.md",
       "source_rel_desktop": "facebook/STABLE_BASELINE.md",
       "source_sha256": "62ace0d0e3a4866323a792d3b488107f41c56457a5aef26e5c39d1d152bd2d8b",
-      "published_sha256": "6f32e6ec50bc56fd62c0017bcc2e36f17d599514e961c7861b705fd24cc2cbd3",
+      "published_sha256": "ee72dea2c4c2a10a67b1863eaf10c1ab4103e94eb5d1351d62fcd88f5152dc5a",
       "changed_for_publication": true
     },
     {
@@ -1875,14 +1875,14 @@
       "path": "projects/social/facebook/source/VALIDATION_2026-09-16.md",
       "source_rel_desktop": "facebook/VALIDATION_2026-09-16.md",
       "source_sha256": "cc11dbb485737e93676e778d33b6dfa4cc70ef531600d5d11bb8ad2d34eaf1fc",
-      "published_sha256": "1132d4d446e3a30a4148226c9d51b8278c45916889190428ad250a88c2c00ba8",
+      "published_sha256": "def8eda864c7bf9ea84cb554fe205e37870534faff7f90e337b3977ecc8fdbec",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/WINDOWS_DEPLOYMENT.md",
       "source_rel_desktop": "facebook/WINDOWS_DEPLOYMENT.md",
       "source_sha256": "cb81cdf4b7a09e01b8d0dec5b577b322dde84bd94b858be9fb86e3c9ec47f292",
-      "published_sha256": "ef0bfc2f3adbe493e9f28627a8c7104869e2ca2a92e4ada48abe868965b0763e",
+      "published_sha256": "508f796e05ed65f70b76e245f8af7698c094b396d6fe0f08bdf9d23119335ff4",
       "changed_for_publication": true
     },
     {
@@ -1938,7 +1938,7 @@
       "path": "projects/social/facebook/source/examples/README.md",
       "source_rel_desktop": "facebook/examples/README.md",
       "source_sha256": "a158a4b15e403c54ef118ee52cb75456afc5beb76ad7c49efa46f758246d4a68",
-      "published_sha256": "d098301181e99f64cdffdfa8afb47d6accbcd5d000ce9e3f6e85aa7a3b0a5150",
+      "published_sha256": "35b657837f135317fd734b65e89c0805856ecca35b4e826ed99575de04364d8c",
       "changed_for_publication": true
     },
     {
@@ -2190,21 +2190,21 @@
       "path": "projects/social/facebook/source/macos/CODEX_DEPLOYMENT_RUNBOOK.md",
       "source_rel_desktop": "facebook/macos/CODEX_DEPLOYMENT_RUNBOOK.md",
       "source_sha256": "9a819e1a8a44e108daa592ad5f9d516582dfcee30aff6076ace79fa4ed00e917",
-      "published_sha256": "5f7ec8f02d0f7beeebfdb925065db4028d62570123ae633ff44e7e6a00f91f56",
+      "published_sha256": "d7bfae2a15d1ed8b306dc2868b844df2d2c8b0b024a73383939cb1a7e2b33c9e",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/QUICKSTART.md",
       "source_rel_desktop": "facebook/macos/QUICKSTART.md",
       "source_sha256": "c7a982586a559a7574be9b54b7f0fd03d670ceea53c27df499d65084df04fefd",
-      "published_sha256": "45d7307acdaa562599f15a38d44bdc022f74fc2353b53c1b5bae53fde73152d1",
+      "published_sha256": "4c403cf06a70f549b2d5c5b4bf1dce38b8b5f31eb0a6f77fd0272717a291c9df",
       "changed_for_publication": true
     },
     {
       "path": "projects/social/facebook/source/macos/README.md",
       "source_rel_desktop": "facebook/macos/README.md",
       "source_sha256": "82c512ab609195ed072bf896037ac51fbeab34809047770b9df15e3f3abd58f3",
-      "published_sha256": "46cb0c3116317689f1dbe3864501885fceb98eb107e04dd03f507b6e19cbad3c",
+      "published_sha256": "2326e12559c50f4544bb8a76fe1baa3b68cbe19be05da586a86d43e583f2e5f1",
       "changed_for_publication": true
     },
     {
@@ -2491,7 +2491,7 @@
       "path": "projects/social/facebook/source/tests/README.md",
       "source_rel_desktop": "facebook/tests/README.md",
       "source_sha256": "26ab33d1618d26c96fd44d3bd4e7f1e17a68483623d645cf875f0c92eddef21a",
-      "published_sha256": "9040f6cbcfcd3471314be8958ce03bf962fb880e5cd3d3e1f023fd1256fa9d87",
+      "published_sha256": "42c4d2929e1d5c4c635699a269ecadb8f50c6dfe5d41cc90d1775d22a68cb560",
       "changed_for_publication": true
     },
     {

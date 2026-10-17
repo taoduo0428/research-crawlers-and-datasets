@@ -1,4 +1,9 @@
+# 猪八戒
 
-# 猪八戒（zbj）
-源码：`../../market-platform/drv_crawler/sites.py` 的 `ZbjAdapter`。
-数据：`data/records.csv`，7,082 条、record_id 无重复。`run-report` 报告 341 个列表页、`window_complete=true`，但 `details_fetched=0`；描述中位数 46 字，不能把列表摘要宣称为完整详情。只有约 1,668 条包含非零数字的预算或价格字段；另一些是平台估价或非数字报价。按本项目需求评估前先做价格类型、单位和真实性筛选。
+猪八戒的数据在 `data/records.csv`，一共 **7,082 条任务**，`record_id` 没有重复。
+
+这批采集跑过 341 个列表页。虽然当时的报告写着采集窗口完成，但**没有进一步抓完整详情页**（`details_fetched=0`）。所以 `description_raw` 多数只是列表摘要，文字比较短，别把它直接当成完整需求书。
+
+报价也要小心。已发布表的 `budget_raw` 为空，其他字段里能找到部分价格或平台估价，但不能当作全部任务的真实成交金额。打算用来训练价格模型的话，先区分价格来源、单位和是否有明确数字。
+
+代码在 [共用爬虫工程](../../market-platform/README.md) 的 `drv_crawler/sites.py`，适配器名是 `ZbjAdapter`。

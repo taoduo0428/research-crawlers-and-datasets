@@ -1,18 +1,30 @@
+# Amazon + Jiimore：把商品和历史指标连起来
 
-# 亚马逊 + Jiimore：一个多数据源商品研究项目
+这是**一个项目**。Amazon 提供商品信息，Jiimore 提供部分搜索/点击指标，SellerSprite 提供月销量、评论和历史趋势。几套数据之间主要靠 `ASIN` 连接。
 
-**一个项目，不将 Amazon、Jiimore 和 SellerSprite 作为彼此独立的三个课题。** 全部通过 `ASIN` 关联。
-代码位于 `source/current`、`source/legacy`、`source/supplement`，包括 Amazon 商品详情、Jiimore 品类 ASIN 与周点击量、SellerSprite 月销量/留评率/Keepa 风格趋势。主运行入口推荐先看 `source/current/jiimore1.py` 和 `source/current/sellersprite.py`；有些早期脚本仍是历史实验，不保证每个入口都能独立工作。各脚本依赖并不完全相同：主脚本主要涉及 `requests pandas beautifulsoup4 DrissionPage openpyxl`，部分旧脚本还依赖 `selenium`、`chromedriver_autoinstaller` 和 `ddddocr`。仓库目前没有经过全量验证的统一电商 `requirements.txt`，应在独立虚拟环境按实际脚本导入项安装依赖，不要假定所有旧版本可以直接运行。使用前配置 `JIIMORE_PHONE` / `JIIMORE_PASSWORD` / `SELLERSPRITE_COOKIE` 在本机环境变量，不要写到源码或提交 Git。
+## 文件怎么找
 
-## 数据关联
-- `data/amazon/products.csv`：2,006 行，其中 1,999 个有效唯一 ASIN；商品标题、价格、评分等。
-- `data/amazon/tags.csv`：8,533 行，覆盖 1,342 个 ASIN。
-- `data/jiimore/weekly_clicks.csv`：117,049 条、覆盖同样 1,999 个 ASIN（2023-01 至 2024-04）。
-- `data/sellersprite/monthly_sales.csv`：66,871 行，覆盖 1,998 个 ASIN。
-- `data/sellersprite/monthly_reviews.csv`：178,785 行，覆盖 1,999 个 ASIN。
-- `data/sellersprite/keepa_history.csv`：25,824 行，仅覆盖 18 个 ASIN；接口在 SellerSprite 域名，不代表直接调用 Keepa。
-四个主要表共同覆盖 1,998 个 ASIN。关联用 `ASIN` + （`日期` / `月份`），切勿只按 ASIN 去重。
-已观察月销量 28 条、月评论 1 条“ASIN + 月份”非完全相同冲突。`amazon global shipping` 列现有商品表全部为空；其他时间序列亦有缺失。
+| 文件 | 内容 | 当前规模 |
+| --- | --- | ---: |
+| `data/amazon/products.csv` | Amazon 商品基本信息 | 2,006 行，1,999 个有效唯一 ASIN |
+| `data/amazon/tags.csv` | 商品标签 | 8,533 行 |
+| `data/jiimore/asin.csv` | Jiimore 商品 ASIN 清单 | 按文件内容为准 |
+| `data/jiimore/weekly_clicks.csv` | 周点击量 | 117,049 行 |
+| `data/sellersprite/monthly_sales.csv` | 月销量 | 66,871 行 |
+| `data/sellersprite/monthly_reviews.csv` | 月评论指标 | 178,785 行 |
+| `data/sellersprite/keepa_history.csv` | Keepa 风格历史曲线（取自 SellerSprite） | 25,824 行，18 个 ASIN |
 
-## 认证与安全
-所有发现的硬编码旧手机号/密码/Cookie 在发布副本中需替换为环境读取，原始文件留在本机；建议立即轮换此前使用过的有效凭据。原 ZIP/HTML 可能含认证会话，未上传。
+四个主表共同覆盖 **1,998 个 ASIN**。做关联时不要只按商品号拼月数据，月销量和评论还要加上 `月份`；点击量按 `日期` 处理。
+
+有些字段缺值：商品表的 `amazon global shipping` 全空；部分月份没有销量或留评率。月度数据里还有少量相同 ASIN、月份但值不同的记录，需要回查来源，不能随手去重。
+
+## 代码在哪
+
+- `source/current/`：整理时选用的商品、Jiimore、SellerSprite 脚本；建议先看 `jiimore1.py` 和 `sellersprite.py`。
+- `source/legacy/`：早期版本，留着查处理方式。
+- `source/misc/`：商品检查和其他实验脚本。
+- `source/supplement/get-asin/`：补充获取 ASIN 的脚本。
+
+这些脚本的依赖不完全一样，常见有 `requests`、`pandas`、`beautifulsoup4`、`DrissionPage`、`openpyxl`，有些旧版还需要 `selenium` 等。没有经过验证的统一安装清单；确定要跑哪个脚本，再按它的导入项准备环境。
+
+账号也得用自己的。旧代码曾出现硬编码手机号、密码和 Cookie 的问题；不要拿历史认证信息继续用。需要时在本机设置 `JIIMORE_PHONE`、`JIIMORE_PASSWORD`、`SELLERSPRITE_COOKIE` 等环境变量，不要提交到 Git。

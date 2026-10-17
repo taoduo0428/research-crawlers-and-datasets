@@ -1,6 +1,6 @@
-# 贡献指南
+# BOSS CDP 子工程：怎么提交修改
 
-感谢你对 boss-zhipin-scraper 的兴趣！无论是提 Issue、修 Bug 还是加功能，都欢迎。
+这份说明原本写给独立的 boss-zhipin-scraper 工程。现在它放在课题组总仓库的 `projects/market-platform/drv_crawler/boss_cdp/` 目录下。准备修改时，先确认是要改这份子工程，还是共用爬虫主流程；下面的安装命令和测试路径主要针对原仓库。
 
 ## 行为准则
 

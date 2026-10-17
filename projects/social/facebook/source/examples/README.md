@@ -2,7 +2,7 @@
 
 先按平台文档启动 API。服务默认 `http://127.0.0.1:8765`，实际以本机配置为准；本地 API **没有 API Key / Cookie / Authorization 要求**，只绑定 loopback。POST 使用 `Content-Type: application/json`。不要使用负责人伪代码中的 `/submit`、`parameters=` 或 `finished`；实际契约见 [API_USAGE](../API_USAGE.md)。
 
-## 四种客户端：提交、状态、进度、结果、下载
+## 提交任务、查进度、下载结果（Python、PowerShell、Bash）
 
 下列脚本都会先 GET `/health`，仅提交一次，轮询 job 与 `/progress`，遇到 `failed/cancelled` 返回非零；只在 `completed` 后读 `/result` 并下载 `facebook-reactor-users.csv?download=1`。等待超时不会取消、重试提交或假装任务失败，保存输出的 job_id 可继续读取。同名输出文件会被替换，请选择独立路径。
 
@@ -15,11 +15,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File examples\capture.ps1 -Url 'h
 ```sh
 # macOS；requests 来自项目 requirements；Node 仅运行 fetch 示例时需要。
 .venv/bin/python examples/capture_requests.py --url 'https://www.facebook.com/share/r/1Dg59X6ysJ/' --output reel.csv
-node examples/capture_fetch.mjs --url 'https://www.facebook.com/share/r/1Dg59X6ysJ/' --output reel.csv
+# 本仓库未收录 capture_fetch.mjs；Node 的批量提交例子在后面
 PYTHON=.venv/bin/python bash examples/capture_curl.sh 'https://www.facebook.com/share/r/1Dg59X6ysJ/' reel.csv
 ```
 
-Node 脚本也可在 Windows 运行。curl 脚本要求 Bash、curl 和 Python 3（Python 只解析 JSON，无 jq 依赖）；Windows 可在 Git Bash 中设 `PYTHON=.venv/Scripts/python.exe`。Node 示例使用 Node 22+，不需要 npm install。
+原工程有 Node 客户端，但 `capture_fetch.mjs` 没收入这份仓库；下面提供 Node 批量提交代码，可自己保存为 .mjs 使用。curl 脚本要求 Bash、curl 和 Python 3（Python 只解析 JSON，无 jq 依赖）；Windows 可在 Git Bash 中设 `PYTHON=.venv/Scripts/python.exe`。Node 示例使用 Node 22+，不需要 npm install。
 
 恢复已有任务：Python/Node 使用 `--job-id fb_xxx` 替代 `--url`；PowerShell 使用 `-JobId fb_xxx` 替代 `-Url`；Bash 使用 `bash examples/capture_curl.sh --job-id fb_xxx output.csv`。
 

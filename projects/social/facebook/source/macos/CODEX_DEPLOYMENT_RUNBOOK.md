@@ -1,5 +1,8 @@
 # macOS Apple Silicon 部署与验收 Runbook
 
+**这是原工程的历史部署记录。** 里面的 `CONFIGURE.command`、`CHECK.command`、`START.command` 没有收入当前总仓库，不能直接复制相关命令来运行。现在接手 Mac 环境请先读 [更新后的安装说明](QUICKSTART.md)；下面保留旧步骤，主要为了查当时的配置和故障处理。
+
+
 本文给另一个 Codex 直接执行。目标是在 Apple Silicon（M1-M4）Mac 上完成可审计的本地 Facebook Reaction 采集部署，并把“主机就绪”“设备前置就绪”“单链接低压样本”“全量终点完成”分别记录。
 
 新执行器入口是根目录的 CONFIGURE.command、CHECK.command、START.command、facebook_setup.py、facebook_local.py、facebook_capture_api.py 和 facebook_android_capture.py。macos/facebook_macos.py 与 macos/start_facebook_workers.sh 是旧 transport/模拟适配器，不是新控制台入口。
