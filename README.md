@@ -19,7 +19,7 @@
 | [Facebook](projects/social/facebook/README.md) | Android 采集程序、本地 API、脱敏后的关系数据 |
 | [Keep](projects/social/keep/README.md) | 第一阶段抓包结果的匿名摘要、第二阶段整理后的三张表 |
 | [豆瓣](projects/social/douban/README.md) | 电影与影评 Scrapy 项目 |
-| [Amazon + Jiimore](projects/commerce/amazon-jiimore/README.md) | Amazon 商品、Jiimore 点击量、SellerSprite 销量和评论数据 |
+| [Amazon / Jiimore / SellerSprite](projects/commerce/amazon-jiimore/README.md) | 更新为本地整理过的 Amazon 采集代码（`source/`）；保留七张历史数据表与离线审计工具 |
 
 外包四站与招聘三站共用一套代码，放在[`projects/market-platform/`](projects/market-platform/README.md)。它不是另一个网站。Amazon、Jiimore、SellerSprite 也算同一个研究项目，数据通过 ASIN 关联。
 
@@ -51,7 +51,7 @@ research-crawlers-and-datasets/
 │   │   ├── keep/
 │   │   └── douban/
 │   └── commerce/
-│       └── amazon-jiimore/           Amazon + Jiimore 联合项目
+│       └── amazon-jiimore/           Amazon / Jiimore / SellerSprite：新源码与历史数据
 ├── docs/                             给成员看的数据、使用和安全说明
 ├── metadata/                         数据及源码的文件清单、SHA-256
 ├── tools/                            全仓库校验与 Keep 数据整理工具
@@ -62,7 +62,7 @@ research-crawlers-and-datasets/
 
 ### 代码、数据和文档怎么看
 
-- **`source/`、`drv_crawler/`**：放采集代码。`current/` 是整理时选用的版本，`legacy/` 是旧版，`supplement/` 是补充脚本；旧版留着查问题，不代表现在仍能直接运行。
+- **`source/`、`drv_crawler/`**：放采集代码。部分其他项目仍保留 `current/legacy/supplement` 历史分类；**Amazon 项目已于 2026-10-17 用整理版的 `source/` 替换旧多版本源码**，不要按旧目录继续找采集入口。
 - **`data/`**：已经采到或整理好的数据。`final.csv` 往往是简化后的交付表，`full-source.csv` 会保留更多原字段，`phase1/phase2` 是处理前后两个阶段。不同版本可能重复，不能直接相加。
 - **各项目的 `README.md`**：先看这一份，里面写了文件在哪、怎么用、还有哪些问题没解决。像 `specs/`、`.agents/`、`SKILL.md`、`CHANGELOG.md` 这些是历史研发记录或工具配置，不是新同学的入门教程，没必要从头读。
 - **`projects/market-platform/tools/`**：专门处理外包/招聘数据。和仓库根目录的 `tools/` 不是一回事。
@@ -110,7 +110,7 @@ python -m unittest discover -s tests -p test_keep_release.py
 
 整理后会得到用户、动态、评论三张 CSV。第一阶段真正的网络抓包程序和未脱敏原件没有放在仓库里。
 
-**Facebook、B站、豆瓣、电商项目**：分别打开上面对应的 README，按那个项目的环境安装。Facebook 有 Windows/macOS 的部署手册；豆瓣需要 Scrapy；B站和电商的部分脚本是旧版本，运行前要检查路径和网站接口。
+**Facebook、B站、豆瓣、电商项目**：分别打开对应 README，按项目环境安装。Facebook 有 Windows/macOS 的部署手册；豆瓣需要 Scrapy。**Amazon 已换成本地整理版源码**，启动命令及隐私配置请看 [亚马逊项目 README](projects/commerce/amazon-jiimore/README.md)；其现网接口权限仍需要按账号另行验收。B站的部分代码仍含历史版本。
 
 ## 用数据时容易弄错的地方
 
@@ -118,7 +118,7 @@ python -m unittest discover -s tests -p test_keep_release.py
 - 实现网有 46 条外包需求和 7 条全职岗位，不能混在一张“外包报价表”里。
 - 三个招聘网站的最终表只有六列，缺公司和原始岗位 ID；即使两行文字一样，也不能直接认定同一个岗位。
 - B站多份字幕文件有重叠，先按 `CID` 处理。
-- Amazon、Jiimore、SellerSprite 按 `ASIN` 联表；月度数据还得加上月份，不能只按商品号合并。
+- Amazon、Jiimore、SellerSprite 按 `ASIN` 联表；月度数据还得加上月份。**Amazon 旧七张研究表在 `projects/commerce/amazon-jiimore/data/`，新版爬虫本地输出在 `source/data/`，不是同一批数据。**
 - Keep 的 1,692 行是**示例评论索引**，不是 1,692 条动态；Facebook 的数据也已做匿名处理。
 
 更细的口径写在[数据说明](docs/DATA_GUIDE.md)和各项目 README 中。
@@ -127,4 +127,4 @@ python -m unittest discover -s tests -p test_keep_release.py
 
 先留好原始层，再做清洗表；每次采集尽量记下日期、网站、批次、筛选条件。新数据上传前检查个人信息和账号凭据，大文件按 Git LFS 规则提交。改了数据或已纳入清单的源码，记得更新 `metadata/` 的 SHA-256 再运行校验。
 
-这份仓库的历史数据已经上传，并做过文件完整性检查。但**“文件能下载”与“爬虫今天还能跑”是两回事**。目前没有对所有网站重新做完整在线采集验收。哪一站要继续做，先看对应项目 README 和[检查记录](docs/REPOSITORY_AUDIT_2026-10-17.md)。
+这份仓库的历史数据已经上传，并做过文件完整性检查。但**“文件能下载”与“爬虫今天还能跑”是两回事**。目前没有对所有网站重新做完整在线采集验收。Amazon 当前采集代码已于 2026-10-17 更新，说明和未发布的隐私文件范围见[亚马逊项目 README](projects/commerce/amazon-jiimore/README.md)及[替换记录](projects/commerce/amazon-jiimore/docs/发布替换说明_2026-10-17.md)；其他网站继续看各项目 README 和[检查记录](docs/REPOSITORY_AUDIT_2026-10-17.md)。

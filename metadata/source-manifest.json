@@ -1,153 +1,76 @@
 {
-  "created_at_utc": "2026-10-16T16:26:40+00:00",
+  "created_at_utc": "2026-10-17T12:05:12+00:00",
   "schema_version": 1,
   "files": [
     {
-      "path": "projects/commerce/amazon-jiimore/source/current/Amazon1.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/Amazon1.py",
-      "source_sha256": "ea13041189cd08fc5b277b9006019a95688ced5f507ea4e6bc7ac641ccc79fb4",
-      "published_sha256": "ea13041189cd08fc5b277b9006019a95688ced5f507ea4e6bc7ac641ccc79fb4",
+      "path": "projects/commerce/amazon-jiimore/source/amazon.py",
+      "source_rel_desktop": "curated-local-Amazon/amazon.py",
+      "source_sha256": "9de7cb6d5297ce2289c28854e522c3799ee8e277389d1d860873dd6fb2ca8de2",
+      "published_sha256": "9de7cb6d5297ce2289c28854e522c3799ee8e277389d1d860873dd6fb2ca8de2",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/current/amazon.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/amazon.py",
-      "source_sha256": "2f3218833f31ac6fb4be90c1c34b80a09b7a9e45ee64b4fb2f575b90e2a56610",
-      "published_sha256": "69dc84122eaa03b529e4358c3964909cb9e747bce0a3cf799189bc40aef097fc",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/current/amazon2.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/amazon2.py",
-      "source_sha256": "493cc94e2b034d9efc7fe124157f08134ddd0c8eb2a098f48cb95d746fb6bd72",
-      "published_sha256": "493cc94e2b034d9efc7fe124157f08134ddd0c8eb2a098f48cb95d746fb6bd72",
+      "path": "projects/commerce/amazon-jiimore/source/amazon_extract.py",
+      "source_rel_desktop": "curated-local-Amazon/amazon_extract.py",
+      "source_sha256": "9e47bff1fc67b5d985c772f8372b9eb604cfb20cd0e6e36abaac442d43bf33ad",
+      "published_sha256": "9e47bff1fc67b5d985c772f8372b9eb604cfb20cd0e6e36abaac442d43bf33ad",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/current/jiimore.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/jiimore.py",
-      "source_sha256": "f4277e21356ffc49ef786abb707f4b94709088ebaa0b40a4fbf0637d0fa8e0f0",
-      "published_sha256": "8bae5b19a56c3be315c72c9c2d8b026717436831b391b7469434a5b6ee542c42",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/current/jiimore1.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/jiimore1.py",
-      "source_sha256": "bb0ba97d36b027eb45e5a355fb475f9092183227c18b9140d67b6feb104e75e3",
-      "published_sha256": "b5db76a0e2da31444b7ae4a41c170f86680936370ef3e20f37fa6f0ec0bf40f9",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/current/sellersprite.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/sellersprite.py",
-      "source_sha256": "39e781b869aba29f1b578e7bcf65194eba180a38367d0597483fec5b50f5bb1d",
-      "published_sha256": "5130cb4f84d31cb9382fd0b55262c18b47ccd0464dea5f023ff80555b6f9e9d1",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/current/sellersprite1.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/sellersprite1.py",
-      "source_sha256": "c2fa1096dfa53d1e032ace68678b861d81929ab1a8c97b3a23fb97deb5674f77",
-      "published_sha256": "483c36fad803340c630b0447ca7eebeed6c0882b83686d321594ee5813c88063",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/legacy/Amazon1.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/Amazon1.py",
-      "source_sha256": "5c3c10c0d022c0be19dc963029afe3ef58a28598ea3696e6e0b20b14fcde8fb1",
-      "published_sha256": "5c3c10c0d022c0be19dc963029afe3ef58a28598ea3696e6e0b20b14fcde8fb1",
+      "path": "projects/commerce/amazon-jiimore/source/jiimore.py",
+      "source_rel_desktop": "curated-local-Amazon/jiimore.py",
+      "source_sha256": "459e4f66e233446b1ab99b5a79cd2d72133a4f54a52d7872c444fc1bae40b1c3",
+      "published_sha256": "459e4f66e233446b1ab99b5a79cd2d72133a4f54a52d7872c444fc1bae40b1c3",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/legacy/amazon.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/amazon.py",
-      "source_sha256": "194d83949a6e0ce4d9a83b30975ae4931f55b126b3aeaaf39847da3eddae6c89",
-      "published_sha256": "c870d9948f5a0d950a4c94610392197316db9b87372d999c7a61bc42a9100576",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/legacy/amazon2.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/amazon2.py",
-      "source_sha256": "19fa4e7567b346a7f65eab4dc6aa2786ba77f8ec369d7eb68deabfbfd5d348a2",
-      "published_sha256": "19fa4e7567b346a7f65eab4dc6aa2786ba77f8ec369d7eb68deabfbfd5d348a2",
+      "path": "projects/commerce/amazon-jiimore/source/project_config.py",
+      "source_rel_desktop": "curated-local-Amazon/project_config.py",
+      "source_sha256": "09a415c97c358f7204e618a2918074655ccf594375ab986fb5f8aeb486140e0a",
+      "published_sha256": "09a415c97c358f7204e618a2918074655ccf594375ab986fb5f8aeb486140e0a",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/legacy/jiimore.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/jiimore.py",
-      "source_sha256": "f4277e21356ffc49ef786abb707f4b94709088ebaa0b40a4fbf0637d0fa8e0f0",
-      "published_sha256": "8bae5b19a56c3be315c72c9c2d8b026717436831b391b7469434a5b6ee542c42",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/legacy/jiimore1.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/jiimore1.py",
-      "source_sha256": "bb0ba97d36b027eb45e5a355fb475f9092183227c18b9140d67b6feb104e75e3",
-      "published_sha256": "b5db76a0e2da31444b7ae4a41c170f86680936370ef3e20f37fa6f0ec0bf40f9",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/legacy/sellersprite.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/sellersprite.py",
-      "source_sha256": "39e781b869aba29f1b578e7bcf65194eba180a38367d0597483fec5b50f5bb1d",
-      "published_sha256": "5130cb4f84d31cb9382fd0b55262c18b47ccd0464dea5f023ff80555b6f9e9d1",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/legacy/sellersprite1.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/sellersprite1.py",
-      "source_sha256": "3f07b978c74eb15f8a701a16a32feadcc2c471732d44f70e2a4534d4779146af",
-      "published_sha256": "62a4337ddf9a926927bd76a418ce8344f15cb773418ea8d55b87404c666553cd",
-      "changed_for_publication": true
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/misc/1.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/1.py",
-      "source_sha256": "0782d47372516b496149d705d220e86c92bbe62c3749cb265fe1a6f1fb831bc1",
-      "published_sha256": "0782d47372516b496149d705d220e86c92bbe62c3749cb265fe1a6f1fb831bc1",
+      "path": "projects/commerce/amazon-jiimore/source/sellersprite.py",
+      "source_rel_desktop": "curated-local-Amazon/sellersprite.py",
+      "source_sha256": "28f69be4ae094b31c69072e4468b27cb1731430aea4262ace577f0b989b7f05b",
+      "published_sha256": "28f69be4ae094b31c69072e4468b27cb1731430aea4262ace577f0b989b7f05b",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/misc/商品.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/商品.py",
-      "source_sha256": "ffd04def64e69a107e0b4e6e852cdda395a6606476c7ea1d4f396d0a80d600ca",
-      "published_sha256": "ffd04def64e69a107e0b4e6e852cdda395a6606476c7ea1d4f396d0a80d600ca",
+      "path": "projects/commerce/amazon-jiimore/source/tests/test_amazon_extract.py",
+      "source_rel_desktop": "curated-local-Amazon/tests/test_amazon_extract.py",
+      "source_sha256": "323a6c320912f284f7cfca1707e4aa5f7ac7f7ce83c53c0f8b3b460d9ba0c405",
+      "published_sha256": "323a6c320912f284f7cfca1707e4aa5f7ac7f7ce83c53c0f8b3b460d9ba0c405",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/misc/商品检查.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/商品检查.py",
-      "source_sha256": "8e9b6dfe40cbba22487ef5665630d6ae6d42242764c0a501104acca69e01d4ee",
-      "published_sha256": "8e9b6dfe40cbba22487ef5665630d6ae6d42242764c0a501104acca69e01d4ee",
+      "path": "projects/commerce/amazon-jiimore/source/tests/test_amazon_runtime.py",
+      "source_rel_desktop": "curated-local-Amazon/tests/test_amazon_runtime.py",
+      "source_sha256": "6e407580b90f5730449f7ff7fdd250c70eca92d56274b72be0358288497f5744",
+      "published_sha256": "6e407580b90f5730449f7ff7fdd250c70eca92d56274b72be0358288497f5744",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/misc/商品检查2.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/商品检查2.py",
-      "source_sha256": "ae10c0288ce2346b9bed683aa5c7d5d8ab0c975eef2557a9aee699a4a2f42999",
-      "published_sha256": "ae10c0288ce2346b9bed683aa5c7d5d8ab0c975eef2557a9aee699a4a2f42999",
+      "path": "projects/commerce/amazon-jiimore/source/tests/test_jiimore.py",
+      "source_rel_desktop": "curated-local-Amazon/tests/test_jiimore.py",
+      "source_sha256": "86a138df0935a4f8fd17ea5b3492e3856eb16cbbfa0221b5dfbcc9556b2b4600",
+      "published_sha256": "86a138df0935a4f8fd17ea5b3492e3856eb16cbbfa0221b5dfbcc9556b2b4600",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/misc/检查.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/检查.py",
-      "source_sha256": "81035960a3e0e92c2c1e6ec7048b47df3909e2e512d598e2ca14d5c494e7209e",
-      "published_sha256": "81035960a3e0e92c2c1e6ec7048b47df3909e2e512d598e2ca14d5c494e7209e",
+      "path": "projects/commerce/amazon-jiimore/source/tests/test_project_config.py",
+      "source_rel_desktop": "curated-local-Amazon/tests/test_project_config.py",
+      "source_sha256": "c304230fd3f10e703bddba5c547ea408e9b295071d893dee13d95d192157f853",
+      "published_sha256": "c304230fd3f10e703bddba5c547ea408e9b295071d893dee13d95d192157f853",
       "changed_for_publication": false
     },
     {
-      "path": "projects/commerce/amazon-jiimore/source/misc/爬虫.py",
-      "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/爬虫.py",
-      "source_sha256": "c8fc7d83bd542f63dd4a638ff822405227d2faf362c79261165bb234597c66ed",
-      "published_sha256": "c8fc7d83bd542f63dd4a638ff822405227d2faf362c79261165bb234597c66ed",
+      "path": "projects/commerce/amazon-jiimore/source/tests/test_sellersprite.py",
+      "source_rel_desktop": "curated-local-Amazon/tests/test_sellersprite.py",
+      "source_sha256": "6e22c4f5b83d52a667e1727b4a23153c5a122d98a1f4e93f7a415bccf5f9c013",
+      "published_sha256": "6e22c4f5b83d52a667e1727b4a23153c5a122d98a1f4e93f7a415bccf5f9c013",
       "changed_for_publication": false
-    },
-    {
-      "path": "projects/commerce/amazon-jiimore/source/supplement/get-asin/获取asin.py",
-      "source_rel_desktop": "个人知识库/项目/亚马逊/获取asin/获取asin.py",
-      "source_sha256": "22fd5ad03ce6bd8c053c32dcc4a1e96789841ad9939141bfcbf81f8e8b8d2a5c",
-      "published_sha256": "64824458271ef2d9cbc99c576187d5a04594f64343763da1e056bd869153ede7",
-      "changed_for_publication": true
     },
     {
       "path": "projects/market-platform/JD补采说明.md",

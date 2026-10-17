@@ -22,7 +22,8 @@
     "shares": 16
   },
   "boss_recovered_ids": 40747,
-  "publication_policy": "private, redacted research use only",
+  "publication_policy": "public repository, account credentials excluded; third-party redistribution rights require separate review",
+  "initial_builder_publication_policy": "private, redacted research use only",
   "original_files_unchanged": true,
   "publication_fixes": {
     "converted_utf16_course_scripts": 5,
@@ -33,5 +34,13 @@
     "keep_allowlist_and_reproducible_comments_v2": true,
     "keep_original_filenames_and_hashes_removed": true
   },
-  "data_files_count": 251
+  "data_files_count": 251,
+  "current_source_manifest_count": 396,
+  "amazon_2026_10_17_refresh": {
+    "replaced_old_source_entries": 21,
+    "new_current_code_and_test_files": 10,
+    "original_code_files_byte_identical": true,
+    "historical_research_data_preserved": true,
+    "private_runtime_config_and_edge_profile_excluded": true
+  }
 }

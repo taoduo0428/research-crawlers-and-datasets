@@ -1,95 +1,134 @@
-# Amazon + Jiimore：代码和数据怎么用
+# Amazon · Jiimore · SellerSprite｜采集程序与研究数据
 
-这不是一个脚本抓下来的数据。原电脑里有两套工程，名字分别叫 `成功` 和 `新建文件夹`，采集对象包括 Amazon 商品、Jiimore 点击量、SellerSprite 销量和评论。
+本项目围绕 **Amazon ASIN** 组织数据：Jiimore 获取类目商品 ASIN，Amazon 采集商品和评论，SellerSprite 查询销量与历史趋势。本次已将原仓库旧的 `source/current`、`source/legacy` 等多套采集代码替换为本地整理并测试过的 **`Amazon/` 当前代码**；此前归档的 **七张历史研究表和分析工具保留**，避免误删科研成果。
 
-两套工程的数据**互相补充**，不能只留下其中一个；但它们也有不少重复，不能直接合并两个文件夹里的所有 CSV。
+> 区分两个数据层：`source/data/` 是新版程序的运行输入/输出位置；`data/` 是原仓库七张历史整理表，**不是本次新版重新采集的结果**。当前 `source/data/ASIN.txt` 已核对 **2,049 个唯一 ASIN**：包含旧历史列表的 1,999 个，另多 50 个；新增 ASIN 不意味着 Amazon/SellerSprite 已完整采集。
 
-想做分析的同学，**先用这里整理好的 `data/`，不要先启动爬虫**。想继续采集，先看[两个源码目录的关系](source/README.md)和[原始来源对照](docs/来源版本对照.md)。
+## 从哪里开始
 
-## 七张表分别是什么
+| 想做什么 | 入口 | 要登录吗 |
+| --- | --- | --- |
+| Jiimore 按类目获取 ASIN | [`source/jiimore.py`](source/README.md#jiimore-获取-asin) | 需要 Jiimore 授权账户 |
+| Amazon 商品、真实评论、Customer say | [`source/amazon.py`](source/README.md#amazon-商品及评论) | Edge 采集窗口，必要时人工登录 |
+| SellerSprite 月销量、留评率、Keepa | [`source/sellersprite.py`](source/README.md#sellersprite-月度与历史指标) | 需单独授权的本地 Cookie |
+| 运行新版离线单元测试 | [源码测试说明](source/tests/README.md) | 否 |
+| 阅读已发布的七张历史研究表 | [历史数据说明](data/README.md) | 否 |
+| 历史数据审计和冲突处理 | [分析工具说明](tools/README.md) | 否 |
+| 查看历史测试和本次替换记录 | [文档目录](docs/README.md) | 否 |
 
-| 文件 | 原始数据主要来自 | 内容 | 行数 |
-| --- | --- | --- | ---: |
-| `data/amazon/products.csv` | `新建文件夹` | Amazon 商品基本信息 | 2,006 |
-| `data/amazon/tags.csv` | `新建文件夹` | 用户提及的商品标签 | 8,533 |
-| `data/jiimore/asin.csv` | 两边完全相同 | ASIN 清单及商品链接 | 1,999 |
-| `data/jiimore/weekly_clicks.csv` | `成功` | 按日期记录的周点击量 | 117,049 |
-| `data/sellersprite/monthly_sales.csv` | `成功` | 月销量、销售额、平均单价 | 66,871 |
-| `data/sellersprite/monthly_reviews.csv` | `成功` | 月度评分增长与留评率 | 178,785 |
-| `data/sellersprite/keepa_history.csv` | `新建文件夹` | 历史评分、价格等趋势 | 25,824 |
+## 目录结构
 
-商品主表有 **1,999 个有效 ASIN**，但另有 7 行没有 ASIN；Keepa 历史表只涉及 **18 个 ASIN**。四张主要分析表（商品、周点击、月销量、月评论）共同覆盖 **1,998 个 ASIN**。这些数字是历史数据，不是网站当前数据。
+```text
+projects/commerce/amazon-jiimore/
+├── README.md                           项目总说明（本页）
+├── source/                             ★ 当前整理版采集代码
+│   ├── README.md                       安装、命令、配置、输出说明
+│   ├── amazon.py                       Amazon 商品和评论，使用 Edge
+│   ├── amazon_extract.py               商品/评论 HTML 提取
+│   ├── jiimore.py                      类目 → 商品 ASIN
+│   ├── sellersprite.py                 月销量、评论增长、Keepa
+│   ├── project_config.py               本地配置加载器
+│   ├── config.example.json             无密码配置模板
+│   ├── sellersprite_cookies.example.json 无 Cookie 模板
+│   ├── requirements.txt
+│   ├── data/                            ASIN.txt 及本地运行输出
+│   └── tests/                           当前五组单元测试
+├── data/                                ★ 旧仓库七张历史研究表，原样保留
+├── tools/                               旧历史数据分析及公开接口探针
+├── tests/                               历史数据分析工具测试
+└── docs/                                历史记录、版本发布说明
+```
 
-`新建文件夹` 中另外保存的 907 行月销量、1,653 行月评论，**全部存在于 `成功` 的大表中**，没有必要再追加一遍。
+**发布安全措施：**原本地文件夹包含真实登录配置、浏览器个人资料和采集输出，这次只发布程序、测试、无凭据配置示例及已存在的 ASIN 输入。未复制 `config.local.json`、`sellersprite_cookies.json`、`.edge-amazon-profile/`、旧运行结果、真实评论者原文/原 HTML。测试需要的评论 HTML 改为合成数据。用户本机原文件未被修改。
 
-## 现在最方便的入口
+## 新版快速开始（Windows / Edge）
 
-新增了一个**不联网**的数据检查工具，不需要登录 Amazon、Jiimore 或 SellerSprite，也不需要先安装浏览器。
+以下从仓库根目录开始：
 
-在总仓库根目录执行：
+```powershell
+cd projects/commerce/amazon-jiimore/source
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 
-~~~bash
-# 先确认大 CSV 下载完整
+# 帮助命令不会启动采集
+.\.venv\Scripts\python.exe jiimore.py --help
+.\.venv\Scripts\python.exe amazon.py --help
+.\.venv\Scripts\python.exe sellersprite.py --help
+
+# 离线测试，不调用外部网站
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p "test_*.py" -v
+```
+
+采集前自行在 `source/` 内从 `config.example.json` 创建 `config.local.json`，从 `sellersprite_cookies.example.json` 创建 `sellersprite_cookies.json`。密码/Cookie 只能保存在本地，不要提交 Git。SellerSprite **Edge 插件的登录状态不等于独立 Python API 已授权**。
+
+### Jiimore 获取 ASIN
+
+```powershell
+python jiimore.py --keyword Makeup --max-pages 1
+```
+
+该脚本调用老版 `basCategory/list` 和 `nicheAsin/page`，按 **categoryId** 分页得到 ASIN，写入 `source/data/jiimore/jiimore.csv`，并去重补充到 `source/data/ASIN.txt`。**当前整理版的周点击量和日期字段为空**，没有实现旧版本的商品周点击历史采集，不能误读为空数据就是零。具体细分市场的 `nicheId` 不等于这里的 categoryId。
+
+### Amazon 商品及评论
+
+```powershell
+python amazon.py --asin B09XMYFTB7 --max-review-pages 1
+python amazon.py --asin-file data/ASIN.txt --limit 2
+python amazon.py --asin B09XMYFTB7 --reviews-only
+```
+
+采用 Edge + DrissionPage，本地独立浏览器资料和调试端口在 [source/README](source/README.md) 解释。程序收集商品字段、Customer say 和真实评论；遇到登录/网页验证暂停人工处理，不自动绕过。输出在 `source/data/amazon/`，成功与失败状态保留在 `last_run.json`。默认不指定 ASIN 时只运行两个测试商品，不会突然启动全部商品。
+
+### SellerSprite 月度与历史指标
+
+```powershell
+python sellersprite.py --asin B09XMYFTB7
+python sellersprite.py --limit 2
+```
+
+分别保存月销量/销售额/均价、月度评分增长及留评率、Keepa 每日价格/评分趋势到 `source/data/sellersprite/`。月销量接口若返回空响应、需升级或未授权，**不视为成功取得数值**。
+
+三套程序是独立入口：**运行 Jiimore 不会自动启动 Amazon 或 SellerSprite**。先少量验收，再根据 ASIN 清单运行其他两站。完整配置与选项参见 [当前源码说明](source/README.md)。
+
+## 原仓库七张历史表（保留，不被新版覆盖）
+
+| 文件（相对于 `data/`） | 历史行数 | 内容 |
+| --- | ---: | --- |
+| `amazon/products.csv` | 2,006 | Amazon 商品 |
+| `amazon/tags.csv` | 8,533 | Customers say 标签 |
+| `jiimore/asin.csv` | 1,999 | ASIN 和商品链接 |
+| `jiimore/weekly_clicks.csv` | 117,049 | 历史周点击 |
+| `sellersprite/monthly_sales.csv` | 66,871 | 历史销量 |
+| `sellersprite/monthly_reviews.csv` | 178,785 | 历史评论增长 |
+| `sellersprite/keepa_history.csv` | 25,824 | 历史趋势 |
+
+**这些数字来自旧归档审计，不表示新版已经重爬上述数量。** 已发现部分缺 ASIN、缺销量、留评率缺值、相同 ASIN+月份冲突；Keepa 只覆盖部分商品。见 [数据质量检查](docs/数据质量检查_2026-10-17.md) 和 [七表说明](data/README.md)。
+
+从仓库根目录只读审计：
+
+```powershell
 git lfs pull
 python tools/verify_release.py
-
-# 看七张表各有多少行、多少 ASIN、缺了哪些值、有哪些重复键
+python projects/commerce/amazon-jiimore/tools/check_release.py
 python projects/commerce/amazon-jiimore/tools/review_data.py audit
-
-# 按 ASIN + 月份合并销量与评论（输出保存到仓库外）
 python projects/commerce/amazon-jiimore/tools/review_data.py merge-monthly --output ../amazon_monthly.csv
+```
 
-# 导出某个真实 ASIN 在七张表中的相关记录，仍保留为七个文件
-python projects/commerce/amazon-jiimore/tools/review_data.py export-asin --asin B09XMYFTB7 --outdir ../amazon_B09XMYFTB7
-~~~
+原分析工具保留冲突，不擅自选择不同值覆盖历史行。
 
-合并后会同时产生 `amazon_monthly.csv` 和 `amazon_monthly_conflicts.csv`。如果相同 ASIN、月份有不同的销量或评论值，程序**不会擅自选其中一条**：它在合并表中留空并标注 `冲突待核对`，把候选值写进冲突明细供人检查。
+## 验收与适用范围
 
-输出文件若已存在，程序默认拒绝覆盖；确实要覆盖自己生成的文件，需要额外传 `--overwrite`。工具禁止将输出写回正式的 `data/` 目录。
+用户已在自己的 Windows + Python 3.11 + Microsoft Edge 环境整理和测试当前 `Amazon/`。发布阶段另在隔离 Python 3.13 环境补齐 `DrissionPage==4.1.1.4`，**42/42 项离线单元测试通过**。仓库内的离线用例只能验证解析、配置和保存逻辑；**不应将它们称为 Jiimore 当前接口登录、SellerSprite 月销量或 Amazon 全量抓取已经通过验收**。
 
-**别把周点击量直接拼到月销量表。** 一张表是周粒度，另外两张是月粒度。如果要按月分析点击量，先明确采用求和还是月内均值，再单独计算。
+原仓库的 [2026-10-17 联网小样本记录](docs/联网实测_2026-10-17.md) 是**独立无登录探针的历史检查**，不等于本次新 `source/` 实际运行结果。当前源码缺少商品级历史周点击收集；月销量需账户/API 权限；不要混用当前程序 `source/data/` 与旧研究数据 `data/` 的口径。
 
-## 整理时发现的真实问题
+## 分级文档
 
-- 月销量有 **6,134 行**缺月销量，另有 **104 行**没有 ASIN。
-- 同一 `ASIN + 月份` 里，月销量存在 **28 个有不同值的冲突键**；月评论存在 **1 个**。
-- 月评论的 `留评率` 缺了 **130,399 行**，缺失不能填成零。
-- 商品主表的 `amazon global shipping` 整列为空；目前的发布数据里**没有补采成功的运费字段**。
-- Keepa 的历史日期范围与周点击、月销量不同，不能直接按行号拼。
-
-更完整的核对数字、字段和合并规则在[数据质量记录](docs/数据质量检查_2026-10-17.md)。
-
-## 2026-10-17 的联网小样本测试
-
-已经用仓库里的真实 ASIN 测过当前网站，结果见[完整测试记录](docs/联网实测_2026-10-17.md)：
-
-| 当前功能 | 测试结果 |
-| --- | --- |
-| Amazon 商品标题、价格、评分 | **2/4 真实商品成功**，另 2 个返回 HTTP 500 |
-| SellerSprite 月评论 | **2/2 成功**，月度数据到 2026-09 |
-| SellerSprite Keepa 历史趋势 | **2/2 成功**，时间点到 2026-10-17 |
-| SellerSprite 月销量 | **0/2**，返回 HTTP 200 但数据是空的 |
-| Jiimore 周点击 | **0/1**，未登录返回 401 |
-
-可以用新工具在自己机器上重试：
-
-~~~bash
-python -m pip install requests beautifulsoup4
-python projects/commerce/amazon-jiimore/tools/live_probe.py --asin B005G9E98O
-~~~
-
-这个命令只查一个 ASIN，打印实际字段与结果状态，**不会写入历史 CSV**。如果只想看 Amazon 的当前商品信息，可以加 `--site amazon`。注意：美国站网页可能返回 JPY 等非美元价格，不能把它当作 USD 使用。
-
-**这次成功的是小样本的公开页面或接口读取，不代表历史的批量爬虫已经恢复。** 月销量和 Jiimore 周点击仍需继续处理登录权限或接口变化。
-
-## 如果想重新采集网站
-
-历史脚本在 `source/current/` 和 `source/legacy/`，目录名容易让人误会：前者是从 `成功/` 复制来的，后者是从 `新建文件夹/` 复制来的，**不是已经验证的新旧版本排名**。
-
-要重新抓商品，先看 `source/current/amazon2.py`；要追踪 ASIN/周点击的老流程，看 `source/current/jiimore1.py`；月销量和评论脚本见 `source/current/sellersprite.py`。这些只是**适合先检查的历史入口**，不代表今天已经完成登录和联网采集验收。
-
-除了离线整理，这次也对当前网站做了少量真实请求；**但没有直接启动旧的批量爬虫**。旧脚本有本机绝对路径、浏览器依赖、账号环境和网页变化风险。部分旧代码还会自动尝试识别验证码，联网测试没有使用这些功能。不要复制历史 Cookie 或密码，需要登录时在自己的电脑操作，并先小样本运行。
-
-## 以后加新数据
-
-尽量分别保存原始商品表、周点击、月销量、月评论。记录采集日期、脚本版本、数据来源；相同 ASIN/月出现冲突时保留原始候选记录。大 CSV 使用 Git LFS，修改发布数据后更新 `metadata/data-manifest.json` 再运行 `python tools/verify_release.py`。
+- [当前采集源码详细说明](source/README.md)
+- [当前程序的离线测试](source/tests/README.md)
+- [采集输出与 ASIN 输入](source/data/README.md)
+- [历史七张研究表](data/README.md)
+- [历史数据分析工具](tools/README.md)
+- [历史分析测试](tests/README.md)
+- [历史报告、来源对照及此次替换记录](docs/README.md)
+- [仓库总 README](../../../README.md)

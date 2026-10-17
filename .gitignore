@@ -35,3 +35,12 @@
 **/*local.json
 **/raw-private/
 **/.crawler-state/
+
+# Amazon release: browser profiles, real credentials, local run outputs
+**/.edge-amazon-profile/
+**/.ai-bridge/
+projects/commerce/amazon-jiimore/source/data/amazon/
+projects/commerce/amazon-jiimore/source/data/jiimore/
+projects/commerce/amazon-jiimore/source/data/sellersprite/
+# Public example contains placeholders only.
+!projects/commerce/amazon-jiimore/source/sellersprite_cookies.example.json
