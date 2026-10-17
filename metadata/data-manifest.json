@@ -243,6 +243,16 @@
       "dataset": "recruitment"
     },
     {
+      "path": "projects/social/bilibili/data/combined_verified_samples.csv",
+      "origin": "New combined sample: current public Bilibili metadata and already published subtitle archives",
+      "source_sha256": null,
+      "sha256": "aa1f2ac6367ce6138bbe38f4f570861f005f782701f69ff0b0aee2897e8dc86f",
+      "bytes": 33159,
+      "records": 5,
+      "privacy_processing": "Real metadata and existing archived subtitles; no login cookie or session data stored",
+      "dataset": "bilibili-verified-combined-sample"
+    },
+    {
       "path": "projects/social/bilibili/data/supplement/extra_bv_rows.xlsx",
       "origin": "个人知识库/项目/B站/extra_bv_rows.xlsx",
       "source_sha256": "c0c52ea2bdad3231e272cbf51f02ee1b8475b7a11b200e2f2ccade564158683e",
@@ -296,10 +306,10 @@
       "path": "projects/social/bilibili/data/空.csv",
       "origin": "个人知识库/项目/爬虫/B站爬虫/空.csv",
       "source_sha256": "054b4ff5b0ff3a1618cf46a212352a6660e16160f88c29783631627d7177bcde",
-      "sha256": "94a5686a9caef279ae94214939f9dde72ce2b58a9d5a02d73a945295823dace7",
-      "bytes": 619153,
+      "sha256": "23098a1fa01ea26dc1a4ba08e576177915ff77e4e62931f036be2af6b550026f",
+      "bytes": 471793,
       "records": 1296,
-      "privacy_processing": "contact fields, emails, phone numbers and token literals redacted",
+      "privacy_processing": "Rebuilt from already-sanitized 结果.csv; legacy GB18030 source headers restored",
       "dataset": "bilibili"
     },
     {

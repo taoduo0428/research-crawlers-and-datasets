@@ -27,7 +27,7 @@
       "path": "projects/commerce/amazon-jiimore/source/current/jiimore.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/成功/jiimore.py",
       "source_sha256": "f4277e21356ffc49ef786abb707f4b94709088ebaa0b40a4fbf0637d0fa8e0f0",
-      "published_sha256": "6538995884d423a7e4df597a42ac502e79843a5f2871ee430e7eafce08723948",
+      "published_sha256": "8bae5b19a56c3be315c72c9c2d8b026717436831b391b7469434a5b6ee542c42",
       "changed_for_publication": true
     },
     {
@@ -76,7 +76,7 @@
       "path": "projects/commerce/amazon-jiimore/source/legacy/jiimore.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/亚马逊/新建文件夹/jiimore.py",
       "source_sha256": "f4277e21356ffc49ef786abb707f4b94709088ebaa0b40a4fbf0637d0fa8e0f0",
-      "published_sha256": "6538995884d423a7e4df597a42ac502e79843a5f2871ee430e7eafce08723948",
+      "published_sha256": "8bae5b19a56c3be315c72c9c2d8b026717436831b391b7469434a5b6ee542c42",
       "changed_for_publication": true
     },
     {
@@ -1385,7 +1385,7 @@
       "path": "projects/social/bilibili/source/main/1.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/1.py",
       "source_sha256": "2593542b537510c22195b24793dfe878e7756b7139deb112c6bb5574e89a92be",
-      "published_sha256": "00d881595401026324e0abfe61e76ad16b14c18ef20cd10476d3ab0f377e0658",
+      "published_sha256": "2df952e589020b2952b4c144cbb303f26963b518bad7aef47c2ef4a931046bdf",
       "changed_for_publication": true
     },
     {
@@ -1399,14 +1399,14 @@
       "path": "projects/social/bilibili/source/main/3.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/3.py",
       "source_sha256": "7ab904f08b86cc37ff347e9cb5dc5d0fd067444d36756e8500df340ce207c192",
-      "published_sha256": "7ab904f08b86cc37ff347e9cb5dc5d0fd067444d36756e8500df340ce207c192",
-      "changed_for_publication": false
+      "published_sha256": "5b9508a18b8b89a8d9729bca9b6660f9340e71a856926290bfe4b3e705dc607c",
+      "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/bilibili_API.ipynb",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/bilibili_API.ipynb",
       "source_sha256": "86bbc8dc923989d6f5ee47d350f9532424489b50365ac07eb14717b4b73c08fe",
-      "published_sha256": "b418adee130f98bea232ef9777e927caeac027b8ff05553f2eb9afc23ed71a83",
+      "published_sha256": "82dbb739d803a64caf63e5951473a013c1ec733bb31f357414242e16ca397105",
       "changed_for_publication": true
     },
     {
@@ -1427,8 +1427,8 @@
       "path": "projects/social/bilibili/source/main/检查.py",
       "source_rel_desktop": "个人知识库/项目/爬虫/B站爬虫/检查.py",
       "source_sha256": "58fe2a059a823c99dc606279e093e83725882ff80ba9f6336dcfe435a16cd007",
-      "published_sha256": "58fe2a059a823c99dc606279e093e83725882ff80ba9f6336dcfe435a16cd007",
-      "changed_for_publication": false
+      "published_sha256": "7907c72f633317b64150b20e48e17e5b2e9654be21b5dc0550b3f77117f26bc9",
+      "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/main/编码.py",
@@ -1441,7 +1441,7 @@
       "path": "projects/social/bilibili/source/supplement/b站信息爬取.py",
       "source_rel_desktop": "个人知识库/项目/B站/b站信息爬取.py",
       "source_sha256": "ad05197fc24c2030a14e31af9269661f1e8b9f20d2f03b31b3cc016476075f9f",
-      "published_sha256": "81a962e6d9e79f585527cc53a2834af654be723921df5cdc7d6f37d31385baf2",
+      "published_sha256": "6817067a187d6aa9e797da5a00b36176ee6b166d9006745e957f5b4b20d9f955",
       "changed_for_publication": true
     },
     {
@@ -1455,15 +1455,15 @@
       "path": "projects/social/bilibili/source/supplement/字幕(csv).py",
       "source_rel_desktop": "个人知识库/项目/B站/字幕(csv).py",
       "source_sha256": "7ab904f08b86cc37ff347e9cb5dc5d0fd067444d36756e8500df340ce207c192",
-      "published_sha256": "7ab904f08b86cc37ff347e9cb5dc5d0fd067444d36756e8500df340ce207c192",
-      "changed_for_publication": false
+      "published_sha256": "5b9508a18b8b89a8d9729bca9b6660f9340e71a856926290bfe4b3e705dc607c",
+      "changed_for_publication": true
     },
     {
       "path": "projects/social/bilibili/source/supplement/字幕.excel.py",
       "source_rel_desktop": "个人知识库/项目/B站/字幕.excel.py",
       "source_sha256": "ad0e3f23a5b6558d3097cf083a54b51eb8980db70ca1d5efcd3edf3419dfeb22",
-      "published_sha256": "ad0e3f23a5b6558d3097cf083a54b51eb8980db70ca1d5efcd3edf3419dfeb22",
-      "changed_for_publication": false
+      "published_sha256": "1c44bb47539ec208572d1dee82e0e0d1d81ec12455d78c5c8c19cdd192aea798",
+      "changed_for_publication": true
     },
     {
       "path": "projects/social/douban/source/course-legacy/dbfcrs2/pipelines.py",

@@ -230,7 +230,7 @@ def get_user_info(uid):
     # 设置用户代理 User_Agent及Cookies
     headers = {
         'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
-        'Cookie': 'buvid3=07E695D8-DC99-1CE7-0BD5-1AD40BC9EF5079673infoc; b_nut=1677637579; i-wanna-go-back=-1; _uuid=513BB983-88B7-5F810-69AD-75B3101A23810C93257infoc; DedeUserID=520931432; DedeUserID__ckMd5=85ebb83199377c61; rpdid=0z9ZwfQeoZ|14XAXesu|4ri|3w1Pxee5; b_ut=5; buvid4=AD5B8430-8417-F6DB-C9F2-623249C92FF393031-023030112-7XDfT9HnZ75f7eH4%2BIxIp4BKQv9vkuaEPPrtVRI1MkYCidM8Mtxh2w%3D%3D; buvid_fp_plain=undefined; LIVE_BUVID=AUTO1516781971255759; hit-dyn-v2=1; nostalgia_conf=-1; CURRENT_PID=c5731e30-c89d-11ed-8e21-d7631bcaf686; hit-new-style-dyn=1; is-2022-channel=1; header_theme_version=CLOSE; CURRENT_BLACKGAP=0; FEED_LIVE_VERSION=V8; CURRENT_FNVAL=4048; enable_web_push=DISABLE; CURRENT_QUALITY=120; buvid_fp=ecb7dd28792e93e5277f4442aae2d4c6; fingerprint=aa0121758f5e8f5253ebe2b68898acfe; PVID=1; bp_video_offset_520931432=894245691817197600; SESSDATA=6f7eb495%2C1722675706%2C66d4c%2A21CjCf36FNLhsY83qz1D3jD97FqWRC3cWDfpFseASOny7-BVuF5vEJscr7LJxvUiMcHMISVmpLM1I0WDN1M1hvMFNOSmlCcEwya0JWWlBqQjU2UUQ5VjVjQUxHTVBYaF9hWEJtc1h0UTNubmx6c3hsQWJCaGJZbElqZlI5eTU1cXZqUnRDWkJxNTBRIIEC; bili_jct=acb09ff334f932433ba231ab32a94f5a; sid=5qx6tg0r; b_lsid=1EB6941D_18D7C2EBC10; home_feed_column=4; browser_resolution=780-898'}
+        'Cookie': os.environ.get('BILIBILI_COOKIE', '')}
  
     # 将传入的的uid组成up主主页的api_url
     # A Example: https://api.bilibili.com/x/web-interface/card?mid=1177893348

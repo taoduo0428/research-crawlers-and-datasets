@@ -2,7 +2,7 @@
   "created_at_utc": "2026-10-16T16:26:40+00:00",
   "source_files_copied": 407,
   "data_files_prepared": 250,
-  "data_bytes_total": 364760167,
+  "data_bytes_total": 364645966,
   "exclusions_count_by_reason": {
     "source_missing": 1,
     "source_sensitive_blocked": 2,
@@ -32,5 +32,6 @@
     "pseudonyms_use_base32_without_phone_like_digits": true,
     "keep_allowlist_and_reproducible_comments_v2": true,
     "keep_original_filenames_and_hashes_removed": true
-  }
+  },
+  "data_files_count": 251
 }

@@ -20,7 +20,7 @@ headers = {
     'origin': 'https://www.bilibili.com',
     'referer': 'https://www.bilibili.com/',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0',
-    'cookie': "CURRENT_FNVAL=4048; enable_web_push=DISABLE; buvid3=0EBBF7BB-FE14-88F8-E78C-4C732780DCCD71579infoc; b_nut=1706859171; i-wanna-go-back=-1; b_ut=7; _uuid=77556E410-5B1D-A147-C45C-C67631D575BC72835infoc; buvid4=93E3B393-C104-C800-3418-408C939DF4CA73042-024020207-IAAnKFSLv27gVhP1IipP0w%3D%3D; rpdid=|(umJJRY~k|)0J'u~|Y)lmu)Y; CURRENT_QUALITY=80; DedeUserID=1041142819; DedeUserID__ckMd5=367f5cee99b8f9b1; FEED_LIVE_VERSION=V_WATCHLATER_PIP_WINDOW3; header_theme_version=CLOSE; fingerprint=9421df2d3b267e6c8735ce525ea1f004; buvid_fp_plain=undefined; buvid_fp=55dedf4b3b36eba7b6cfce63266904db; LIVE_BUVID=AUTO8217153416417219; PVID=3; b_lsid=33F47E46_192AA7B182E; SESSDATA=0d799cac%2C1744989048%2C8ab9c%2Aa1CjA66uNGHbd0uSseo8lCYViCv-1I0bA7DPhukVVsxrUUqz8KZFmMuPgiTaL5vJ6wRyYSVnFSTjlpODlPd0pVb2hKclJCM0NkcEVOMjJPb1V4cURfYkowcTd0M1Nhejh1OWxsZ0lLS3dFbmR5QnR6M1ZaaGYwclRqdFlwdTZoVjJELU80M3B4R3VRIIEC; bili_jct=48c5f7b7e7fc2dd1b3aa1780e3829671; sid=p3etxzaw; home_feed_column=4; browser_resolution=1022-834; bp_t_offset_1041142819=990413677431619584"  # 替换为你的cookie信息
+    'cookie': os.environ.get('BILIBILI_COOKIE', '')  # 替换为你的cookie信息
 }
 
 def download_subtitle(url):

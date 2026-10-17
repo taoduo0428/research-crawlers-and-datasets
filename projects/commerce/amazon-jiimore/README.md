@@ -1,6 +1,8 @@
 # Amazon + Jiimore：把商品和历史指标连起来
 
-这是**一个项目**。Amazon 提供商品信息，Jiimore 提供部分搜索/点击指标，SellerSprite 提供月销量、评论和历史趋势。几套数据之间主要靠 `ASIN` 连接。
+这是**一个联合研究项目**，但原电脑里确实有两套工程：`成功` 和 `新建文件夹`。两边并非简单的新旧版本，数据互相补充，也有重复。详细看 [两套原始工程的逐文件对照](docs/来源版本对照.md)。
+
+Amazon 提供商品信息，Jiimore 提供部分搜索/点击指标，SellerSprite 提供月销量、评论和历史趋势。几套数据之间主要靠 `ASIN` 连接。
 
 ## 文件怎么找
 
@@ -20,8 +22,8 @@
 
 ## 代码在哪
 
-- `source/current/`：整理时选用的商品、Jiimore、SellerSprite 脚本；建议先看 `jiimore1.py` 和 `sellersprite.py`。
-- `source/legacy/`：早期版本，留着查处理方式。
+- `source/current/`：从原电脑 **`成功/`** 目录复制来的 7 份 Python 脚本，包含 Amazon、Jiimore、SellerSprite；文件夹名称只是整理标记，**不是全部已通过现网测试**。
+- `source/legacy/`：从原电脑 **`新建文件夹/`** 复制来的 7 份脚本；其中 Amazon 商品采集部分和 `current/` 存在明显差异，**不能直接断定它比前者旧**。
 - `source/misc/`：商品检查和其他实验脚本。
 - `source/supplement/get-asin/`：补充获取 ASIN 的脚本。
 

@@ -91,6 +91,29 @@ def scrub_python(content: str, original: Path) -> str:
         t = PHONE.sub("00000000000", t)
         if "os.environ" in t and not re.search(r"(?m)^\s*(?:import os|from os import)", t):
             t = "import os\n" + t
+
+    # Keep old Bilibili session cookies out of any future publication rebuild.
+    if "B站" in str(original) or "bilibili" in str(original).lower():
+        pattern = re.compile(
+            r"""(?P<key>['"]cookie['"]\s*:\s*)(?P<q>['"])(?P<v>(?:\\.|[^\r\n])*?)(?P=q)""",
+            re.I,
+        )
+        def replace_bili_cookie(match):
+            if "SESSDATA=" not in match.group("v"):
+                return match.group(0)
+            return match.group("key") + "os.environ.get('BILIBILI_COOKIE', '')"
+        t = pattern.sub(replace_bili_cookie, t)
+        cleaned = []
+        for line in t.splitlines(keepends=True):
+            if "SESSDATA=" in line and re.match(r"^\s*cookie\s*=", line, re.I):
+                lead = re.match(r"^(\s*cookie\s*=)", line, re.I).group(1)
+                line = lead + " os.environ.get('BILIBILI_COOKIE', '')\n"
+            cleaned.append(line)
+        t = "".join(cleaned)
+        if "os.environ.get('BILIBILI_COOKIE'" in t and not re.search(
+            r"(?m)^\s*import os\s*$", t
+        ):
+            t = "import os\n" + t
     return t
 
 def safety_check_source(text: str, original: Path) -> bool:
@@ -187,7 +210,13 @@ def save_data(src: Path, rel: str, *, data_kind: str, safe_csv=True):
     n = None
     privacy = "source copy"
     if safe_csv and src.suffix.lower() == ".csv":
-        with src.open("r",encoding="utf-8-sig",errors="replace",newline="") as fi, dst.open("w",encoding="utf-8",newline="") as fo:
+        # Some legacy Bilibili CSVs are GB18030, not UTF-8.
+        input_encoding = (
+            "gb18030"
+            if "B站" in str(src) and src.name == "空.csv"
+            else "utf-8-sig"
+        )
+        with src.open("r",encoding=input_encoding,errors="replace",newline="") as fi, dst.open("w",encoding="utf-8",newline="") as fo:
             r=csv.DictReader(fi)
             if not r.fieldnames:
                 EXCLUDED["data_empty_header"]+=1
